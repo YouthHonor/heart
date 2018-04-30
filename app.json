@@ -1,3 +1,12 @@
 {
+<<<<<<< Updated upstream
     "pages":["pages/about/about"]
+=======
+    "pages":[
+        "pages/register/register",
+        "pages/wishList/wishList",
+        "pages/about/about"
+    ]
+
+>>>>>>> Stashed changes
 }
