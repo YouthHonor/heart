@@ -1,6 +1,7 @@
 {
     "pages":[
         "pages/register/register",
+        "pages/wishList/wishList",
         "pages/about/about"
     ]
 
