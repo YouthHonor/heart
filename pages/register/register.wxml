@@ -1,0 +1,39 @@
+<view class="page">
+    <view class="bg_img">
+    </view>
+    <view class="tx_img_window">
+      <image src="/images/heart.jpg" class="tx_img"></image>
+    </view>
+    <form bindsubmit='form_submit' bindreset='form_reset'>
+      <view class="register_info">
+        <view class="register_window">
+          <view class="zh_window window_height window_bot">
+            <view class="zh_text left mright">姓名</view>
+            <view class="zh_input left wd">
+              <input type="text" name="uname" value="{{uname}}" focus="true" placeholder='输入姓名' maxlength='15'></input>    
+            </view>
+          </view>
+          <view class="pas_window window_height window_bot">
+            <view class="pas_text left mright">身份</view>
+              <view class="radio_view left">
+                  <radio-group class="radio_group" bindchange="radioChange">
+                    <radio class="radio" wx:for="{{items}}" wx:key="indentification" value="{{item.identification}}" checked="{{item.checked}}">
+                      <text>{{item.value}}</text>
+                    </radio>
+                  </radio-group>
+            </view>
+          </view>
+          <view class="confirm_window left window_height window_bot">
+            <view class="conf_text left mright">手机号</view>
+            <view class="conf_input left wd">
+              <input type="number" maxlength='11' name="phoneNumber" value='{{phoneNumber}}'>
+            </input>
+          </view>
+          <view class="button_window">
+            <button class="reg_button" form-type='submit' type="primary">修改成功</button>
+          </view>
+        </view>
+      </view>
+	 </view>
+  </form>
+</view>

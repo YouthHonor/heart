@@ -1,3 +1,9 @@
 {
+<<<<<<< HEAD
     "pages":["pages/about/about"]
+=======
+  "pages":[
+    "pages/register/register"
+  ]
+>>>>>>> 1047b8edfb71a9e7fc2305494e6bd6e30cd926fe
 }
