@@ -60,7 +60,7 @@ Page({
     ycId:0,
     stID:0
   },
-  onLoad:function(){
+  onLoad:function(options){
     this.setData({
       ycId:0,
       stId:0
@@ -131,11 +131,11 @@ Page({
                 if(res.confirm){
                   wx.redirectTo({
                     //跳转到主页
-                    url: '/pages/home/mine?uname='+uname+'&identification='+identification+
+                    url: '/pages/mine?uname='+uname+'&identification='+identification+
                     '&phoneNumber=' + phoneNumber + '&ycShi=' + that.data.ycList[that.data.ycId]+
                     '&street=' + that.data.stList[that.data.ycId].stLists[that.data.stId]
                   })
-                }
+                } 
               }
             })
           }

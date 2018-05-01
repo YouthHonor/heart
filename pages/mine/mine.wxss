@@ -1,0 +1,96 @@
+.bg_img{
+  width:100%;
+  height:100%;
+  background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525085807099&di=b8bf20aee89d7e7843257d48ad82ef3b&imgtype=0&src=http%3A%2F%2Fscimg.jb51.net%2Fallimg%2F151019%2F14-151019145FC38.jpg)no-repeat;
+  background-size: cover;
+  /*背景模糊*/
+  -webkit-filter: blur(10px); /* Chrome, Opera */  
+  -moz-filter: blur(10px);  
+  -ms-filter: blur(10px);      
+  filter: blur(10px);   
+  /*层叠布局*/
+  z-index: 0;
+  /*相对位置，这样其他view就能用绝对位置覆盖上去*/
+  position: relative;
+}
+
+.info_head{
+  position: absolute;
+  top:60rpx;
+  width:90%;
+}
+
+.tx_win{
+  
+}
+
+.tx_img{
+  width:200rpx;
+  height:200rpx;
+  margin-left:50rpx;
+  border-radius:100%;
+  float:left;
+}
+.pname{
+  margin-left: 100rpx;
+  float:left;
+  margin-top: 100rpx;
+  font-size:50rpx;
+}
+
+.infoWin{
+  top:300rpx;
+  width: 690rpx;
+  height: 700rpx;
+  position: absolute;
+  z-index: 999;
+  margin-left: 30rpx;
+}
+
+.info_bottom{
+  border: 1px solid rgb(190,198,185);
+  border-radius: 20rpx;
+  margin: 0,auto;
+  height: 100%;
+  width:100%;
+  display:flex;
+  flex-direction: column;
+}
+
+.appointment_win{
+  height: 20%;
+}
+
+.xy_win{
+  height: 20%;
+}
+
+.win_img{
+  height:40rpx;
+  width:10%;
+}
+
+.myXy_win{
+  height: 20%;
+}
+
+.info_win{
+  height: 20%;
+}
+
+.img_size{
+  width:40rpx;
+  height:40rpx;
+}
+
+.text_left{
+  float:left;
+}
+
+.img_left{
+  float:left;
+}
+
+.bor_bot{
+  border-bottom: 1px solid rgb(190,198,185);
+}

@@ -1,5 +1,10 @@
 {
   "pages":[
-    "pages/register/register"
+    "pages/mine/mine",
+    "pages/register/register",
+    "pages/appoint/appoint",
+    "pages/myXy/myXy",
+    "pages/pick/pick",
+    "pages/verify/verify"
   ]
 }
