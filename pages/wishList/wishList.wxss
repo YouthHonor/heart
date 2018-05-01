@@ -1,0 +1,21 @@
+.pickers{
+    width:25%;
+    float:left;
+}
+.item{
+  height:250rpx;
+  margin-top: 50rpx;
+  margin-left: 50rpx;
+}
+
+.menu{
+background-color: yellowgreen;
+}
+.image{
+  width:200rpx;
+  height:200rpx;
+  float:left
+}
+.item_word{
+  float:left
+}

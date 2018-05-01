@@ -1,3 +1,9 @@
+<view class="jx_card"> 
+  <image style="width: 740rpx; height: 275rpx;margin-left=10rpx;margin-top:10rpx;" mode="{{item.mode}}" src="/images/home.jpg"> 
+  </image> 
+ </view>
+
+
 <view class="page">
     <view class="bg_img">
     </view>

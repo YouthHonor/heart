@@ -1,0 +1,86 @@
+<view wx:if="{{!success}}">
+<view class='row'>
+<label class='title'> 许愿人姓名 </label>
+ <view class='info'>
+  <input  class= 'info-input' bindinput="handleNameChanges" placeholder="填写您的姓名" />
+ </view>
+ </view>
+<view class='row'>
+<label class='title'> 联系方式 </label>
+ <view class='info'>
+ <input  class= 'info-input' bindinput = "handleContactChanges" placeholder="填写您的联系方式" />
+ </view>
+</view>
+<view class='row'>
+<label class='title'> 许愿人类型 </label>
+ <view class='info'>
+ <radio-group bindchange = "handleTypeChanges" >
+  <label class="radio"  >
+    <radio value="党员" checked="ture"/>党员
+    <radio class = 'radio2' value="群众" />群众
+  </label>
+</radio-group>
+</view>
+</view>
+<view class='row'>
+<label class='title'> 许愿类型 </label>
+ <view class='info'>
+  <radio-group  bindchange = "handleServeTypeChanges" >
+  <label class="radio" >
+    <radio value="个人物质" checked="ture"/>个人物质
+    <radio value="个人服务" />个人服务
+  </label>
+</radio-group>
+ </view>
+</view>
+<view class='row'>
+ <label class='title'> 具体需求 </label>
+ <view class='info'>
+ <input  class= 'info-input' bindinput = "handleMessageChanges" placeholder="填写您的具体需求" />
+ </view>
+</view>
+<view class='row'>
+<label class='title'> 心愿日期 </label>
+ <view class='info'>
+ <view class="section">
+  <view class="section__title"></view>
+  <picker mode="date" value="{{date}}" start="2018-01-01" end="2030-01-01" bindchange="bindDateChange">
+    <view class="picker">
+          ：{{date}}
+    </view>
+  </picker>
+</view>
+ </view>
+</view>
+<view class='row'>
+<label class='title'> 我的地址 </label>
+<view class='info' bindtap='handleAddress1'>{{address}}
+</view>
+</view>
+<view class='row'>
+<label class='title' > 详细地址 </label>
+<view class='info'>
+<input  class= 'info-input' bindinput = "handleAddress" placeholder="填写您的详细地址" />
+</view>
+</view>
+<view class='row'>
+<label class='title'> 我的故事 </label>
+ <view class='info'>
+ <textarea bindblur="bindTextAreaBlur" class= 'textarea' placeholder="讲述您的故事"  />
+
+
+<view class="shangchuan" bindtap="choose">  点击添加图片 <image style="width:100%;height:100%;" src="{{tempFilePaths}}"></image>  </view> 
+
+
+</view>
+
+<view class='submit-button' bindtap='handleSubmit'>发布我的心愿</view>
+
+</view>
+</view>
+<view class = 'success' wx:if="{{success}}">
+ <view class='cheer'><icon type="success" size="24"/> 恭喜您提交成功!</view>
+ 
+ <button type = "default" class = 'return' >返回首页</button>
+ 
+ </view>

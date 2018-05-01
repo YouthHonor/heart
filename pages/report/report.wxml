@@ -1,0 +1,41 @@
+<view wx:if="{{!success}}">
+<view class='row'>
+<label class='title'> 举报类型 </label>
+ <view class='info'>
+  <radio-group  bindchange="radioChange" >
+  <label class="radio"  >
+    <radio value="实名" checked="ture"/>实名
+    <radio class = "radio2" value="匿名" />匿名
+  </label>
+</radio-group>
+ </view>
+ </view>
+<view class='row'>
+<label class='title'> 举报事件 </label>
+ <view class='info'>
+ <view class="section">
+  <view class="section__title"></view>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      ：{{array[index]}}
+    </view>
+  </picker>
+</view>
+ </view>
+ </view>
+<view class='row'>
+<label class='title'> 举报详情： </label>
+ <view class='info'>
+ <textarea bindblur="bindTextAreaBlur" class= 'textarea' placeholder=""  />
+ </view>
+ <view class='submit-button' bindtap='handleSubmit'>举报</view>
+ </view>
+ 
+ </view>
+
+ <view class = 'success' wx:if="{{success}}">
+ <view class='cheer'><icon type="success" size="24"/> 恭喜您提交成功!</view>
+ 
+ <button type = "default" class = 'return' >返回首页</button>
+ 
+ </view>

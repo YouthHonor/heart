@@ -1,14 +1,50 @@
 {
   "pages":[
-    "pages/verify/verify",
-    "pages/mine/mine",
     "pages/register/register",
+    "pages/verify/verify",
+    "pages/wishList/wishList",
     "pages/appoint/appoint",
     "pages/myXy/myXy",
+    "pages/wish/wish",
+    "pages/home/home",
+    "pages/mine/mine",
     "pages/pick/pick",
-    
     "pages/about/about",
-    "pages/wishList/wishList"
-  ]
-
+    "pages/report/report",
+    "pages/index/index"
+    
+  ],
+   
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#ff8800",
+    "navigationBarTitleText": "微心愿",
+    "navigationBarTextStyle":"black"
+    
+  },
+  "tabBar": {
+    "selectedColor": "#33ff33",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "心愿墙",
+        "iconPath": "images/wish1.png",
+        "selectedIconPath": "images/wish2.png"
+      },
+      {
+      "pagePath": "pages/index/index",
+      "text": "社区",
+      "iconPath": "images/首页.png",
+      "selectedIconPath": "images/首页1.png"
+     
+    },
+    
+    {
+      "pagePath": "pages/mine/mine",
+      "text": "我",
+      "iconPath": "images/个人1.png",
+      "selectedIconPath": "images/个人.png"
+    }
+    ]
+  }
 }
