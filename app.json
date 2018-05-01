@@ -1,18 +1,21 @@
 {
   "pages":[
-    "pages/verify/verify",
-    "pages/mine/mine",
-    "pages/register/register",
-    "pages/appoint/appoint",
-    "pages/myXy/myXy",
-    "pages/pick/pick",
-    "pages/about/about",
-    "pages/wishList/wishList",
     "pages/wish/wish",
-    "pages/report/report",
-    "pages/index/index",
+    "pages/home/home",
+    "pages/mine/mine",
+    "pages/about/about",
+    "pages/pick/pick",
+    "pages/myXy/myXy",
+    "pages/appoint/appoint",
+    "pages/register/register",
+   
+    "pages/verify/verify",
     
-    "pages/home/home"
+    "pages/wishList/wishList",
+    "pages/report/report",
+    "pages/index/index"
+    
+    
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -39,7 +42,7 @@
     },
     
     {
-      "pagePath": "pages/index/index",
+      "pagePath": "pages/mine/mine",
       "text": "我",
       "iconPath": "images/个人1.png",
       "selectedIconPath": "images/个人.png"
