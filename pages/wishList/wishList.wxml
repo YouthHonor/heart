@@ -1,0 +1,28 @@
+
+<view>
+    <view class='menu'>
+        <view  stytle='display:inline;float:left'>
+            <picker bindchange="bindPickerChange" value="{{index}}"                     range="{{array}}">
+                心愿对象
+            </picker>
+        </view>
+        <view  stytle='display:inline;float:left'>
+            <picker bindchange="bindPickerChange" value="{{index}}"                     range="{{array}}">
+                心愿形式
+            </picker>
+        </view>
+        <picker bindchange="bindPickerChange" value="{{index}}" range="             {{array}}">
+            <view class="picker3">
+            地区
+            </view>
+        </picker>
+        <picker bindchange="bindPickerChange" value="{{index}}" range="             {{array}}">
+            <view class="picker4">
+            认领状态
+            </view>
+        </picker>
+    </view>
+    <scroll-view>
+
+    </scroll-view>
+</view>

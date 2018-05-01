@@ -1,0 +1,12 @@
+.picker1{
+    display: inline;
+}
+.picker2{
+    display: inline;
+}
+.picker3{
+    display: inline;
+}
+.picker4{
+    display: inline;
+}
