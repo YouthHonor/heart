@@ -21,7 +21,7 @@ Page({
   */
   bindAppointment:function(){
     wx.navigateTo({
-      url: '/pages/app/app',
+      url: '/pages/appoint/appoint',
     })
   },
   bindXy:function(){
