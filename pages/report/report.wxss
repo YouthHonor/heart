@@ -1,0 +1,47 @@
+page{
+  background: #eee;
+}
+.row{
+  overflow: hidden;
+  line-height: 100rpx;
+  border-bottom: 1rpx solid #ccc;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  color: #777;
+  background: #fff;
+}
+.radio{
+  margin-left: 30rpx;
+  padding-left: 10rpx;
+}
+.radio2{
+  margin-left: 40rpx;
+}
+.submit-button{
+  background: #ff9700;
+  line-height: 38px;
+  border-radius: 6px;
+  text-align: center;
+  color: #fff;
+}
+.title{
+  width: 100px;
+  float: left;
+}
+.textarea{
+  margin-top: 60rpx;
+}
+.success{
+  background: #ffffff;
+
+}
+.cheer{
+  text-align: center;
+  line-height: 500rpx;
+  font-size: 60rpx;
+  position: relative;
+}
+.return{
+  margin: 10px;
+
+}

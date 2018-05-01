@@ -1,0 +1,3 @@
+<view>
+<image  bindtap='f1' class = 'home' src='/images/home.jpg'></image>
+</view>
