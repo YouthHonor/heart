@@ -8,6 +8,9 @@ Page({
     var that = this;
     wx.request({
       url:"",
+      header:{
+        "Content-Type":"json"
+      },
       success:function(res){
         that.setData({
           uname:res.data.uname
