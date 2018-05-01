@@ -68,11 +68,11 @@
 }
 
 .radio{
-  margin-right: 15rpx;
+  margin-right: 90rpx;
 }
 
 .mright{
-  margin-right:40rpx;
+  margin-right:50rpx;
 }
 
 .zh_input{
@@ -88,7 +88,12 @@
   border-radius: 10rpx;
 }
 
-.confirm_window{
+.phoneNumber_win{
+  margin: 0rpx,10rpx;
+  border-radius: 10rpx;
+}
+
+.liveArea_win{
   margin: 0rpx,10rpx;
   border-radius: 10rpx;
 }
@@ -103,3 +108,20 @@
   height:100%rpx;
 }
 
+.area_text{
+  margin-top: 8rpx;
+}
+
+.area_list{
+  width:450rpx;
+}
+
+.yc_list{
+  width:30%;
+  float:left;
+}
+
+.street_list{
+  width:70%;
+  float:left;
+}

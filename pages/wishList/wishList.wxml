@@ -1,28 +1,38 @@
 
-<view>
+<view class="basic">
     <view class='menu'>
-        <view  stytle='display:inline;float:left'>
-            <picker bindchange="bindPickerChange" value="{{index}}"                     range="{{array}}">
-                心愿对象
-            </picker>
-        </view>
-        <view  stytle='display:inline;float:left'>
-            <picker bindchange="bindPickerChange" value="{{index}}"                     range="{{array}}">
-                心愿形式
-            </picker>
-        </view>
-        <picker bindchange="bindPickerChange" value="{{index}}" range="             {{array}}">
-            <view class="picker3">
-            地区
-            </view>
-        </picker>
-        <picker bindchange="bindPickerChange" value="{{index}}" range="             {{array}}">
-            <view class="picker4">
-            认领状态
-            </view>
-        </picker>
-    </view>
-    <scroll-view>
+      <picker class="pickers" bindchange="bindPickerChange1" 
+        value="{{wishObjectIndex}}"range="{{wishObjectList}}">
+        <view class="">{{wishObjectList[wishObjectIndex]}}</view>
+      </picker>
 
+      <picker class='pickers'bindchange="bindPickerChange2" 
+        value="{{wishMethodIndex}}"range="{{wishMethodList}}">
+        <view class="">{{wishMethodList[wishMethodIndex]}}</view>
+      </picker>
+
+      <picker class='pickers' bindchange="bindPickerChange3" 
+        value="{{areaIndex}}"range="{{areaList}}">
+        <view class="">{{areaList[areaIndex]}}</view>
+      </picker>
+
+      <picker bindchange="bindPickerChange4" 
+        value="{{statusIndex}}"range="{{statusList}}">
+        
+        <view class="">{{statusList[statusIndex]}}</view>
+      </picker>
+    </view>
+
+
+    <scroll-view scroll-y class='scrolls'>
+      <view class='item' wx:for="{{record}}">
+        <image class="image" src="/images/smallShip.png" ></image>
+        <view class="item_word">
+          <view>{{item.specificNeeds}}</view>
+          <view>星愿类型：{{item.wishType}}</view>
+          <view>星愿发布时间：{{item.date}}</view>
+          <view>所属街道：{{item.address}}</view>
+        </view>
+      </view>
     </scroll-view>
 </view>

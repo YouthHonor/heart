@@ -17,23 +17,34 @@
             <view class="pas_text left mright">身份</view>
               <view class="radio_view left">
                   <radio-group class="radio_group" bindchange="radioChange">
-                    <radio class="radio" wx:for="{{items}}" wx:key="indentification" value="{{item.identification}}" checked="{{item.checked}}">
+                    <radio class="radio" wx:for="{{items}}" wx:key="identification" value="{{item.identification}}" checked="{{item.checked}}">
                       <text>{{item.value}}</text>
                     </radio>
                   </radio-group>
             </view>
           </view>
-          <view class="confirm_window left window_height window_bot">
-            <view class="conf_text left mright">手机号</view>
-            <view class="conf_input left wd">
-              <input type="number" maxlength='11' name="phoneNumber" value='{{phoneNumber}}'>
-            </input>
+          <view class="phoneNumber_win left window_height window_bot">
+              <view class="phoneNum_text left mright">手机号</view>
+              <view class="phoneNum_input left wd">
+                <input type="number" maxlength='11' name="phoneNumber" value='{{phoneNumber}}'>
+                </input>
+              </view>
+          </view>
+          <view class="liveArea_win left window_height window_bot">
+            <view class="area_text left mright">所属居民区</view>
+            <view class="area_list left">
+              <picker class="yc_list" bindchange='bindPickerYc' value="{{ycId}}" range="{{ycList}}">
+                <view class="picker">{{ycList[ycId]}}</view>
+              </picker>
+              <picker class="street_list" bindchange='bindPickerSt' value="{{stId}}" range="{{stList[ycId].stLists}}">
+                <view class="picker">{{stList[ycId].stLists[stId]}}</view>
+              </picker>
+            </view>
           </view>
           <view class="button_window">
             <button class="reg_button" form-type='submit' type="primary">修改成功</button>
           </view>
         </view>
       </view>
-	 </view>
   </form>
 </view>

@@ -1,8 +1,14 @@
 {
-    "pages":[
-        "pages/wishList/wishList",
-        "pages/register/register",
-        "pages/about/about"
-    ]
+  "pages":[
+    "pages/wishList/wishList",
+    "pages/register/register",
+    "pages/mine/mine",
+    "pages/appoint/appoint",
+    "pages/myXy/myXy",
+    "pages/pick/pick",
+    "pages/verify/verify",
+    "pages/about/about"
+    
+  ]
 
 }

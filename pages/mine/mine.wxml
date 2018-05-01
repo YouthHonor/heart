@@ -1,0 +1,42 @@
+<view class="page">
+    <view class="bg_img">
+    </view>
+    <view class="info_head">
+      <view class="tx_win">
+        <image class="tx_img" src="/images/fupin.png"></image>
+      <view class="pname">昵称:小明</view>
+      </view>
+    </view>
+    <view class="infoWin">
+      <view class="info_bottom">
+        <view class="appointment_win bor_bot" bindtap='bindAppointment'>
+          <view class="apImg_win win_img img_left">
+            <image class="ap_img img_size" src="/images/date.png"></image>
+          </view>
+          <view>
+            <view class="ap_text text_left">我的预约</view>
+          </view>
+        </view>
+        <view class="xy_win bor_bot" bindtap='bindXy'>
+          <view class="xyImg_win win_img img_left">
+            <image src="/images/xy_dan.png" class="xy_img img_size"></image>
+          </view>
+          <view class="xy_text">认领心愿</view>
+        </view>
+        <view class="myXy_win bor_bot" bindtap='bindMyXy'>
+          <view class="myXyImg_win win_img img_left">
+            <image src="/images/ai.png" class="myXy_img img_size"></image>
+          </view>
+          <view class="myXy_text text_left">我的心愿</view>
+        </view>
+          <view class="info_win" bindtap='bindModi'>
+            <view class="infoImg_win win_img img_left">
+              <view class="infoImg_win">
+                <image src="/images/modi.png" class="info_img img_size"></image>
+              </view>
+            </view>
+            <view class="info_text text_left">编辑资料</view>
+          </view>
+      </view>
+    </view>
+</view>

@@ -1,12 +1,21 @@
-.picker1{
-    display: inline;
+.pickers{
+    width:25%;
+    float:left;
 }
-.picker2{
-    display: inline;
+.item{
+  height:250rpx;
+  margin-top: 50rpx;
+  margin-left: 50rpx;
 }
-.picker3{
-    display: inline;
+
+.menu{
+background-color: yellowgreen;
 }
-.picker4{
-    display: inline;
+.image{
+  width:200rpx;
+  height:200rpx;
+  float:left
+}
+.item_word{
+  float:left
 }
