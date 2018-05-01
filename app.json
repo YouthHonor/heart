@@ -1,11 +1,12 @@
 {
   "pages":[
+    "pages/verify/verify",
     "pages/mine/mine",
     "pages/register/register",
     "pages/appoint/appoint",
     "pages/myXy/myXy",
     "pages/pick/pick",
-    "pages/verify/verify",
+    
     "pages/about/about",
     "pages/wishList/wishList"
   ]

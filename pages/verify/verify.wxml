@@ -1,10 +1,27 @@
 <view class="page">
-  <scroll-view class="scroll-view" scroll-y="true">
-    <view wx:for="{{infoArray}}">
-      <view class="size">许愿方:{{item.name}}</view>
-      <view class="size">电话:{{item.phoneNumber}}</view>
-      <view class="size">联系地址:{{item.address}}</view>
-      <view class="size">发布时间:{{item.date}}</view>
+  <view class="bg_img">
+  </view>
+  <view class="core">
+    <scroll-view class="scroll-view" scroll-y="true">
+      <view class="boder_bot">
+        <view wx:for="{{infoArray}}" wx:key="index" wx:for-item="item" class="left wd">
+          <view class="size">许愿方:{{item.name}}</view>
+          <view class="size">电话:{{item.phoneNumber}}</view>
+          <view class="size">联系地址:{{item.address}}</view>
+          <view class="size">发布时间:{{item.date}}</view>
+        </view>
+        <view class="radio_win wd_ra left">
+          <radio-group class="radio_group wd_ra" bindchange="radioChange"  wx:key="pas_index"  data-xy-id="{{item.id}}" data-pass-status="{{ifPass.value}}">
+            <radio class="radio" wx:for="{{ifPass}}"  wx:for-item="items" checked="{{items.checked}}" wx:key="pass" value='items.value'>
+              <text>{{items.value}}</text>
+            </radio>
+          </radio-group>
+        </view>
+      </view>
+
+    </scroll-view>
+      <view class="button_window">
+        <button class="button" bindtap="submit" type="primary">提交成功</button>
+      </view>
     </view>
-  </scroll-view>
 </view>
