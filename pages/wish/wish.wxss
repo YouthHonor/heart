@@ -1,0 +1,54 @@
+
+.row{
+  overflow: hidden;
+  line-height: 100rpx;
+  border-bottom: 1rpx solid #ccc;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  color: #777;
+  background: #fff;
+}
+.submit-button{
+  background: #ff9700;
+  line-height: 38px;
+  border-radius: 6px;
+  text-align: center;
+  color: #fff;
+}
+.title{
+  width: 100px;
+  float: left;
+}
+.radio{
+  margin-left: 30rpx;
+  padding-left: 10rpx;
+}
+.radio2{
+  margin-left: 40rpx;
+}
+.info-input{
+  height: 100rpx;
+  margin-left: 250rpx;
+  color: #777;
+}
+.textarea{
+  
+  margin-top: 80rpx;
+}
+.picker{
+  margin-left: 250rpx;
+}
+.success{
+  background: #ffffff;
+
+}
+.cheer{
+  text-align: center;
+  line-height: 400rpx;
+  font-size: 60rpx;
+  position: relative;
+}
+.return{
+  margin: 10px;
+
+}

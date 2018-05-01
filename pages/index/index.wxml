@@ -1,0 +1,69 @@
+<view class ='title'>新高苑第三居民区</view>
+  <view class ='items-list'>
+  <image bindtap='f2' class = 'btn_wish'  src ='/images/许愿.png' ></image>
+       <view class ='pro_phone'>
+           <image class='png_phone' src='/images/电话.png'></image>
+           <button bindtap='tell' class='phone_number'><text >021-22062659</text></button>
+      
+      </view>
+      <view class ="pro_address">
+           <image class='png_address' src='/images/地址.png'></image>
+      <view class='address'>浦东新区高宝路68弄71号</view>
+       
+      </view>
+   
+    </view>
+<view class="divLine"></view>
+<!-- 设置心愿墙  和查看更多-->
+
+<view class="block">
+<text type="default" bindtap='f1' class = 'more'>查看更多>> </text>
+<view class = 'wall_title'>心愿墙</view>
+</view>
+<!--显示心愿墙里面的各部分组件-->
+<view class ='serve' >
+<view class='f3'>
+<image class='f3_1' src='/images/政府.png'></image>
+<view bindtap='government' class = 'f3_2'>政府服务</view>
+</view>
+<view class='f4'>
+<image class='f3_1' src='/images/健康达人.png'></image>
+<view class = 'f3_2'>健康服务</view>
+</view>
+<view class='f5'>
+<image class='f3_1' src='/images/生活.png'></image>
+<view class = 'f3_2'>生活服务</view>
+</view>
+<view class='f6'>
+<image class='f3_1' src='/images/文化.png'></image>
+<view class = 'f3_2'>文化服务</view>
+</view>
+</view>
+<view class ='serve' >
+<view class='f3'>
+<image class='f3_1' src='/images/法律.png'></image>
+<view class = 'f3_2'>法律服务</view>
+</view>
+<view class='f4'>
+<image class='f3_1' src='/images/党群.png'></image>
+<view class = 'f3_2'>党群服务</view>
+</view>
+<view class='f5'>
+<image class='f3_1' src='/images/社会.png'></image>
+<view class = 'f3_2'>社会服务</view>
+</view>
+<view class='f6'>
+<image class='f3_1' src='/images/特色.png'></image>
+<view class = 'f3_2'>特色服务</view>
+</view>
+</view>
+<view class="divLine"></view>
+
+<swiper indicator-dots="ture"
+  autoplay="ture" interval="5000" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>

@@ -1,0 +1,41 @@
+{
+  "pages":[
+    "pages/wish/wish",
+    "pages/report/report",
+    "pages/index/index",
+    
+    "pages/home/home"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#ff8800",
+    "navigationBarTitleText": "微心愿",
+    "navigationBarTextStyle":"black"
+    
+  },
+  "tabBar": {
+    "selectedColor": "#33ff33",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "心愿墙",
+        "iconPath": "images/wish1.png",
+        "selectedIconPath": "images/wish2.png"
+      },
+      {
+      "pagePath": "pages/index/index",
+      "text": "社区",
+      "iconPath": "images/首页.png",
+      "selectedIconPath": "images/首页1.png"
+     
+    },
+    
+    {
+      "pagePath": "pages/index/index",
+      "text": "我",
+      "iconPath": "images/个人1.png",
+      "selectedIconPath": "images/个人.png"
+    }
+    ]
+  }
+}
