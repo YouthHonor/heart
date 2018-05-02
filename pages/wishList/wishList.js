@@ -1,5 +1,7 @@
 Page({
     data:{
+      tabTxt: ['心愿对象', '心愿形式', '地区', '认领状态'],//tab文案
+      tab: [true, true, true, true],
       record:[
         {
           name:"江展鹏",
@@ -98,5 +100,45 @@ Page({
       this.setData({
         statusIndex: e.detail.value
       })
+    },
+    filterTab: function (e) {
+      var data = [true, true, true, true],
+        index = e.currentTarget.dataset.index;
+      data[index] = !this.data.tab[index];
+      this.setData({
+        tab: data
+      })
+    },
+    filter: function (e) {
+      var self = this, id = e.currentTarget.dataset.id, txt = e.currentTarget.dataset.txt, tabTxt = this.data.tabTxt;
+      switch (e.currentTarget.dataset.index) {
+        case '0':
+          tabTxt[0] = txt;
+          self.setData({
+            tab: [true, true, true, true],
+            tabTxt: tabTxt,
+          });
+          break;
+        case '1':
+          tabTxt[1] = txt;
+          self.setData({
+            tab: [true, true, true, true],
+            tabTxt: tabTxt,
+          });
+          break;
+        case '2':
+          tabTxt[2] = txt;
+          self.setData({
+            tab: [true, true, true, true],
+            tabTxt: tabTxt,
+          });
+          break;
+        case '3':
+          tabTxt[3] = txt;
+          self.setData({
+            tab: [true, true, true, true],
+            tabTxt: tabTxt,
+          });
+      }
     }
 })

@@ -1,29 +1,41 @@
+<view class="tabTit box tc bg_f">
+	<view class="flex1{{!tab[index]?' active':''}}" wx:for="{{tabTxt}}" wx:key="" data-index="{{index}}" bindtap="filterTab">
+		<text class='text'>{{item}}</text>
+		<image src="/images/下拉.png"></image>
+	</view>
+</view>
+<view class="tabLayer tc text" hidden="{{tab[0]}}">
+	<text class="" data-id="0" data-index="0" data-txt="心愿对象" bindtap="filter1">个人</text>
+  	<text class="" data-id="0" data-index="0" data-txt="心愿对象" bindtap="filter2">团体</text>
+    	<text class="" data-id="0" data-index="0" data-txt="心愿对象" bindtap="filter3">公众</text>
+	<text class="" wx:for="{{filterList.space_list}}" wx:key="" data-id="{{item.id}}" data-index="0" data-txt="{{item.name}}" bindtap="filter">{{item.name}}</text>
+</view>
 
-<view class="basic">
-    <view class='menu'>
-      <picker class="pickers" bindchange="bindPickerChange1" 
-        value="{{wishObjectIndex}}"range="{{wishObjectList}}">
-        <view class="">{{wishObjectList[wishObjectIndex]}}</view>
-      </picker>
+<view class="tabLayer tc text" hidden="{{tab[1]}}">
+	<text class="{{house_type==0?'active':''}}" data-id="0" data-index="0" data-txt="心愿形式" bindtap="filter">精神</text>
+  	<text class="" data-id="0" data-index="0" data-txt="心愿形式" bindtap="filter">物质</text>
+	<text class="" wx:for="{{filterList.space_list}}" wx:key="" data-id="{{item.id}}" data-index="0" data-txt="{{item.name}}" bindtap="filter">{{item.name}}</text>
+</view>
 
-      <picker class='pickers'bindchange="bindPickerChange2" 
-        value="{{wishMethodIndex}}"range="{{wishMethodList}}">
-        <view class="">{{wishMethodList[wishMethodIndex]}}</view>
-      </picker>
+<view class="tabLayer tc text" hidden="{{tab[2]}}">
+	<text class="" data-id="0" data-index="0" data-txt="地区" 
+  bindtap="filter">亭湖区</text>
+  	<text class="" data-id="0" data-index="0" data-txt="地区" bindtap="filter">亭湖新区</text>
+	<text class="" wx:for="{{filterList.space_list}}" wx:key="" data-id="{{item.id}}" data-index="0" data-txt="{{item.name}}" bindtap="filter">{{item.name}}</text>
+</view>
 
-      <picker class='pickers' bindchange="bindPickerChange3" 
-        value="{{areaIndex}}"range="{{areaList}}">
-        <view class="">{{areaList[areaIndex]}}</view>
-      </picker>
-
-      <picker bindchange="bindPickerChange4" 
-        value="{{statusIndex}}"range="{{statusList}}">
-        
-        <view class="">{{statusList[statusIndex]}}</view>
-      </picker>
-    </view>
+<view class="tabLayer tc text" hidden="{{tab[3]}}">
+	<text class="" data-id="0" data-index="0" data-txt="认领状态" bindtap="filter">未认领</text>
+  	<text class="" data-id="0" data-index="0" data-txt="认领状态" bindtap="filter">已认领</text>
+    	<text class="" data-id="0" data-index="0" data-txt="认领状态" bindtap="filter">确认实现待审核</text>
+      	<text class="" data-id="0" data-index="0" data-txt="认领状态" bindtap="filter">已完成</text>
+	<text class="" wx:for="{{filterList.space_list}}" wx:key="" data-id="{{item.id}}" data-index="0" data-txt="{{item.name}}" bindtap="filter">{{item.name}}</text>
+</view>
 
 
+
+
+<view >
     <scroll-view scroll-y class='scrolls'>
       <view class='item' wx:for="{{record}}">
         <image class="image" src="/images/smallShip.png" ></image>

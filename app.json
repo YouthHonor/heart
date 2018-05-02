@@ -1,16 +1,17 @@
 {
   "pages":[
+
     "pages/home/home",
+    "pages/mine/mine",
+    "pages/adLogin/adLogin",
+    "pages/register/register",
      "pages/detail/detail",
      "pages/support/support",
-     "pages/register/register",
      "pages/verify/verify",
     "pages/wishList/wishList",
     "pages/appoint/appoint",
     "pages/myXy/myXy",
     "pages/wish/wish",
-    
-    "pages/mine/mine",
     "pages/pick/pick",
     "pages/about/about",
     "pages/report/report",
