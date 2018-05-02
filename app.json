@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/home/home",
      "pages/detail/detail",
      "pages/support/support",
      "pages/register/register",
@@ -8,7 +9,7 @@
     "pages/appoint/appoint",
     "pages/myXy/myXy",
     "pages/wish/wish",
-    "pages/home/home",
+    
     "pages/mine/mine",
     "pages/pick/pick",
     "pages/about/about",
@@ -20,7 +21,7 @@
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#ff8800",
-    "navigationBarTitleText": "微心愿",
+    "navigationBarTitleText": "心愿墙",
     "navigationBarTextStyle":"black"
     
   },
