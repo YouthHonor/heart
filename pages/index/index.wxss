@@ -61,7 +61,7 @@ margin-top: 30rpx;
   margin-top: 1rpx;
 
 }
-/*用来做心愿墙前面的竖线*//
+/*用来做心愿墙前面的竖线*/
 .wall_title{
   position: relative;
   font-size: 30rpx;
