@@ -1,7 +1,9 @@
 {
   "pages":[
-    "pages/support/support",
-    "pages/detail/detail",
+     "pages/detail/detail",
+     "pages/support/support",
+     "pages/register/register",
+     "pages/verify/verify",
     "pages/wishList/wishList",
     "pages/appoint/appoint",
     "pages/myXy/myXy",
@@ -9,8 +11,6 @@
     "pages/home/home",
     "pages/mine/mine",
     "pages/pick/pick",
-    "pages/register/register",
-    "pages/verify/verify",
     "pages/about/about",
     "pages/report/report",
     "pages/index/index"
