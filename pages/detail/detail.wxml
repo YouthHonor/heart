@@ -1,0 +1,59 @@
+<view class='row'>
+<label class='title'> 许愿人姓名 </label>
+ <view class='info'>
+ </view>
+ </view>
+<view class='row'>
+<label class='title'> 联系方式 </label>
+<view class='info'>
+
+</view>
+</view>
+<view class='row'>
+<label class='title'> 许愿人类型 </label>
+ <view class='info'>
+
+</view>
+</view>
+<view class='row'>
+<label class='title'> 许愿类型 </label>
+ <view class='info'>
+ </view>
+</view>
+<view class='row'>
+ <label class='title'> 具体需求 </label>
+ <view class='info'>
+ </view>
+</view>
+<view class='row'>
+<label class='title'> 心愿日期 </label>
+ <view class='info'>
+ 
+</view>
+</view>
+<view class='row'>
+<label class='title'> 我的地址 </label>
+<view class='info'>
+
+</view>
+</view>
+<view class='row'>
+<label class='title' > 详细地址 </label>
+<view class='info'>
+
+</view>
+</view>
+<view class='row'>
+<label class='title'> 我的故事 </label>
+ <view class='info'>
+ </view> 
+
+</view>
+<view>
+
+<image class = "report_png" src='/images/举报.png'></image>
+<button class = 'report_title' bindtap='report'>点击举报</button>
+<image class = "support_png" src='/images/支持.png'></image>
+<button class = 'support_title' bindtap='support'>点击参与</button>
+<view >{{connt}}</view>
+</view>

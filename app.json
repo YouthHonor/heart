@@ -1,5 +1,7 @@
 {
   "pages":[
+    "pages/support/support",
+    "pages/detail/detail",
     "pages/wishList/wishList",
     "pages/appoint/appoint",
     "pages/myXy/myXy",
@@ -27,6 +29,12 @@
     "list": [
       {
         "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "images/首页.png",
+        "selectedIconPath": "images/首页1.png"
+      },
+      {
+        "pagePath": "pages/wishList/wishList",
         "text": "心愿墙",
         "iconPath": "images/wish1.png",
         "selectedIconPath": "images/wish2.png"
@@ -34,11 +42,10 @@
       {
       "pagePath": "pages/index/index",
       "text": "社区",
-      "iconPath": "images/首页.png",
-      "selectedIconPath": "images/首页1.png"
+      "iconPath": "images/社区.png",
+      "selectedIconPath": "images/社区1.png"
      
     },
-    
     {
       "pagePath": "pages/mine/mine",
       "text": "我",
