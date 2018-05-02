@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/adLogin/adLogin",
     "pages/register/register",
     "pages/verify/verify",
     "pages/wishList/wishList",
