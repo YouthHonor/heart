@@ -1,6 +1,6 @@
 {
   "pages":[
-
+"pages/wish/wish",
     "pages/home/home",
     "pages/mine/mine",
     "pages/adLogin/adLogin",
@@ -11,7 +11,7 @@
     "pages/wishList/wishList",
     "pages/appoint/appoint",
     "pages/myXy/myXy",
-    "pages/wish/wish",
+    
     "pages/pick/pick",
     "pages/about/about",
     "pages/report/report",

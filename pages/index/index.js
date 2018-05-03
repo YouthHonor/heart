@@ -9,7 +9,7 @@ Page({
       console.log(res.target)
     }
     return {
-      title: '微心愿',
+      title: '心愿墙',
       path: '/pages/index/index',
       success: function (res) {
         // 转发成功

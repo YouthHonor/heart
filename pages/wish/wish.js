@@ -3,58 +3,32 @@
 Page({
   data:{
     address: "点击选择地址",
-    success:  false
+    success:  false,
+    tempFilePaths: ''
   },
   staticData: {
 
 
   },
-  choose: function () {
-    var that = this; 
-    wx.showActionSheet({
-      itemList: ['从相册中选择', '拍照'],
-      itemColor: "#f7982a", 
-      success: function (res) {
-        if (!res.cancel) {
-          if (res.tapIndex == 0) {
-            that.chooseWxImageShop('album')
-          } else if (res.tapIndex == 1) {
-            that.chooseWxImageShop('camera')
-          }
-        }
-      }
-    })
-  }, 
-  chooseWxImageShop: function (type) {
-    var that = this;
+  chooseimage: function () {
+    var _this = this;
     wx.chooseImage({
-      sizeType: ['original', 'compressed'],
-      sourceType: [type],
+      count: 9, // 默认9  
+      sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有  
+      sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有  
       success: function (res) {
-        for (var index in res.tempFilePaths) {
-          that.upload_file(API_URL + 'shop/shopImage', res.tempFilePaths[index])
-        }
-      } 
-    })
-  },
-  upload_file: function (url, filePath) {
-    var that = this;
-    wx.uploadFile({
-      url: url,
-      filePath: filePath,
-      name: 'uploadFile',
-      header: {
-        'content-type': 'multipart/form-data'
-      }, // 设置请求的 header 
-      formData: { 'shopId': wx.getStorageSync('shopId') }, // HTTP 请求中其他额外的 form data 
-      success: function (res) {
-        wx.showToast({
-          title: "图片修改成功",
-          icon: 'success',
-          duration: 700
+        // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片  
+        _this.setData({
+          tempFilePaths: res.tempFilePaths
         })
-      },
-      fail: function (res) {
+        var tempFilePath = res.tempFilePaths[0];
+        new AV.File('file-name', {
+          blob: {
+            uri: tempFilePath,
+          },
+        }).save().then(
+          file => console.log(file.url())
+          ).catch(console.error);
       }
     })
   },
@@ -69,13 +43,6 @@ Page({
     })
   },
 
-
-
-
-
-
-
-
   handleChoose(res){
     this.setData({
       address:res.address
@@ -85,6 +52,7 @@ Page({
       longitude: res.longitude
     })
   },
+  
   handleNameChanges(e){
     console.log(e.detail.value)
   },

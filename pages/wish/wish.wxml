@@ -69,7 +69,8 @@
  <textarea bindblur="bindTextAreaBlur" class= 'textarea' placeholder="讲述您的故事"  />
 
 
-<view class="shangchuan" bindtap="choose">  点击添加图片 <image style="width:100%;height:100%;" src="{{tempFilePaths}}"></image>  </view> 
+<button style="margin:30rpx;" bindtap="chooseimage">点击添加图片</button> 
+<image src="{{tempFilePaths }}" mode="aspecFill" style="width: 100%; height: 450rpx"/>   
 
 
 </view>

@@ -1,5 +1,6 @@
 {
       "navigationBarTitleText": "愿望列表",
-      "navigationBarBackgroundColor": "#eee",
-      "navigationBarTextStyle": "black"
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#ff8800",
+        "navigationBarTextStyle": "black"
 }
