@@ -1,13 +1,13 @@
 {
   "pages":[
-"pages/wish/wish",
+    "pages/wish/wish",
     "pages/home/home",
     "pages/mine/mine",
     "pages/adLogin/adLogin",
     "pages/register/register",
-     "pages/detail/detail",
-     "pages/support/support",
-     "pages/verify/verify",
+    "pages/detail/detail",
+    "pages/support/support",
+    "pages/verify/verify",
     "pages/wishList/wishList",
     "pages/appoint/appoint",
     "pages/myXy/myXy",
