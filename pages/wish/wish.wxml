@@ -82,6 +82,6 @@
 <view class = 'success' wx:if="{{success}}">
  <view class='cheer'><icon type="success" size="24"/> 恭喜您提交成功!</view>
  
- <button type = "default" class = 'return' >返回首页</button>
+ <button type = "default" class = 'return' bindtap='return_home'>返回首页</button>
  
  </view>

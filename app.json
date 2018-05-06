@@ -1,8 +1,10 @@
 {
   "pages":[
     "pages/wish/wish",
-    "pages/home/home",
     "pages/mine/mine",
+    
+    "pages/home/home",
+    
     "pages/adLogin/adLogin",
     "pages/register/register",
     "pages/detail/detail",
