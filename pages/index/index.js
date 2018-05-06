@@ -40,7 +40,7 @@ Page({
   },
  f1 :function(event){
     wx.navigateTo({
-      url: '/pages/viewmore/viewmore',
+      url: '/pages/wishList/wishList',
     })
   },
   f2: function(event){

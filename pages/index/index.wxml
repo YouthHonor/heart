@@ -17,7 +17,7 @@
 <!-- 设置心愿墙  和查看更多-->
 
 <view class="block">
-<text type="default" bindtap='f1' class = 'more'>查看更多>> </text>
+<view type="default" bindtap='f1' class = 'more'>查看更多>> </view>
 <view class = 'wall_title'>心愿墙</view>
 </view>
 <!--显示心愿墙里面的各部分组件-->
