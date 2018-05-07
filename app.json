@@ -1,9 +1,10 @@
 {
   "pages":[
+    "pages/home/home",
     "pages/wish/wish",
     "pages/mine/mine",
     
-    "pages/home/home",
+
     
     "pages/adLogin/adLogin",
     "pages/register/register",
