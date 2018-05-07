@@ -4,7 +4,19 @@ Page({
   data:{
     address: "点击选择地址",
     success:  false,
-    tempFilePaths: ''
+    tempFilePaths: '',
+
+    /*提交字段*/
+    xyName:"",
+    xyPhone:"",
+    xyType:"党员",
+    wishType:"个人物质",
+    xyRequest:"",
+    xyDate:"",
+    xyAdd:"",
+    xyDeAdd:"",
+    xyStory:""
+
   },
   staticData: {
 
@@ -45,7 +57,8 @@ Page({
 
   handleChoose(res){
     this.setData({
-      address:res.address
+      address:res.address,
+      xyAdd:res.address 
     });
     Object.assign(this.staticData,{
       latitude: res.latitude,
@@ -54,28 +67,56 @@ Page({
   },
   
   handleNameChanges(e){
-    console.log(e.detail.value)
+    console.log(e.detail.value);
+    var name = e.detail.value;
+    this.setData({
+      xyName:name
+    })
   },
   handleContactChanges(e){
     console.log(e.detail.value)
+    var phone = e.detail.value;
+    this.setData({
+      xyPhone:phone
+    })
 },
   handleServeTypeChanges(e) {
   console.log(e.detail.value)
+  var Type = e.detail.value;
+  this.setData({
+    wishType:Type
+  })
 },
   handleTypeChanges(e) {
     console.log(e.detail.value)
+    var Type = e.detail.value;
+    this.setData({
+      xyType:Type
+    })
 },
   handleMessageChanges(e) {
     console.log(e.detail.value)
+    var request = e.detail.value;
+    this.setData({
+      xyRequest:request
+    })
 },
   handleAddress(e){
     console.log(e.detail.value)
+    var address = e.detail.value;
+    this.setData({
+      xyDeAdd:address
+    })
   },
   bindTextAreaBlur: function (e) {
     console.log(e.detail.value)
+    var story = e.detail.value;
+    this.setData({
+      xyStory:story
+    })
   },
 
-handleSubmit() {
+handleSubmit:function() {
   if (this.data.address === "点击选择地址" || !this.data.address) {
     wx.showToast({
       title: '请输入地址',
@@ -83,7 +124,67 @@ handleSubmit() {
       duration: 2000
     })
     return;
+  } else if(this.data.xyName === "") {
+    wx.showToast({
+      title: '请输入名字',
+      icon: 'loading',
+      duration: 2000
+    })
+    return;
+  } else if(this.data.xyPhone === ""){
+    wx.showToast({
+      title: '请输入联系方式',
+      icon: 'loading',
+      duration: 2000
+    })
+    return;
+  } else if(this.data.xyRequest === ""){
+    wx.showToast({
+      title: '请输入具体需求',
+      icon: 'loading',
+      duration: 2000
+    })
+    return;
+  } else if(this.data.xyDeAdd === ""){
+    wx.showToast({
+      title: '请输入具体需求',
+      icon: 'loading',
+      duration: 2000
+    })
+    return;
+  } else{
+    var that = this;
+    wx.request({
+      url:"http://localhost:8080/wish",
+      method:"POST",
+      header: {
+        "content-type": "application/x-www-form-urlencoded"
+      },
+      data:{
+        xyName:that.data.xyName,
+        xyPhone: that.data.xyPhone,
+        xyType: that.data.xyType,
+        wishType: that.data.wishType,
+        xyRequest:that.data.xyRequest,
+        xyAdd:that.data.xyAdd,
+        xyDeAdd:that.data.xyDeAdd,
+        xyStory:that.data.xyStory,
+        xyDate:that.data.xyDate
+      },            
+      success:function(res){
+        that.setData({
+          success:true
+        });       
+        wx.showToast({
+          title: '许愿成功~',
+          icon: 'loading',
+          duration: 2000
+        })
+      }
+    })
   }
+
+
 },
 
 
@@ -93,7 +194,13 @@ handleSubmit() {
   bindDateChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
-      date: e.detail.value
+      date: e.detail.value,
+      xyDate: e.detail.value
+    })
+  },
+  return_home:function(){
+    wx.switchTab({
+      url: "/pages/home/home",
     })
   },
   onShareAppMessage: function (res) {
