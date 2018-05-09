@@ -15,7 +15,8 @@ Page({
     xyDate:"",
     xyAdd:"",
     xyDeAdd:"",
-    xyStory:""
+    xyStory:"",
+    openId:""
 
   },
   staticData: {
@@ -169,7 +170,8 @@ handleSubmit:function() {
         xyAdd:that.data.xyAdd,
         xyDeAdd:that.data.xyDeAdd,
         xyStory:that.data.xyStory,
-        xyDate:that.data.xyDate
+        xyDate:that.data.xyDate,
+        openId: getApp().globalData.open_id
       },            
       success:function(res){
         that.setData({

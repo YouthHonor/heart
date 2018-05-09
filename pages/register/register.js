@@ -2,10 +2,10 @@ Page({
   data:{
     items:[
       {
-        indentification:'qz',value:'群众',checked:true
+        identification:'群众',value:'群众',checked:true
       },
       {
-        indentification: 'dy', value: '党员'
+        identification: '党员', value: '党员'
       }
     ],
     ycList:[
@@ -55,10 +55,10 @@ Page({
                   "小尖镇", "陈家港镇"]
       },
     ],
-    indentification:'',
-    address:'',
+    /*默认为群众,必须要写，不然值将为空*/
+    identification:'群众',
     ycId:0,
-    stID:0
+    stId:0
   },
   onLoad:function(options){
     this.setData({
@@ -78,13 +78,14 @@ Page({
     })
   },
   radioChange:function(e){
+    console.log(e.detail.value);
     this.setData({
-      indentification:e.detail.value
+      identification:e.detail.value
     })
   },
   form_submit:function(e){
+    console.log(e.detail.value);
     var uname = e.detail.value.uname;
-    var identification = e.detail.value.identification;
     var phoneNumber = e.detail.value.phoneNumber;
     var that = this;
     var warn = "";
@@ -111,14 +112,19 @@ Page({
       })
       return;
     }else{
-      var that = this;
+      console.log(that.data.identification);
       wx.request({
-        url: 'http://loaclhost:8888/index',
+        url: "http://localhost:8080/modify",
+        method:"POST",
+        header: {
+          "content-type": "application/x-www-form-urlencoded"
+        },
         data:{
           zh:uname,
-          sf:identification,
+          sf:that.data.identification,
           hm:phoneNumber,
-          ad:that.data.ycList[that.data.ycId] +" "+ that.data.ycList[that.data.ycId].stLists[that.data.stId]
+          ad:that.data.ycList[that.data.ycId] +" "+ that.data.stList[that.data.ycId].stLists[that.data.stId],
+          openId: getApp().globalData.open_id
         },
         dataType:"JSON",
         success:function(res){

@@ -1,3 +1,5 @@
 {
-  
+  "navigationBarBackgroundColor": "#000000",
+  "navigationBarTitleText": "我的心愿",
+  "navigationBarTextStyle": "white"
 }

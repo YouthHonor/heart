@@ -21,7 +21,8 @@
 }
 
 .tx_win{
-  
+  height: 200rpx;
+  width: 100%;
 }
 
 .tx_img{
@@ -32,7 +33,7 @@
   float:left;
 }
 .pname{
-  margin-left: 100rpx;
+  margin-left: 40rpx;
   float:left;
   margin-top: 100rpx;
   font-size:50rpx;

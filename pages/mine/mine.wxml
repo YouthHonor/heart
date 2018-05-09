@@ -4,7 +4,9 @@
     <view class="info_head">
       <view class="tx_win">
         <image class="tx_img" src="/images/fupin.png"></image>
-      <view class="pname">昵称:小明</view>
+      <view class="pname">
+        <text>昵称:{{user_info[0].uname}}({{user_info[0].identification}})</text>
+      </view>
       </view>
     </view>
     <view class="infoWin">

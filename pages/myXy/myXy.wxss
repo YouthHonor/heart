@@ -1,0 +1,34 @@
+.bg_img{
+  width:100%;
+  height:100%;
+  background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525854131338&di=5a96b85ce8e8de9fd216117d411e2fb0&imgtype=0&src=http%3A%2F%2F58pic.ooopic.com%2F58pic%2F22%2F78%2F72%2F21y58PICzef.jpg)no-repeat;
+  background-size: cover;
+  /*背景模糊*/
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);  
+  -ms-filter: blur(3px);      
+  filter: blur(3px);   
+  /*层叠布局*/
+  z-index: 0;
+  /*相对位置，这样其他view就能用绝对位置覆盖上去*/
+  position: relative;
+}
+
+
+.xy_win{
+  z-index: 999;
+  position: absolute;
+  border: 1px solid rgb(190,198,185);
+  margin:30rpx;
+  top:100rpx;
+  width: 90%;
+  height:700rpx;
+}
+
+.border{
+  border-bottom: 1px solid rgb(190,198,185)
+}
+
+.xy_info{
+  margin-bottom: 40rpx;
+}
