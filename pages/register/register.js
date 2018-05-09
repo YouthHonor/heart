@@ -128,23 +128,19 @@ Page({
         },
         dataType:"JSON",
         success:function(res){
-          if(res==true){
             //修改成功，跳转
-            wx.showModel({
+            wx.showModal({
               title:'修改状态',
               content:"修改成功,页面即将跳转",
               success:function(res){
                 if(res.confirm){
-                  wx.redirectTo({
+                  wx.switchTab({
                     //跳转到主页
-                    url: '/pages/mine?uname='+uname+'&identification='+identification+
-                    '&phoneNumber=' + phoneNumber + '&ycShi=' + that.data.ycList[that.data.ycId]+
-                    '&street=' + that.data.stList[that.data.ycId].stLists[that.data.stId]
+                    url: '/pages/mine/mine'
                   })
                 } 
               }
             })
-          }
         }
       })
     }
