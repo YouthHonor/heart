@@ -1,0 +1,285 @@
+[33mcommit 0bd01ad2222d4c16769acd12a6c3ea3da99a0568[m[33m ([m[1;36mHEAD -> [m[1;32mdev[m[33m, [m[1;31morigin/dev[m[33m)[m
+Merge: 0c7d4bb 36f4eb6
+Author: sunhao <1138298595@qq.com>
+Date:   Wed May 9 14:54:04 2018 +0800
+
+    Merge branch 'dev' of https://github.com/YouthHonor/heart into dev
+
+[33mcommit 0c7d4bbbd8a6456c78ee0535bf1f270ad6998870[m
+Merge: ca53f98 bc4069e
+Author: sunhao <1138298595@qq.com>
+Date:   Wed May 9 14:53:40 2018 +0800
+
+    14:53
+
+[33mcommit 36f4eb6b5b41a5274b8b46140b4dbaa5f28327cd[m
+Author: zhanp <751196943@qq.com>
+Date:   Wed May 9 14:36:38 2018 +0800
+
+    zhanp submit the mine page after completing the server code
+
+[33mcommit ca53f98ffd4d8136591178610d0efb4fba052e9c[m
+Merge: 0a8d52c 09f8b2c
+Author: sunhao <1138298595@qq.com>
+Date:   Mon May 7 23:00:15 2018 +0800
+
+    23.00
+
+[33mcommit bc4069ec177e8642893e3e3a31736dcfedeaecc7[m
+Author: zhanp <751196943@qq.com>
+Date:   Mon May 7 22:50:41 2018 +0800
+
+    zhanp submit app.js after getting open-id
+
+[33mcommit 0a8d52cd123bb4cce768e195d0228356d73115d9[m
+Author: sunhao <1138298595@qq.com>
+Date:   Sun May 6 21:02:08 2018 +0800
+
+    sunhao21.02
+
+[33mcommit 09f8b2c1fd5f25b85c71b4ccbd8e0c07d1ec09d5[m
+Author: zhanp <751196943@qq.com>
+Date:   Sun May 6 16:13:54 2018 +0800
+
+    zhanp submit the wish page after testing the java server
+
+[33mcommit cc18d227e470ddc3b24a4a989f30df555128d871[m
+Author: gh <18662225601@163.com>
+Date:   Fri May 4 17:30:23 2018 +0800
+
+    gh
+
+[33mcommit c6aa6637fbeff3d6381069f333f6a822f1d15ea9[m
+Author: sunhao <1138298595@qq.com>
+Date:   Thu May 3 21:00:46 2018 +0800
+
+    sunhao21:00
+
+[33mcommit 8a5243bc8cd3a8355a732db3e3228672a13a49f5[m
+Merge: f2ea26e eb19678
+Author: sunhao <1138298595@qq.com>
+Date:   Wed May 2 21:46:01 2018 +0800
+
+    sun52
+
+[33mcommit f2ea26e0ce0b2fc6366ec94ad4f12b529bba08d6[m
+Author: sunhao <1138298595@qq.com>
+Date:   Wed May 2 21:29:01 2018 +0800
+
+    sunhao21:28
+
+[33mcommit 12f0d3945edddfa4f6dc8cb2134f28cfa7cfbfaa[m
+Merge: 987a151 0029411
+Author: sunhao <1138298595@qq.com>
+Date:   Wed May 2 21:22:55 2018 +0800
+
+    sunhao21:22
+
+[33mcommit eb1967828c977541f763b850d945ea7bdecef643[m
+Author: gh <18662225601@163.com>
+Date:   Wed May 2 19:46:04 2018 +0800
+
+    gh
+
+[33mcommit 94d36fe7e062a85cfd834ee475e299f34df9a811[m
+Merge: 56251eb 0029411
+Author: gh <18662225601@163.com>
+Date:   Wed May 2 19:42:43 2018 +0800
+
+    gh
+
+[33mcommit 987a1512c3b833b63c24845fa1d1a3e85ac373e9[m
+Author: sunhao <1138298595@qq.com>
+Date:   Wed May 2 19:36:49 2018 +0800
+
+    sunhao19:36
+
+[33mcommit 56251eb75413b2632fce4c2b572e730134a7b27a[m
+Author: gh <18662225601@163.com>
+Date:   Wed May 2 15:08:37 2018 +0800
+
+    gh
+
+[33mcommit 0029411780fe2e9fc00e76ede1fa3eabc7f4ae7b[m
+Merge: ff862f8 bdd1853
+Author: zhanp <751196943@qq.com>
+Date:   Wed May 2 15:07:30 2018 +0800
+
+    zhanp submit mine page secondly
+
+[33mcommit ff862f849bc6a48520be6249b2ad0c5ac3b09e70[m
+Author: zhanp <751196943@qq.com>
+Date:   Wed May 2 15:03:58 2018 +0800
+
+    zhanp subbmit  mine page successfully
+
+[33mcommit 32f4af18c6d2a9666806876418a9b793020a90ec[m
+Author: zhanp <751196943@qq.com>
+Date:   Wed May 2 12:59:36 2018 +0800
+
+    zhanp submit adLogin page
+
+[33mcommit bdd18535fb96e5bfe69b8afeee22b730a135c60d[m
+Merge: 46d7764 90d72ff
+Author: sunhao <1138298595@qq.com>
+Date:   Wed May 2 12:17:14 2018 +0800
+
+    sunhao52
+
+[33mcommit 46d7764bf57820b0d9f10ddb962ef6b97d0f2c80[m
+Author: sunhao <1138298595@qq.com>
+Date:   Wed May 2 11:42:59 2018 +0800
+
+    sh52
+
+[33mcommit 90d72fff2537b439f28a5ef4dd2a709d5c4ab42c[m
+Merge: 4dbe850 3852ef5
+Author: zhanp <751196943@qq.com>
+Date:   Tue May 1 23:46:05 2018 +0800
+
+    zhanp submit stupidly
+
+[33mcommit 4dbe8508eb6469a671fd9993fa25eb342ee9a0d7[m
+Author: zhanp <751196943@qq.com>
+Date:   Tue May 1 23:29:54 2018 +0800
+
+    zhanp try to solve the problem 5.1 23:29
+
+[33mcommit 3852ef57c51b0dce61d20aa3ba6a9ebe1de25f5d[m
+Merge: 3c78aed dcafef9
+Author: gh <18662225601@163.com>
+Date:   Tue May 1 21:35:56 2018 +0800
+
+    gh new
+
+[33mcommit dcafef92d9c6677c9c425adfaf9e865f17c7d19d[m
+Author: sunhao <1138298595@qq.com>
+Date:   Tue May 1 21:23:55 2018 +0800
+
+    sh1
+
+[33mcommit 3c78aed921c023f52a571deb6b7417389e8c1e03[m
+Merge: a3156df ea59462
+Author: gh <18662225601@163.com>
+Date:   Tue May 1 21:22:15 2018 +0800
+
+    gh
+
+[33mcommit 61bd833f93fc857bfb7f42d36d0031c1d04b916e[m
+Merge: a68451b 495aa65
+Author: zhanp <751196943@qq.com>
+Date:   Tue May 1 19:38:28 2018 +0800
+
+    zhanp submmit third
+
+[33mcommit a68451b9264d9bc0a0aff3852badd7f9909a2f43[m
+Author: zhanp <751196943@qq.com>
+Date:   Tue May 1 19:34:56 2018 +0800
+
+    zhanp submmit verify page
+
+[33mcommit 495aa6564f94f24d83c6b0252a80bcd3b632c6f9[m
+Merge: 7ed9a92 7be8823
+Author: sunhao <1138298595@qq.com>
+Date:   Tue May 1 19:27:39 2018 +0800
+
+    Merge branch 'sh' into dev
+
+[33mcommit 7be8823f53885e40e1512cb388ef0405054f9d31[m
+Author: sunhao <1138298595@qq.com>
+Date:   Tue May 1 19:27:19 2018 +0800
+
+    sh new
+
+[33mcommit 7ed9a92a5cc65f23d66b92fa13f7df42a1f7f6d1[m
+Author: sunhao <1138298595@qq.com>
+Date:   Tue May 1 19:06:34 2018 +0800
+
+    sh tuo
+
+[33mcommit 5c6dbc42e7002f036899fab4215774cb13af4c7c[m
+Author: sunhao <1138298595@qq.com>
+Date:   Tue May 1 19:05:02 2018 +0800
+
+    sh first
+
+[33mcommit a3156df32dca3561410a973e3f58947037591a93[m
+Author: gh <18662225601@163.com>
+Date:   Tue May 1 15:06:10 2018 +0800
+
+    gh test
+
+[33mcommit ea59462e58336f050041dd6067cc06044ee11c90[m
+Merge: bc4b773 d3171a7
+Author: zhanp <751196943@qq.com>
+Date:   Tue May 1 15:02:20 2018 +0800
+
+    zhanp+=gh
+
+[33mcommit bc4b77335c44c2be768d0bb79a0d84639fdf4f65[m
+Author: zhanp <751196943@qq.com>
+Date:   Tue May 1 14:58:20 2018 +0800
+
+    zhanp second submit
+
+[33mcommit 9d55a8c939569a2e0b03b4e44e90da5c52896282[m
+Author: zhanp <751196943@qq.com>
+Date:   Mon Apr 30 15:00:19 2018 +0800
+
+    zhanp established the page of /register(modify personal info)
+
+[33mcommit d3171a7a04896636157a7e8628aac32dbd0324ea[m
+Merge: a60c7e9 66ee6d6
+Author: gh <18662225601@163.com>
+Date:   Mon Apr 30 14:29:50 2018 +0800
+
+    gh
+
+[33mcommit a60c7e9718d8a103e34d319be671fea1c9ea015e[m
+Author: gh <18662225601@163.com>
+Date:   Mon Apr 30 14:27:10 2018 +0800
+
+    gh
+
+[33mcommit 66ee6d6656b315fafe57c1100cbb739161fe08db[m
+Author: gh <18662225601@163.com>
+Date:   Mon Apr 30 14:26:28 2018 +0800
+
+    gh
+
+[33mcommit ca6b125522be8eb8b676141617263c1557f4ee02[m
+Author: gh <18662225601@163.com>
+Date:   Mon Apr 30 13:56:38 2018 +0800
+
+    gh+=zp 2
+
+[33mcommit cf7ed098e848892b9d96d502eee34cbcfd096e1f[m
+Merge: 0358ce3 1047b8e
+Author: gh <18662225601@163.com>
+Date:   Mon Apr 30 13:51:46 2018 +0800
+
+    gh+=zp
+
+[33mcommit 0358ce351369d45821214e48881f2cfb3b691f55[m
+Author: gh <18662225601@163.com>
+Date:   Mon Apr 30 13:42:29 2018 +0800
+
+    gh basic
+
+[33mcommit 1047b8edfb71a9e7fc2305494e6bd6e30cd926fe[m
+Author: zhanp <751196943@qq.com>
+Date:   Mon Apr 30 10:44:15 2018 +0800
+
+    add four basic files
+
+[33mcommit 788d94aae99abb7ba0c2968f11f9f8e89512a8e2[m
+Author: zhanp <751196943@qq.com>
+Date:   Mon Apr 30 10:31:00 2018 +0800
+
+    zhanp add project.config.json
+
+[33mcommit 0329ec9cb58bc8b4b8fc816f604527898fe4c543[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Author: YouthHonor <571367333@qq.com>
+Date:   Sun Apr 29 21:44:15 2018 +0800
+
+    Initial commit

@@ -23,6 +23,7 @@ Page({
 
 
   },
+  
   chooseimage: function () {
     var _this = this;
     wx.chooseImage({

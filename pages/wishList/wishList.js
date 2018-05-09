@@ -1,6 +1,6 @@
 Page({
     data:{
-      tabTxt: ['心愿对象', '心愿形式', '地区', '认领状态'],//tab文案
+      tabTxt: ['显示全部', '心愿形式', '地区', '认领状态'],//tab文案
       tab: [true, true, true, true],
       record:[
         {
@@ -71,7 +71,49 @@ Page({
       wishObjectIndex:0,
       wishMethodIndex:0,
       areaIndex:0,
-      statusIndex:0
+      statusIndex:0,
+      area:[
+        {
+          areaname:"亭湖区",
+          tabid:"filter5"
+        },
+        {
+          areaname: "盐都区",
+          tabid: "filter6"
+        },
+        {
+          areaname: "大丰区",
+          tabid: "filter7"
+        },
+        {
+          areaname: "东台市",
+          tabid: "filter8"
+        },
+        {
+          areaname: "建湖区",
+          tabid: "filter9"
+        },
+        {
+          areaname: "射阳县",
+          tabid: "filter10"
+        },
+        {
+          areaname: "阜宁县",
+          tabid: "filter11"
+        },
+        {
+          areaname: "滨海县",
+          tabid: "filter12"
+        },
+        {
+          areaname: "响水县",
+          tabid: "filter13"
+        }
+      ]
+
+    },
+    state:function(){
+
     },
     bindPickerChange1: function (e) {
         console.log(e)
@@ -141,6 +183,7 @@ Page({
           });
       }
     },
+    
     onShareAppMessage: function (res) {
       if (res.from === 'button') {
         // 来自页面内转发按钮
@@ -157,5 +200,229 @@ Page({
         }
       }
     },
+    filter1 :function(){
+      wx:wx.request({
+        url: '',
+        data: '',
+        header: {},
+        method: 'GET',
+        dataType: 'json',
+        responseType: 'text',
+        success: function(res) {},
+        fail: function(res) {},
+        complete: function(res) {},
+      })
+    },
+    filter2: function () {
+      wx: wx.request({
+        url: '',
+        data: '',
+        header: {},
+        method: 'GET',
+        dataType: 'json',
+        responseType: 'text',
+        success: function (res) { },
+        fail: function (res) { },
+        complete: function (res) { },
+      })
+    },
+    filter3: function () {
+      wx: wx.request({
+        url: '',
+        data: '',
+        header: {},
+        method: 'GET',
+        dataType: 'json',
+        responseType: 'text',
+        success: function (res) { },
+        fail: function (res) { },
+        complete: function (res) { },
+      })
+    },
+    filter4: function () {
+      wx: wx.request({
+        url: '',
+        data: '',
+        header: {},
+        method: 'GET',
+        dataType: 'json',
+        responseType: 'text',
+        success: function (res) { },
+        fail: function (res) { },
+        complete: function (res) { },
+      })
+    },
+    filter5: function () {
+      wx: wx.request({
+        url: '',
+        data: '',
+        header: {},
+        method: 'GET',
+        dataType: 'json',
+        responseType: 'text',
+        success: function (res) { },
+        fail: function (res) { },
+        complete: function (res) { },
+      })
+    },
+    filter6: function () {
+      wx: wx.request({
+        url: '',
+        data: '',
+        header: {},
+        method: 'GET',
+        dataType: 'json',
+        responseType: 'text',
+        success: function (res) { },
+        fail: function (res) { },
+        complete: function (res) { },
+      })
+    },
+    filter7: function () {
+      wx: wx.request({
+        url: '',
+        data: '',
+        header: {},
+        method: 'GET',
+        dataType: 'json',
+        responseType: 'text',
+        success: function (res) { },
+        fail: function (res) { },
+        complete: function (res) { },
+      })
+    },
+    filter8: function () {
+      wx: wx.request({
+        url: '',
+        data: '',
+        header: {},
+        method: 'GET',
+        dataType: 'json',
+        responseType: 'text',
+        success: function (res) { },
+        fail: function (res) { },
+        complete: function (res) { },
+      })
+    },
+    filter9: function () {
+      wx: wx.request({
+        url: '',
+        data: '',
+        header: {},
+        method: 'GET',
+        dataType: 'json',
+        responseType: 'text',
+        success: function (res) { },
+        fail: function (res) { },
+        complete: function (res) { },
+      })
+    },
+    filter10: function () {
+      wx: wx.request({
+        url: '',
+        data: '',
+        header: {},
+        method: 'GET',
+        dataType: 'json',
+        responseType: 'text',
+        success: function (res) { },
+        fail: function (res) { },
+        complete: function (res) { },
+      })
+    },
+    filter11: function () {
+      wx: wx.request({
+        url: '',
+        data: '',
+        header: {},
+        method: 'GET',
+        dataType: 'json',
+        responseType: 'text',
+        success: function (res) { },
+        fail: function (res) { },
+        complete: function (res) { },
+      })
+    },
+    filter12: function () {
+      wx: wx.request({
+        url: '',
+        data: '',
+        header: {},
+        method: 'GET',
+        dataType: 'json',
+        responseType: 'text',
+        success: function (res) { },
+        fail: function (res) { },
+        complete: function (res) { },
+      })
+    },
+    filter13: function () {
+      wx: wx.request({
+        url: '',
+        data: '',
+        header: {},
+        method: 'GET',
+        dataType: 'json',
+        responseType: 'text',
+        success: function (res) { },
+        fail: function (res) { },
+        complete: function (res) { },
+      })
+    },
+    filter14: function () {
+      wx: wx.request({
+        url: '',
+        data: '',
+        header: {},
+        method: 'GET',
+        dataType: 'json',
+        responseType: 'text',
+        success: function (res) { },
+        fail: function (res) { },
+        complete: function (res) { },
+      })
+    },
+    filter15: function () {
+      wx: wx.request({
+        url: '',
+        data: '',
+        header: {},
+        method: 'GET',
+        dataType: 'json',
+        responseType: 'text',
+        success: function (res) { },
+        fail: function (res) { },
+        complete: function (res) { },
+      })
+    },
+    filter16: function () {
+      wx: wx.request({
+        url: '',
+        data: '',
+        header: {},
+        method: 'GET',
+        dataType: 'json',
+        responseType: 'text',
+        success: function (res) { },
+        fail: function (res) { },
+        complete: function (res) { },
+      })
+    },
+    filter17: function () {
+      wx: wx.request({
+        url: '',
+        data: '',
+        header: {},
+        method: 'GET',
+        dataType: 'json',
+        responseType: 'text',
+        success: function (res) { },
+        fail: function (res) { },
+        complete: function (res) { },
+      })
+    },
+    showall :function(event){
+      
+    }
 
 })

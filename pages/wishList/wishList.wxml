@@ -4,31 +4,27 @@
 		<image src="/images/下拉.png"></image>
 	</view>
 </view>
-<view class="tabLayer tc text" hidden="{{tab[0]}}">
-	<text class="" data-id="0" data-index="0" data-txt="心愿对象" bindtap="filter1">个人</text>
-  	<text class="" data-id="0" data-index="0" data-txt="心愿对象" bindtap="filter2">团体</text>
-    	<text class="" data-id="0" data-index="0" data-txt="心愿对象" bindtap="filter3">公众</text>
-	<text class="" wx:for="{{filterList.space_list}}" wx:key="" data-id="{{item.id}}" data-index="0" data-txt="{{item.name}}" bindtap="filter">{{item.name}}</text>
+<view bindtap = "showall" class="tabLayer tc text" hidden="{{tab[0]}}">
 </view>
 
 <view class="tabLayer tc text" hidden="{{tab[1]}}">
-	<text class="{{house_type==0?'active':''}}" data-id="0" data-index="0" data-txt="心愿形式" bindtap="filter">精神</text>
-  	<text class="" data-id="0" data-index="0" data-txt="心愿形式" bindtap="filter">物质</text>
+	<text class="{{house_type==0?'active':''}}" data-id="0" data-index="0" data-txt="心愿形式" bindtap="filter3">个人物质</text>
+  	<text class="" data-id="0" data-index="0" data-txt="心愿形式" bindtap="filter4">个人服务</text>
 	<text class="" wx:for="{{filterList.space_list}}" wx:key="" data-id="{{item.id}}" data-index="0" data-txt="{{item.name}}" bindtap="filter">{{item.name}}</text>
 </view>
 
 <view class="tabLayer tc text" hidden="{{tab[2]}}">
-	<text class="" data-id="0" data-index="0" data-txt="地区" 
-  bindtap="filter">亭湖区</text>
-  	<text class="" data-id="0" data-index="0" data-txt="地区" bindtap="filter">亭湖新区</text>
+	<text wx:for ="{{area}}" class="" data-id="0" data-index="0" data-txt="地区" 
+  bindtap="{{item.tapid}}">{{item.areaname}}</text>
+  
 	<text class="" wx:for="{{filterList.space_list}}" wx:key="" data-id="{{item.id}}" data-index="0" data-txt="{{item.name}}" bindtap="filter">{{item.name}}</text>
 </view>
 
 <view class="tabLayer tc text" hidden="{{tab[3]}}">
-	<text class="" data-id="0" data-index="0" data-txt="认领状态" bindtap="filter">未认领</text>
-  	<text class="" data-id="0" data-index="0" data-txt="认领状态" bindtap="filter">已认领</text>
-    	<text class="" data-id="0" data-index="0" data-txt="认领状态" bindtap="filter">确认实现待审核</text>
-      	<text class="" data-id="0" data-index="0" data-txt="认领状态" bindtap="filter">已完成</text>
+	<text class="" data-id="0" data-index="0" data-txt="认领状态" bindtap="filter14">未认领</text>
+  	<text class="" data-id="0" data-index="0" data-txt="认领状态" bindtap="filter15">已认领</text>
+    	<text class="" data-id="0" data-index="0" data-txt="认领状态" bindtap="filter16">确认实现待审核</text>
+      	<text class="" data-id="0" data-index="0" data-txt="认领状态" bindtap="filter17">已完成</text>
 	<text class="" wx:for="{{filterList.space_list}}" wx:key="" data-id="{{item.id}}" data-index="0" data-txt="{{item.name}}" bindtap="filter">{{item.name}}</text>
 </view>
 
@@ -44,7 +40,9 @@
           <view>星愿类型：{{item.wishType}}</view>
           <view>星愿发布时间：{{item.date}}</view>
           <view>所属街道：{{item.address}}</view>
+          <view class='zhuangtai' bindtap='state'>认领</view>
         </view>
       </view>
     </scroll-view>
+    
 </view>
