@@ -28,7 +28,7 @@
 }
 .info-input{
   height: 100rpx;
-  margin-left: 250rpx;
+  margin-left: 200rpx;
   color: #777;
 }
 .textarea{

@@ -60,7 +60,7 @@
 <view class='row'>
 <label class='title' > 详细地址 </label>
 <view class='info'>
-<input  class= 'info-input' bindinput = "handleAddress" placeholder="填写您的详细地址" />
+<input  class= 'info-input' bindinput = "handleAddress" placeholder="街道地址请去个人信息里填写" />
 </view>
 </view>
 <view class='row'>

@@ -1,3 +1,26 @@
 <view class="page">
-  <text>{{myXy}}</text>
+  <view class="bg_img">
+  </view>
+  <view class="xy_win">
+    <view wx:for="{{myXy_info}}" wx:if="{{!isNull}}" class="xy_info">
+      <view class="border">
+        <text>许愿人: {{item.xyName}}</text>
+      </view>
+      <view class="border">
+        <text>许愿电话: {{item.xyPhone}}</text>
+      </view>
+      <view class="border">
+        <text>许愿人身份: {{item.xyType}}</text>
+      </view>
+      <view class="border">
+        <text>许愿需求: {{item.xyRequest}}</text>
+      </view>
+      <view class="border">
+        <text>许愿日期: {{item.xyDate}}</text>
+      </view>
+      <view class="border">
+        <text>审核状态: {{item.xyFlag}}</text>
+      </view>
+    </view>
+  </view>
 </view>

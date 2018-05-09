@@ -1,24 +1,27 @@
 Page({
   data:{
-
+    user_info:[]
   },
-  uname:"小明",
-  /*
+
   onLoad:function(options){
     var that = this;
     wx.request({
-      url:"",
-      header:{
-        "Content-Type":"json"
+      url:"http://localhost:8080/mine",
+      data:{
+        openId:getApp().globalData.open_id
+      },
+      method:"POST",
+      header: {
+        "content-type": "application/x-www-form-urlencoded"
       },
       success:function(res){
         that.setData({
-          uname:res.data.uname
+          user_info:res.data
         })
       }
     })
-  }
-  */
+  },
+
   bindAppointment:function(){
     wx.navigateTo({
       url: '/pages/appoint/appoint',

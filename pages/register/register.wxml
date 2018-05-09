@@ -17,7 +17,7 @@
             <view class="pas_text left mright">身份</view>
               <view class="radio_view left">
                   <radio-group class="radio_group" bindchange="radioChange">
-                    <radio class="radio" wx:for="{{items}}" wx:key="identification" value="{{item.identification}}" checked="{{item.checked}}">
+                    <radio class="radio" wx:for="{{items}}" wx:key="identification" name="identification" value="{{item.identification}}" checked="{{item.checked}}">
                       <text>{{item.value}}</text>
                     </radio>
                   </radio-group>
