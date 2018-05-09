@@ -54,6 +54,7 @@ Page({
       reportdetail : rede
     }) 
   },
+  
 
 
   handleSubmit(){

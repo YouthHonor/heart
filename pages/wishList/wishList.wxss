@@ -6,6 +6,7 @@
   height:250rpx;
   margin-top: 50rpx;
   margin-left: 50rpx;
+  border-bottom: 5px solid #efeff3;
 }
 
 .menu{
@@ -13,11 +14,11 @@ background-color: yellowgreen;
 }
 .image{
   width:200rpx;
-  height:200rpx;
-  float:left
+  height:240rpx;
+  float:left;
 }
 .item_word{
-  float:left
+  float:left;
 }
 
 .tabTit{
@@ -76,4 +77,12 @@ width:26rpx;
 height:26rpx;
 vertical-align: middle;
 margin-left: 5px;
+}
+.zhuangtai{
+  float: right;
+ background-color: #00ff00;
+ width: 150rpx;
+ height:50rpx;
+ border-radius: 10rpx;
+ text-align: center;
 }
