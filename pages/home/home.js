@@ -2,7 +2,7 @@
 Page({
 
   onLoad: function (options) {
-  
+    
   },
   f1: function(){
     wx.navigateTo({

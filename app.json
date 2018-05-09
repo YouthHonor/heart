@@ -1,11 +1,10 @@
 {
   "pages":[
-    "pages/home/home",
+    "pages/report/report",
     "pages/wish/wish",
-
+     "pages/home/home",
     "pages/mine/mine",
-    
-    
+
     "pages/adLogin/adLogin",
     "pages/register/register",
     "pages/detail/detail",
@@ -16,7 +15,7 @@
     "pages/myXy/myXy",
     "pages/pick/pick",
     "pages/about/about",
-    "pages/report/report",
+    
     "pages/index/index"
     
   ],

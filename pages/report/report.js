@@ -19,30 +19,52 @@ Page({
         name: '其他'
       }
     ],
-    success: false
+    success: false,
+
+    reporttype:"匿名",
+    reportcase: "",
+    reportdetail:""
+  
     
   },
   staticData :{
     
   },
   bindPickerChange: function (e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
+    console.log( e.detail.value)
+    var recase = e.detail.value;
     this.setData({
-      index: e.detail.value
+       reportcase : recase
     })
    
 
 },
   radioChange: function (e) {
     console.log( e.detail.value)
+    var rety = e.detail.value
+    this.setData({
+      reporttype : rety
+    }) 
+
   },
   bindTextAreaBlur: function (e) {
     console.log(e.detail.value)
+    var rede = e.detail.value
+    this.setData({
+      reportdetail : rede
+    }) 
   },
+
+
   handleSubmit(){
     console.log(123)
   },
    
+
+
+
+
+
 
 
 
