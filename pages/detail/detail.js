@@ -25,8 +25,13 @@ Page({
       header: {
         "content-type": "application/x-www-form-urlencoded"
       },
+      data:{
+        xyId:detailId
+      },
       success:function(res){
-        detail_info = res.data;
+        that.setData({
+          detail_info:res.data
+        })
       }
     })
   }

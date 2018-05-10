@@ -42,3 +42,25 @@
   float: left;
   margin-left: 20rpx;
 }
+
+.info{
+  width: 500rpx;
+  height: 100rpx;
+  float:left;
+  margin-left: 20rpx;
+  font-size: 30rpx;
+}
+
+.info_story{
+  margin-left: 20rpx;
+  font-size: 30rpx;
+  text-align: left;
+}
+
+.title{
+  float:left;
+}
+
+.story_win{
+  height: 90rpx;
+}

@@ -39,7 +39,7 @@
           <view>{{item.xyRequest}}</view>
           <view>心愿类型：{{item.wishType}}</view>
           <view>心愿发布时间：{{item.xyDate}}</view>
-          <view>所属街道：{{item.street}}</view>
+          <view>所属街道：{{item.xyStreet}}</view>
           <view class='zhuangtai' bindtap='state' wx:if="{{item.xyFlag === 'true'?true:false}}">已认领</view>
           <view class='zhuangtai'  wx:if="{{item.xyFlag === 'true'?false:true}}">认领</view>
         </view>
