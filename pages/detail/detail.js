@@ -1,4 +1,7 @@
 Page({
+  data:{
+    detail_info:[]
+  },
   
   support: function () {
     wx.navigateTo({
@@ -12,5 +15,19 @@ Page({
   },
   onShareAppMessage: function () {
     
+  },
+  onLoad:function(options){
+    var detailId = options.detailId;
+    var that = this;
+    wx.request({
+      url: 'http://localhost:8080/detail',
+      method:"POST",
+      header: {
+        "content-type": "application/x-www-form-urlencoded"
+      },
+      success:function(res){
+        detail_info = res.data;
+      }
+    })
   }
 })

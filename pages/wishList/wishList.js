@@ -2,68 +2,8 @@ Page({
     data:{
       tabTxt: ['显示全部', '心愿形式', '地区', '认领状态'],//tab文案
       tab: [true, true, true, true],
-      record:[
-        {
-          name:"江展鹏",
-          phonoNumber:12345678901,
-          wishPeopleType:"党员",
-          wishType:"个人物质",
-          specificNeeds:"我要一个手办",
-          date:"2011-1-1",
-          address:"m78星云",
-          story:"我来自m78星云 ，我想要一个凹凸曼手办"
-        },
-        {
-          name: "江展鹏3号",
-          phonoNumber: 12345678901,
-          wishPeopleType: "党员",
-          wishType: "个人物质",
-          specificNeeds: "我要一个面包",
-          date: "2012-1-1",
-          address: "m78星云",
-          story: "我来自m78星云 ，我想要一个凹凸曼手办"
-        },
-        {
-          name: "江展鹏2号",
-          phonoNumber: 12345678901,
-          wishPeopleType: "党员",
-          wishType: "个人物质",
-          specificNeeds: "我要一个奶酪",
-          date: "2014-1-1",
-          address: "m78星云",
-          story: "我来自m78星云 ，我想要一个凹凸曼手办"
-        },
-        {
-          name: "江展鹏2号",
-          phonoNumber: 12345678901,
-          wishPeopleType: "党员",
-          wishType: "个人物质",
-          specificNeeds: "我要一个奶酪",
-          date: "2014-1-1",
-          address: "m78星云",
-          story: "我来自m78星云 ，我想要一个凹凸曼手办"
-        },
-        {
-          name: "江展鹏2号",
-          phonoNumber: 12345678901,
-          wishPeopleType: "党员",
-          wishType: "个人物质",
-          specificNeeds: "我要一双袜子",
-          date: "2014-1-1",
-          address: "m78星云",
-          story: "我来自m78星云 ，我想要一个凹凸曼手办"
-        },
-        {
-          name: "江展鹏2号",
-          phonoNumber: 12345678901,
-          wishPeopleType: "党员",
-          wishType: "个人物质",
-          specificNeeds: "我要一个奶酪",
-          date: "2014-1-1",
-          address: "地球",
-          story: "我来自m78星云 ，我想要一个凹凸曼手办"
-        }
-      ],
+      record:[],
+
       wishObjectList:["心愿对象▽","个人","团体","公众"],
       wishMethodList: ["心愿形式▽","精神","物质"],
       areaList: ["地区▽"],
@@ -423,6 +363,29 @@ Page({
     },
     showall :function(event){
       
+    },
+
+    onLoad:function(options){
+      var that = this;
+      wx.request({
+        url: 'http://localhost:8080/query',
+        method:"POST",
+        header: {
+          "content-type": "application/x-www-form-urlencoded"
+        },
+        success:function(res){
+          that.setData({
+            record:res.data
+          })
+        }
+      })
+      
+    },
+    jmpToDetail:function(event){
+      var detailId = event.currentTarget.dataset.detailId;
+      wx.navigateTo({
+        url: '/pages/detail/detail?detailId='+detailId,
+      })
     }
 
 })

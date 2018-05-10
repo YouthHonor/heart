@@ -19,6 +19,7 @@ background-color: yellowgreen;
 }
 .item_word{
   float:left;
+  width:472rpx;
 }
 
 .tabTit{
@@ -80,7 +81,7 @@ margin-left: 5px;
 }
 .zhuangtai{
   float: right;
- background-color: #00ff00;
+ background-color: #F0E68C;
  width: 150rpx;
  height:50rpx;
  border-radius: 10rpx;
