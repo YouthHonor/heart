@@ -30,3 +30,14 @@
   text-align: center;
   color: #fff;
 }
+.cheer{
+  text-align: center;
+  line-height: 400rpx;
+  font-size: 60rpx;
+  position: relative;
+}
+
+.success{
+  background: #ffffff;
+
+}

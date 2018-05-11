@@ -9,8 +9,8 @@ Page({
     xyId:"",
     pickName:"",
     pickPhone:"",
-    pickDate:"",
-    date:""
+    date:"",
+    success:false
   },
 
   /**
@@ -82,6 +82,7 @@ Page({
     })
   },
   handleSubmit:function(){
+    var that = this;
     wx.request({
       url: 'http://localhost:8080/pick',
       method: "POST",
@@ -92,8 +93,25 @@ Page({
         xyId:that.data.xyId,
         pickName:that.data.pickName,
         pickPhone:that.data.pickPhone,
-        date:that.data.date
+        date:that.data.date,
+        openId: getApp().globalData.open_id
+        
+      },
+      success:function(res){
+        that.setData({
+          success:true
+        })
+        wx.showToast({
+          title: '认领成功~',
+          icon: 'loading',
+          duration: 2000
+        })
       }
+    })
+  },
+  return_home:function(){
+    wx.switchTab({
+      url: '/pages/wishList/wishList'
     })
   }
 })

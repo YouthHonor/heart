@@ -1,29 +1,37 @@
+<view wx:if="{{!success}}">
+  <view class='row'>
+  <label class='title'> 参与人姓名 </label>
+  <view class='info'>
+    <input  class= 'info-input' bindinput="handleNameChanges" placeholder="填写您的姓名" />
+  </view>
+  </view>
+  <view class='row'>
+  <label class='title'> 联系方式 </label>
+  <view class='info'>
+  <input  class= 'info-input' bindinput = "handleContactChanges" placeholder="填写您的联系方式" />
+  </view>
+  </view>
+  <view class='row'>
+  <label class='title'> 参与日期 </label>
+  <view class='info'>
+  <view class="section">
+    <view class="section__title"></view>
+    <picker mode="date" value="{{date}}" start="2018-01-01" end="2030-01-01" bindchange="bindDateChange">
+      <view class="picker">
+            ：{{date}}
+      </view>
+    </picker>
+  </view>
+  </view>
+  </view>
 
-<view class='row'>
-<label class='title'> 参与人姓名 </label>
- <view class='info'>
-  <input  class= 'info-input' bindinput="handleNameChanges" placeholder="填写您的姓名" />
- </view>
- </view>
- <view class='row'>
-<label class='title'> 联系方式 </label>
- <view class='info'>
- <input  class= 'info-input' bindinput = "handleContactChanges" placeholder="填写您的联系方式" />
- </view>
-</view>
-<view class='row'>
-<label class='title'> 参与日期 </label>
- <view class='info'>
- <view class="section">
-  <view class="section__title"></view>
-  <picker mode="date" value="{{date}}" start="2018-01-01" end="2030-01-01" bindchange="bindDateChange">
-    <view class="picker">
-          ：{{date}}
-    </view>
-  </picker>
-</view>
- </view>
+  <view class='submit-button' bindtap='handleSubmit'>提交</view>
 </view>
 
-<view class='submit-button' bindtap='handleSubmit'>提交</view>
+<view class = 'success' wx:if="{{success}}">
+ <view class='cheer'><icon type="success" size="24"/> 恭喜您提交成功!</view>
+ 
+ <button type = "default" class = 'return' bindtap='return_home'>返回首页</button>
+ 
+ </view>
 
