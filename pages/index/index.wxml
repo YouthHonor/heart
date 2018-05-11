@@ -1,4 +1,4 @@
-<view class ='title'>新高苑第三居民区</view>
+<view class ='title'>亭湖区</view>
   <view class ='items-list'>
   <image bindtap='f2' class = 'btn_wish'  src ='/images/许愿.png' ></image>
        <view class ='pro_phone'>
@@ -18,46 +18,22 @@
 
 <view class="block">
 <view type="default" bindtap='f1' class = 'more'>查看更多>> </view>
-<view class = 'wall_title'>心愿墙</view>
+<view class = 'wall_title'>心愿地图</view>
 </view>
 <!--显示心愿墙里面的各部分组件-->
-<view class ='serve' >
-<view class='f3'>
-<image class='f3_1' src='/images/政府.png'></image>
-<view bindtap='government' class = 'f3_2'>政府服务</view>
+<view class='map_view'>
+<map  id="map" class ='map'  show-location controls="{{controls}}" bindcontroltap="controltap" longitude="{{ longitude}}" latitude="{{latitude}}" scale="14"
+ style="width: 100%; height: 450rpx;">
+</map>
+
 </view>
-<view class='f4'>
-<image class='f3_1' src='/images/健康达人.png'></image>
-<view class = 'f3_2'>健康服务</view>
-</view>
-<view class='f5'>
-<image class='f3_1' src='/images/生活.png'></image>
-<view class = 'f3_2'>生活服务</view>
-</view>
-<view class='f6'>
-<image class='f3_1' src='/images/文化.png'></image>
-<view class = 'f3_2'>文化服务</view>
-</view>
-</view>
-<view class ='serve' >
-<view class='f3'>
-<image class='f3_1' src='/images/法律.png'></image>
-<view class = 'f3_2'>法律服务</view>
-</view>
-<view class='f4'>
-<image class='f3_1' src='/images/党群.png'></image>
-<view class = 'f3_2'>党群服务</view>
-</view>
-<view class='f5'>
-<image class='f3_1' src='/images/社会.png'></image>
-<view class = 'f3_2'>社会服务</view>
-</view>
-<view class='f6'>
-<image class='f3_1' src='/images/特色.png'></image>
-<view class = 'f3_2'>特色服务</view>
-</view>
-</view>
-<view class="divLine"></view>
+
+
+
+
+
+
+<view class="divLine2"></view>
 
 <swiper indicator-dots="ture"
   autoplay="ture" interval="5000" duration="{{duration}}">

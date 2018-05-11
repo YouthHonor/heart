@@ -1,8 +1,17 @@
 //app.js
 App({
-  onLaunch: function () {
-    // 展示本地存储能力
+  globalData:{
 
+  },
+  onLaunch () {
+    // 展示本地存储能力
+    try {
+      const res = wx.getSystemInfoSync()
+      this.globalData.windowHeight =res.windowHeight;
+      this.globalData.windowWidth =res.windowWidth; 
+    } catch (e) {
+      // Do something when catch error
+    }
     wx.login({
       success: function (res) {
         console.log(res.code);
