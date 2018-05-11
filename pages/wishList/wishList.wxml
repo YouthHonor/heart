@@ -33,17 +33,18 @@
 
 <view >
     <scroll-view scroll-y class='scrolls'>
-      <view class='item' wx:for="{{record}}" bindtap="jmpToDetail" data-detail-id="{{item.xyId}}">
-        <image class="image" src="/images/cry.jpg" ></image>
-        <view class="item_word">
+      <view class='item' wx:for="{{record}}" data-detail-id="{{item.xyId}}">
+        <image class="image" src="/images/cry.jpg" bindtap="jmpToDetail"></image>
+        <view class="item_word" bindtap="jmpToDetail">
           <view>{{item.xyRequest}}</view>
           <view>心愿类型：{{item.wishType}}</view>
           <view>心愿发布时间：{{item.xyDate}}</view>
           <view>所属街道：{{item.xyStreet}}</view>
-          <view class='zhuangtai' bindtap='state' wx:if="{{item.xyFlag === 'true'?true:false}}">已认领</view>
-          <view class='zhuangtai'  wx:if="{{item.xyFlag === 'true'?false:true}}">认领</view>
         </view>
-      </view>
+          <view class='zhuangtai'  wx:if="{{item.xyFlag === '已认领'?true:false}}">已认领</view>
+          <view class='zhuangtai' data-xy-id="{{item.xyId}}" bindtap='state' wx:if="{{item.xyFlag === '待认领'?true:false}}">认领</view>
+          <view class='zhuangtai' data-xy-id="{{item.xyId}}"  wx:if="{{item.xyFlag === '未审核'?true:false}}">待审核</view>
+        </view>
     </scroll-view>
     
 </view>

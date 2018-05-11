@@ -386,6 +386,12 @@ Page({
       wx.navigateTo({
         url: '/pages/detail/detail?detailId='+detailId,
       })
+    },
+    state:function(event){
+      var xyId = event.currentTarget.dataset.xyId;
+      wx.navigateTo({
+        url: '/pages/support/support?xyId='+xyId
+      })
     }
 
 })
