@@ -21,6 +21,7 @@ Page({
   },
 
   data: {
+    
       imgUrls: [
         '/images/首页滚动图.jpg',
         '/images/首页滚动图1.jpg',
@@ -29,8 +30,57 @@ Page({
       indicatorDots: false,
       autoplay: false,
       interval: 5000,
-      duration: 1000
+      duration: 1000,
+      longitude:"",
+      latitude:"",
+      controls: [{
+      
+        iconPath: '/images/位置 (1).png',
+        position: {
+          left: (app.globalData.windowWidth/2)-12.5,
+          top: ((app.globalData.windowWidth-140) / 2)-25,
+          width: 25,
+          height: 25
+        }
+      },{
+        
+        id: 1,
+        iconPath: '/images/位置_32.png',
+        position: {
+          left: 20,
+          top: app.globalData.windowWidth-190,
+          width: 30,
+          height: 30
+        },
+        clickable: true
+      }]
     },
+
+  handleGwtLocationSucc(res) {
+    this.setData({
+      longitude: res.longitude,
+      latitude: res.latitude
+    })
+    console.log(res);
+  },
+  controltap(){
+  this.mapCtx.moveToLocation();
+  },
+    onShow:function(){
+      this.getLocation();
+    },
+    onReady(){
+      this.mapCtx = wx.createMapContext('map');
+    },
+    getLocation(){
+      wx.getLocation({
+        type: 'gcj02',
+        success: this.handleGwtLocationSucc.bind(this)
+        
+      })
+    },
+    
+
   onLoad: function () {
   },
   tell : function (){
