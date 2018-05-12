@@ -1,21 +1,23 @@
 Page({
   data: {
-    pick_info: ""
+    pick_info: []
   },
-  onLoad: function () {
+  onLoad: function (options) {
     var that = this;
     wx.request({
-      /*存放预约服务信息的url*/
-      url: '',
+      url: "http://localhost:8080/queryMyPick",
+      data: {
+        openId: getApp().globalData.open_id
+      },
+      method: "POST",
       header: {
-        "Content-Type": "json"
+        "content-type": "application/x-www-form-urlencoded"
       },
       success: function (res) {
         that.setData({
-          /*这个不知道写什么,假装和后台交互好了*/
           pick_info: res.data
         })
       }
     })
-  }
+  },
 })
