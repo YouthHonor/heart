@@ -14,7 +14,7 @@ swiper image{
  padding: 20rpx;
 }
 .title{
-  margin-left: 10rpx;
+  margin-left: 20rpx;
 }
 .pro_phone{
 

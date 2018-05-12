@@ -3,10 +3,8 @@ Page({
       tabTxt: ['显示全部', '心愿形式', '地区', '认领状态'],//tab文案
       tab: [true, true, true, true],
       record:[],
-
-      wishObjectList:["心愿对象▽","个人","团体","公众"],
-      wishMethodList: ["心愿形式▽","精神","物质"],
-      areaList: ["地区▽"],
+      wishMethodList: ["心愿形式▽","个人物质","个人服务"],
+      areaList: ["地区▽","","","",""],
       statusList: ["认领状态▽","未认领","已认领","待审核","已完成"],
       wishObjectIndex:0,
       wishMethodIndex:0,
