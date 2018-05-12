@@ -22,10 +22,13 @@
 </view>
 
 <view class="tabLayer tc text" hidden="{{tab[3]}}">
+
 	<text class="" data-id="0" data-index="0" data-txt="认领状态" bindtap="filter14" data-flag="待认领">待认领</text>
   	<text class="" data-id="0" data-index="0" data-txt="认领状态" bindtap="filter15" data-flag="已认领">已认领</text>
     	<text class="" data-id="0" data-index="0" data-txt="认领状态" bindtap="filter16" data-flag="未审核">待审核</text>
       	<text class="" data-id="0" data-index="0" data-txt="认领状态" bindtap="filter17" data-flag="已完成">已完成</text>
+
+
 	<text class="" wx:for="{{filterList.space_list}}" wx:key="" data-id="{{item.id}}" data-index="0" data-txt="{{item.name}}" bindtap="filter">{{item.name}}</text>
 </view>
 

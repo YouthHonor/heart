@@ -28,7 +28,7 @@ Page({
         '/images/首页滚动图2.jpg'
       ],
       indicatorDots: false,
-      autoplay: false,
+      autoplay:true,
       interval: 5000,
       duration: 1000,
       longitude:"",
@@ -53,7 +53,9 @@ Page({
           height: 30
         },
         clickable: true
-      }]
+      }],
+      markers: ""
+
     },
 
   handleGwtLocationSucc(res) {
@@ -68,7 +70,49 @@ Page({
   },
     onShow:function(){
       this.getLocation();
+      this.getMessages();
     },
+    //不同的图标跳转到详情页
+    markertap:function(){
+      var detailId = event.currentTarget.dataset.detailId;
+      wx.navigateTo({
+        url: '/pages/detail/detail?detailId=' + detailId,
+        })
+       
+    },
+    //获取经纬度，待完善
+    getMessages(){
+      wx.request({
+        url: 'test.php', //仅为示例，并非真实的接口地址
+        data: {
+          x: '',
+          y: ''
+        },
+        header: {
+          'content-type': 'application/x-www-form-urlencoded' // 默认值
+        },
+        success: this.getMessageSucc.bind(this)
+        
+      })
+    },
+    getMessageSucc(res){
+      const data =res.data.data;
+      const arr = data.map((value,index)=> {
+        return {
+          iconPath: "/images/"+value.type+".png",
+          id: value.id,
+          latitude: value.latitude,
+          longitude: value.longitude,
+          width: 36,
+          height: 36
+        }
+      });
+      this.setData({
+        markers:markers
+      })
+      console.log(arr);
+    },
+
     onReady(){
       this.mapCtx = wx.createMapContext('map');
     },

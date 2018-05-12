@@ -15,6 +15,7 @@ Page({
       wishObjectList:["心愿对象▽","个人","团体","公众"],
       wishMethodList: ["心愿形式▽","精神","物质"],
       areaList: ["地区▽"],
+
       statusList: ["认领状态▽","未认领","已认领","待审核","已完成"],
       wishObjectIndex:0,
       wishMethodIndex:0,
