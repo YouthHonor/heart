@@ -379,10 +379,33 @@ Page({
       })
       
     },
+    onShow:function(){
+      var that = this;
+      wx.request({
+        url: 'http://localhost:8080/query',
+        method: "POST",
+        header: {
+          "content-type": "application/x-www-form-urlencoded"
+        },
+        success: function (res) {
+          that.setData({
+            record: res.data
+          })
+        }
+      })
+    },
+
     jmpToDetail:function(event){
       var detailId = event.currentTarget.dataset.detailId;
+      console.log(detailId);
       wx.navigateTo({
         url: '/pages/detail/detail?detailId='+detailId,
+      })
+    },
+    state:function(event){
+      var xyId = event.currentTarget.dataset.xyId;
+      wx.navigateTo({
+        url: '/pages/support/support?xyId='+xyId
       })
     }
 

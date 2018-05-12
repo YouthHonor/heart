@@ -6,14 +6,21 @@ Page({
     })
   },
   data: {
-    
+    xyId:"",
+    pickName:"",
+    pickPhone:"",
+    date:"",
+    success:false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    var that = this;
+    that.setData({
+      xyId:options.xyId
+    })
   },
 
   /**
@@ -63,5 +70,48 @@ Page({
    */
   onShareAppMessage: function () {
     
+  },
+  handleNameChanges:function(e){
+    this.setData({
+      pickName:e.detail.value
+    })
+  },
+  handleContactChanges:function(e){
+    this.setData({
+      pickPhone:e.detail.value
+    })
+  },
+  handleSubmit:function(){
+    var that = this;
+    wx.request({
+      url: 'http://localhost:8080/pick',
+      method: "POST",
+      header: {
+        "content-type": "application/x-www-form-urlencoded"
+      },
+      data:{
+        xyId:that.data.xyId,
+        pickName:that.data.pickName,
+        pickPhone:that.data.pickPhone,
+        date:that.data.date,
+        openId: getApp().globalData.open_id
+        
+      },
+      success:function(res){
+        that.setData({
+          success:true
+        })
+        wx.showToast({
+          title: '认领成功~',
+          icon: 'loading',
+          duration: 2000
+        })
+      }
+    })
+  },
+  return_home:function(){
+    wx.switchTab({
+      url: '/pages/wishList/wishList'
+    })
   }
 })
