@@ -3,6 +3,14 @@ Page({
       tabTxt: ['显示全部', '心愿形式', '地区', '认领状态'],//tab文案
       tab: [true, true, true, true],
       record:[],
+      
+      xyTypeFlag:"false",
+      xyStreetFlag:"false",
+      xyFlagFlag:"false",
+
+      Type:"",
+      Street:"",
+      Flag:"",
 
       wishObjectList:["心愿对象▽","个人","团体","公众"],
       wishMethodList: ["心愿形式▽","精神","物质"],
@@ -15,39 +23,39 @@ Page({
       area:[
         {
           areaname:"亭湖区",
-          tabid:"filter5"
+          tapid:"filter5"
         },
         {
           areaname: "盐都区",
-          tabid: "filter6"
+          tapid: "filter6"
         },
         {
           areaname: "大丰区",
-          tabid: "filter7"
+          tapid: "filter7"
         },
         {
           areaname: "东台市",
-          tabid: "filter8"
+          tapid: "filter8"
         },
         {
           areaname: "建湖区",
-          tabid: "filter9"
+          tapid: "filter9"
         },
         {
           areaname: "射阳县",
-          tabid: "filter10"
+          tapid: "filter10"
         },
         {
           areaname: "阜宁县",
-          tabid: "filter11"
+          tapid: "filter11"
         },
         {
           areaname: "滨海县",
-          tabid: "filter12"
+          tapid: "filter12"
         },
         {
           areaname: "响水县",
-          tabid: "filter13"
+          tapid: "filter13"
         }
       ]
 
@@ -153,210 +161,457 @@ Page({
         complete: function(res) {},
       })
     },
+
+    /*显示全部 (也可以当作刷新吧应该(后端目前只返回<=10个))*/
     filter2: function () {
+        var that = this;
+        wx.request({
+          url: 'http://localhost:8080/query',
+          method: "POST",
+          header: {
+            "content-type": "application/x-www-form-urlencoded"
+          },
+          success: function (res) {
+            that.setData({
+              record: res.data
+            })
+          }
+        })
+    },
+
+    /*个人物质*/
+    filter3: function (e) {
+      console.log(e)
+      this.setData({
+        xyTypeFlag:"true",
+        Type:e.currentTarget.dataset.type
+      })
+      var that = this;
       wx: wx.request({
-        url: '',
-        data: '',
-        header: {},
-        method: 'GET',
-        dataType: 'json',
-        responseType: 'text',
-        success: function (res) { },
+        url: 'http://localhost:8080/select',
+        data: {
+          xyTypeFlag: that.data.xyTypeFlag,
+          xyStreetFlag: that.data.xyStreetFlag,
+          xyFlagFlag: that.data.xyFlagFlag,
+          Type: that.data.Type,
+          Street:that.data.Street,
+          Flag:that.data.Flag
+        },
+        header: {
+          "content-type": "application/x-www-form-urlencoded"
+        },
+        method: 'POST',
+        success: function (res) { 
+          that.setData({
+            record:res.data
+          })
+        },
         fail: function (res) { },
         complete: function (res) { },
       })
     },
-    filter3: function () {
+    filter4: function (e) {
+      this.setData({
+        xyTypeFlag: "true",
+        Type: e.currentTarget.dataset.type
+      })
+      var that = this;
       wx: wx.request({
-        url: '',
-        data: '',
-        header: {},
-        method: 'GET',
-        dataType: 'json',
-        responseType: 'text',
-        success: function (res) { },
+        url: 'http://localhost:8080/select',
+        data: {
+          xyTypeFlag: that.data.xyTypeFlag,
+          xyStreetFlag: that.data.xyStreetFlag,
+          xyFlagFlag: that.data.xyFlagFlag,
+          Type: that.data.Type,
+          Street: that.data.Street,
+          Flag: that.data.Flag
+        },
+        header: {
+          "content-type": "application/x-www-form-urlencoded"
+        },
+        method: 'POST',
+        success: function (res) {
+          that.setData({
+            record: res.data
+          })
+        },
         fail: function (res) { },
         complete: function (res) { },
       })
     },
-    filter4: function () {
+    filter5: function (e) {
+      this.setData({
+        xyStreetFlag: "true",
+        Street: e.currentTarget.dataset.xyArea
+      })
+      var that = this;
       wx: wx.request({
-        url: '',
-        data: '',
-        header: {},
-        method: 'GET',
-        dataType: 'json',
-        responseType: 'text',
-        success: function (res) { },
+        url: 'http://localhost:8080/select',
+        data: {
+          xyTypeFlag: that.data.xyTypeFlag,
+          xyStreetFlag: that.data.xyStreetFlag,
+          xyFlagFlag: that.data.xyFlagFlag,
+          Type: that.data.Type,
+          Street: that.data.Street,
+          Flag: that.data.Flag
+        },
+        header: {
+          "content-type": "application/x-www-form-urlencoded"
+        },
+        method: 'POST',
+        success: function (res) {
+          that.setData({
+            record: res.data
+          })
+        },
         fail: function (res) { },
         complete: function (res) { },
       })
     },
-    filter5: function () {
+    filter6: function (e) {
+      this.setData({
+        xyStreetFlag: "true",
+        Street: e.currentTarget.dataset.xyArea
+      })
+      var that = this;
       wx: wx.request({
-        url: '',
-        data: '',
-        header: {},
-        method: 'GET',
-        dataType: 'json',
-        responseType: 'text',
-        success: function (res) { },
+        url: 'http://localhost:8080/select',
+        data: {
+          xyTypeFlag: that.data.xyTypeFlag,
+          xyStreetFlag: that.data.xyStreetFlag,
+          xyFlagFlag: that.data.xyFlagFlag,
+          Type: that.data.Type,
+          Street: that.data.Street,
+          Flag: that.data.Flag
+        },
+        header: {
+          "content-type": "application/x-www-form-urlencoded"
+        },
+        method: 'POST',
+        success: function (res) {
+          that.setData({
+            record: res.data
+          })
+        },
         fail: function (res) { },
         complete: function (res) { },
       })
     },
-    filter6: function () {
+    filter7: function (e) {
+      this.setData({
+        xyStreetFlag: "true",
+        Street: e.currentTarget.dataset.xyArea
+      })
+      var that = this;
       wx: wx.request({
-        url: '',
-        data: '',
-        header: {},
-        method: 'GET',
-        dataType: 'json',
-        responseType: 'text',
-        success: function (res) { },
+        url: 'http://localhost:8080/select',
+        data: {
+          xyTypeFlag: that.data.xyTypeFlag,
+          xyStreetFlag: that.data.xyStreetFlag,
+          xyFlagFlag: that.data.xyFlagFlag,
+          Type: that.data.Type,
+          Street: that.data.Street,
+          Flag: that.data.Flag
+        },
+        header: {
+          "content-type": "application/x-www-form-urlencoded"
+        },
+        method: 'POST',
+        success: function (res) {
+          that.setData({
+            record: res.data
+          })
+        },
         fail: function (res) { },
         complete: function (res) { },
       })
     },
-    filter7: function () {
+    filter8: function (e) {
+      this.setData({
+        xyStreetFlag: "true",
+        Street: e.currentTarget.dataset.xyArea
+      })
+      var that = this;
       wx: wx.request({
-        url: '',
-        data: '',
-        header: {},
-        method: 'GET',
-        dataType: 'json',
-        responseType: 'text',
-        success: function (res) { },
+        url: 'http://localhost:8080/select',
+        data: {
+          xyTypeFlag: that.data.xyTypeFlag,
+          xyStreetFlag: that.data.xyStreetFlag,
+          xyFlagFlag: that.data.xyFlagFlag,
+          Type: that.data.Type,
+          Street: that.data.Street,
+          Flag: that.data.Flag
+        },
+        header: {
+          "content-type": "application/x-www-form-urlencoded"
+        },
+        method: 'POST',
+        success: function (res) {
+          that.setData({
+            record: res.data
+          })
+        },
         fail: function (res) { },
         complete: function (res) { },
       })
     },
-    filter8: function () {
+    filter9: function (e) {
+      this.setData({
+        xyStreetFlag: "true",
+        Street: e.currentTarget.dataset.xyArea
+      })
+      var that = this;
       wx: wx.request({
-        url: '',
-        data: '',
-        header: {},
-        method: 'GET',
-        dataType: 'json',
-        responseType: 'text',
-        success: function (res) { },
+        url: 'http://localhost:8080/select',
+        data: {
+          xyTypeFlag: that.data.xyTypeFlag,
+          xyStreetFlag: that.data.xyStreetFlag,
+          xyFlagFlag: that.data.xyFlagFlag,
+          Type: that.data.Type,
+          Street: that.data.Street,
+          Flag: that.data.Flag
+        },
+        header: {
+          "content-type": "application/x-www-form-urlencoded"
+        },
+        method: 'POST',
+        success: function (res) {
+          that.setData({
+            record: res.data
+          })
+        },
         fail: function (res) { },
         complete: function (res) { },
       })
     },
-    filter9: function () {
+    filter10: function (e) {
+      this.setData({
+        xyStreetFlag: "true",
+        Street: e.currentTarget.dataset.xyArea
+      })
+      var that = this;
       wx: wx.request({
-        url: '',
-        data: '',
-        header: {},
-        method: 'GET',
-        dataType: 'json',
-        responseType: 'text',
-        success: function (res) { },
+        url: 'http://localhost:8080/select',
+        data: {
+          xyTypeFlag: that.data.xyTypeFlag,
+          xyStreetFlag: that.data.xyStreetFlag,
+          xyFlagFlag: that.data.xyFlagFlag,
+          Type: that.data.Type,
+          Street: that.data.Street,
+          Flag: that.data.Flag
+        },
+        header: {
+          "content-type": "application/x-www-form-urlencoded"
+        },
+        method: 'POST',
+        success: function (res) {
+          that.setData({
+            record: res.data
+          })
+        },
         fail: function (res) { },
         complete: function (res) { },
       })
     },
-    filter10: function () {
+    filter11: function (e) {
+      this.setData({
+        xyStreetFlag: "true",
+        Street: e.currentTarget.dataset.xyArea
+      })
+      var that = this;
       wx: wx.request({
-        url: '',
-        data: '',
-        header: {},
-        method: 'GET',
-        dataType: 'json',
-        responseType: 'text',
-        success: function (res) { },
+        url: 'http://localhost:8080/select',
+        data: {
+          xyTypeFlag: that.data.xyTypeFlag,
+          xyStreetFlag: that.data.xyStreetFlag,
+          xyFlagFlag: that.data.xyFlagFlag,
+          Type: that.data.Type,
+          Street: that.data.Street,
+          Flag: that.data.Flag
+        },
+        header: {
+          "content-type": "application/x-www-form-urlencoded"
+        },
+        method: 'POST',
+        success: function (res) {
+          that.setData({
+            record: res.data
+          })
+        },
         fail: function (res) { },
         complete: function (res) { },
       })
     },
-    filter11: function () {
+    filter12: function (e) {
+      this.setData({
+        xyStreetFlag: "true",
+        Street: e.currentTarget.dataset.xyArea
+      })
+      var that = this;
       wx: wx.request({
-        url: '',
-        data: '',
-        header: {},
-        method: 'GET',
-        dataType: 'json',
-        responseType: 'text',
-        success: function (res) { },
+        url: 'http://localhost:8080/select',
+        data: {
+          xyTypeFlag: that.data.xyTypeFlag,
+          xyStreetFlag: that.data.xyStreetFlag,
+          xyFlagFlag: that.data.xyFlagFlag,
+          Type: that.data.Type,
+          Street: that.data.Street,
+          Flag: that.data.Flag
+        },
+        header: {
+          "content-type": "application/x-www-form-urlencoded"
+        },
+        method: 'POST',
+        success: function (res) {
+          that.setData({
+            record: res.data
+          })
+        },
         fail: function (res) { },
         complete: function (res) { },
       })
     },
-    filter12: function () {
+    filter13: function (e) {
+      this.setData({
+        xyStreetFlag: "true",
+        Street: e.currentTarget.dataset.xyArea
+      })
+      var that = this;
       wx: wx.request({
-        url: '',
-        data: '',
-        header: {},
-        method: 'GET',
-        dataType: 'json',
-        responseType: 'text',
-        success: function (res) { },
+        url: 'http://localhost:8080/select',
+        data: {
+          xyTypeFlag: that.data.xyTypeFlag,
+          xyStreetFlag: that.data.xyStreetFlag,
+          xyFlagFlag: that.data.xyFlagFlag,
+          Type: that.data.Type,
+          Street: that.data.Street,
+          Flag: that.data.Flag
+        },
+        header: {
+          "content-type": "application/x-www-form-urlencoded"
+        },
+        method: 'POST',
+        success: function (res) {
+          that.setData({
+            record: res.data
+          })
+        },
         fail: function (res) { },
         complete: function (res) { },
       })
     },
-    filter13: function () {
+    filter14: function (e) {
+      this.setData({
+        xyFlagFlag: "true",
+        Flag: e.currentTarget.dataset.flag
+      })
+      var that = this;
       wx: wx.request({
-        url: '',
-        data: '',
-        header: {},
-        method: 'GET',
-        dataType: 'json',
-        responseType: 'text',
-        success: function (res) { },
+        url: 'http://localhost:8080/select',
+        data: {
+          xyTypeFlag: that.data.xyTypeFlag,
+          xyStreetFlag: that.data.xyStreetFlag,
+          xyFlagFlag: that.data.xyFlagFlag,
+          Type: that.data.Type,
+          Street: that.data.Street,
+          Flag: that.data.Flag
+        },
+        header: {
+          "content-type": "application/x-www-form-urlencoded"
+        },
+        method: 'POST',
+        success: function (res) {
+          that.setData({
+            record: res.data
+          })
+        },
         fail: function (res) { },
         complete: function (res) { },
       })
     },
-    filter14: function () {
+    filter15: function (e) {
+      this.setData({
+        xyFlagFlag: "true",
+        Flag: e.currentTarget.dataset.flag
+      })
+      var that = this;
       wx: wx.request({
-        url: '',
-        data: '',
-        header: {},
-        method: 'GET',
-        dataType: 'json',
-        responseType: 'text',
-        success: function (res) { },
+        url: 'http://localhost:8080/select',
+        data: {
+          xyTypeFlag: that.data.xyTypeFlag,
+          xyStreetFlag: that.data.xyStreetFlag,
+          xyFlagFlag: that.data.xyFlagFlag,
+          Type: that.data.Type,
+          Street: that.data.Street,
+          Flag: that.data.Flag
+        },
+        header: {
+          "content-type": "application/x-www-form-urlencoded"
+        },
+        method: 'POST',
+        success: function (res) {
+          that.setData({
+            record: res.data
+          })
+        },
         fail: function (res) { },
         complete: function (res) { },
       })
     },
-    filter15: function () {
+    filter16: function (e) {
+      this.setData({
+        xyFlagFlag: "true",
+        Flag: e.currentTarget.dataset.flag
+      })
+      var that = this;
       wx: wx.request({
-        url: '',
-        data: '',
-        header: {},
-        method: 'GET',
-        dataType: 'json',
-        responseType: 'text',
-        success: function (res) { },
+        url: 'http://localhost:8080/select',
+        data: {
+          xyTypeFlag: that.data.xyTypeFlag,
+          xyStreetFlag: that.data.xyStreetFlag,
+          xyFlagFlag: that.data.xyFlagFlag,
+          Type: that.data.Type,
+          Street: that.data.Street,
+          Flag: that.data.Flag
+        },
+        header: {
+          "content-type": "application/x-www-form-urlencoded"
+        },
+        method: 'POST',
+        success: function (res) {
+          that.setData({
+            record: res.data
+          })
+        },
         fail: function (res) { },
         complete: function (res) { },
       })
     },
-    filter16: function () {
-      wx: wx.request({
-        url: '',
-        data: '',
-        header: {},
-        method: 'GET',
-        dataType: 'json',
-        responseType: 'text',
-        success: function (res) { },
-        fail: function (res) { },
-        complete: function (res) { },
+    filter17: function (e) {
+      this.setData({
+        xyFlagFlag: "true",
+        Flag: e.currentTarget.dataset.flag
       })
-    },
-    filter17: function () {
+      var that = this;
       wx: wx.request({
-        url: '',
-        data: '',
-        header: {},
-        method: 'GET',
-        dataType: 'json',
-        responseType: 'text',
-        success: function (res) { },
+        url: 'http://localhost:8080/select',
+        data: {
+          xyTypeFlag: that.data.xyTypeFlag,
+          xyStreetFlag: that.data.xyStreetFlag,
+          xyFlagFlag: that.data.xyFlagFlag,
+          Type: that.data.Type,
+          Street: that.data.Street,
+          Flag: that.data.Flag
+        },
+        header: {
+          "content-type": "application/x-www-form-urlencoded"
+        },
+        method: 'POST',
+        success: function (res) {
+          that.setData({
+            record: res.data
+          })
+        },
         fail: function (res) { },
         complete: function (res) { },
       })
@@ -366,6 +621,11 @@ Page({
     },
 
     onLoad:function(options){
+      this.setData({
+        xyTypeFlag:"false",
+        xyStreetFlag:"false",
+        xyFlagFlag:"false"
+      })
       var that = this;
       wx.request({
         url: 'http://localhost:8080/query',
@@ -382,6 +642,11 @@ Page({
       
     },
     onShow:function(){
+      this.setData({
+        xyTypeFlag: "false",
+        xyStreetFlag: "false",
+        xyFlagFlag: "false"
+      })
       var that = this;
       wx.request({
         url: 'http://localhost:8080/query',

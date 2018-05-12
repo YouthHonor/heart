@@ -5,26 +5,27 @@
 	</view>
 </view>
 <view bindtap = "showall" class="tabLayer tc text" hidden="{{tab[0]}}">
+  <text class="{{house_type==0?'active':''}}" data-id="0" data-index="0" data-txt="显示全部" bindtap="filter2">显示全部</text>
 </view>
 
 <view class="tabLayer tc text" hidden="{{tab[1]}}">
-	<text class="{{house_type==0?'active':''}}" data-id="0" data-index="0" data-txt="心愿形式" bindtap="filter3">个人物质</text>
-  	<text class="" data-id="0" data-index="0" data-txt="心愿形式" bindtap="filter4">个人服务</text>
+	<text class="{{house_type==0?'active':''}}" data-id="0" data-index="0" data-txt="心愿形式" bindtap="filter3" data-type="个人物质">个人物质</text>
+  	<text class="" data-id="0" data-index="0" data-txt="心愿形式" bindtap="filter4" data-type="个人服务">个人服务</text>
 	<text class="" wx:for="{{filterList.space_list}}" wx:key="" data-id="{{item.id}}" data-index="0" data-txt="{{item.name}}" bindtap="filter">{{item.name}}</text>
 </view>
 
 <view class="tabLayer tc text" hidden="{{tab[2]}}">
 	<text wx:for ="{{area}}" class="" data-id="0" data-index="0" data-txt="地区" 
-  bindtap="{{item.tapid}}">{{item.areaname}}</text>
+  bindtap="{{item.tapid}}" data-xy-area="{{item.areaname}}">{{item.areaname}}</text>
   
 	<text class="" wx:for="{{filterList.space_list}}" wx:key="" data-id="{{item.id}}" data-index="0" data-txt="{{item.name}}" bindtap="filter">{{item.name}}</text>
 </view>
 
 <view class="tabLayer tc text" hidden="{{tab[3]}}">
-	<text class="" data-id="0" data-index="0" data-txt="认领状态" bindtap="filter14">未认领</text>
-  	<text class="" data-id="0" data-index="0" data-txt="认领状态" bindtap="filter15">已认领</text>
-    	<text class="" data-id="0" data-index="0" data-txt="认领状态" bindtap="filter16">确认实现待审核</text>
-      	<text class="" data-id="0" data-index="0" data-txt="认领状态" bindtap="filter17">已完成</text>
+	<text class="" data-id="0" data-index="0" data-txt="认领状态" bindtap="filter14" data-flag="待认领">待认领</text>
+  	<text class="" data-id="0" data-index="0" data-txt="认领状态" bindtap="filter15" data-flag="已认领">已认领</text>
+    	<text class="" data-id="0" data-index="0" data-txt="认领状态" bindtap="filter16" data-flag="未审核">待审核</text>
+      	<text class="" data-id="0" data-index="0" data-txt="认领状态" bindtap="filter17" data-flag="已完成">已完成</text>
 	<text class="" wx:for="{{filterList.space_list}}" wx:key="" data-id="{{item.id}}" data-index="0" data-txt="{{item.name}}" bindtap="filter">{{item.name}}</text>
 </view>
 
@@ -44,6 +45,7 @@
           <view class='zhuangtai' data-xy-id="{{item.xyId}}" wx:if="{{item.xyFlag === '已认领'?true:false}}">已认领</view>
           <view class='zhuangtai' data-xy-id="{{item.xyId}}" bindtap='state' wx:if="{{item.xyFlag === '待认领'?true:false}}">认领</view>
           <view class='zhuangtai' data-xy-id="{{item.xyId}}"  wx:if="{{item.xyFlag === '未审核'?true:false}}">待审核</view>
+          <view class='zhuangtai' data-xy-id="{{item.xyId}}"  wx:if="{{item.xyFlag === '已完成'?true:false}}">已完成</view>
         </view>
     </scroll-view>
     
