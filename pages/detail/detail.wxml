@@ -79,9 +79,9 @@
 
 
 <view>
-<image class = "report_png" src='/images/举报.png'></image>
+<image class = "report_png" src='/images/jubao1.png'></image>
 <button class = 'report_title' bindtap='report'>点击举报</button>
-<image class = "support_png" src='/images/支持.png'></image>
+<image class = "support_png" src='/images/zhichi.png'></image>
 <button class = 'support_title' bindtap='support'>点击参与</button>
 <view >{{connt}}</view>
 </view>

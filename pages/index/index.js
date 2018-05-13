@@ -23,11 +23,11 @@ Page({
   data: {
     
       imgUrls: [
-        '/images/首页滚动图.jpg',
-        '/images/首页滚动图1.jpg',
-        '/images/首页滚动图2.jpg'
+        '/images/gundong.jpg',
+        '/images/gundong1.jpg',
+        '/images/gundong2.jpg'
       ],
-      indicatorDots: false,
+      indicatorDots: true,
       autoplay:true,
       interval: 5000,
       duration: 1000,
@@ -35,7 +35,7 @@ Page({
       latitude:"",
       controls: [{
       
-        iconPath: '/images/位置 (1).png',
+        iconPath: '/images/weizhi1.png',
         position: {
           left: (app.globalData.windowWidth/2)-12.5,
           top: ((app.globalData.windowWidth-140) / 2)-25,
@@ -45,7 +45,7 @@ Page({
       },{
         
         id: 1,
-        iconPath: '/images/位置_32.png',
+        iconPath: '/images/weizhi2.png',
         position: {
           left: 20,
           top: app.globalData.windowWidth-190,

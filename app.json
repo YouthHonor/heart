@@ -1,12 +1,12 @@
 {
   "pages":[
-    "pages/home/home",
+    "pages/index/index",
     "pages/wishList/wishList",
     "pages/wish/wish",
-
+"pages/home/home",
     "pages/report/report",
    
-
+  
     "pages/mine/mine",
 "pages/appoint/appoint",
     "pages/adLogin/adLogin",
@@ -18,8 +18,8 @@
     
     "pages/myXy/myXy",
     "pages/pick/pick",
-    "pages/about/about",
-    "pages/index/index"
+    "pages/about/about"
+    
     
     
   ],
@@ -37,8 +37,8 @@
       {
         "pagePath": "pages/home/home",
         "text": "首页",
-        "iconPath": "images/首页.png",
-        "selectedIconPath": "images/首页1.png"
+        "iconPath": "images/shouye.png",
+        "selectedIconPath": "images/shouye1.png"
       },
       {
         "pagePath": "pages/wishList/wishList",
@@ -49,15 +49,15 @@
       {
       "pagePath": "pages/index/index",
       "text": "社区",
-      "iconPath": "images/社区.png",
-      "selectedIconPath": "images/社区1.png"
+      "iconPath": "images/shequ.png",
+      "selectedIconPath": "images/shequ1.png"
      
     },
     {
       "pagePath": "pages/mine/mine",
       "text": "我",
-      "iconPath": "images/个人1.png",
-      "selectedIconPath": "images/个人.png"
+      "iconPath": "images/geren1.png",
+      "selectedIconPath": "images/geren.png"
     }
     ]
   }

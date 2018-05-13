@@ -1,13 +1,13 @@
 <view class ='title'>亭湖区</view>
   <view class ='items-list'>
-  <image bindtap='f2' class = 'btn_wish'  src ='/images/许愿.png' ></image>
+  <image bindtap='f2' class = 'btn_wish'  src ='/images/xuyuan.png' ></image>
        <view class ='pro_phone'>
-           <image class='png_phone' src='/images/电话.png'></image>
+           <image class='png_phone' src='/images/dianhua.png'></image>
            <button bindtap='tell' class='phone_number'><text >021-22062659</text></button>
       
       </view>
       <view class ="pro_address">
-           <image class='png_address' src='/images/地址.png'></image>
+           <image class='png_address' src='/images/dizhi.png'></image>
       <view class='address'>盐城工学院办事处</view>
        
       </view>
@@ -34,9 +34,8 @@
 
 
 <view class="divLine2"></view>
-
-<swiper indicator-dots="ture"
-  autoplay="ture" interval="5000" duration="{{duration}}">
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
   <block wx:for="{{imgUrls}}">
     <swiper-item>
       <image src="{{item}}" class="slide-image" width="355" height="150"/>
