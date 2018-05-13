@@ -20,7 +20,7 @@ Page({
     var detailId = options.detailId;
     var that = this;
     wx.request({
-      url: 'http://localhost:8080/detail',  
+      url: 'http://0xffff0.cn/wx_servlet_war/detail',  
       method:"POST",
       header: {
         "content-type": "application/x-www-form-urlencoded"

@@ -84,7 +84,7 @@ Page({
   handleSubmit:function(){
     var that = this;
     wx.request({
-      url: 'http://localhost:8080/pick',
+      url: 'http://0xffff0.cn/wx_servlet_war/pick',
       method: "POST",
       header: {
         "content-type": "application/x-www-form-urlencoded"

@@ -7,7 +7,7 @@
     var that = this;
     wx.request({
       /*存放预约服务信息的url*/
-      url: 'http://localhost:8080/myXy',
+      url: 'http://0xffff0.cn/wx_servlet_war/myXy',
       data:{
         openId: getApp().globalData.open_id
       },

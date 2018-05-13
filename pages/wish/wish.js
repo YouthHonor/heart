@@ -157,7 +157,7 @@ handleSubmit:function() {
   } else{
     var that = this;
     wx.request({
-      url:"http://localhost:8080/wish",
+      url:"http://0xffff0.cn/wx_servlet_war/wish",
       method:"POST",
       header: {
         "content-type": "application/x-www-form-urlencoded"
