@@ -19,7 +19,7 @@ App({
           //发起网络请求
           var that = this;
           wx.request({
-            url: 'http://0xffff0.cn/login',
+            url: 'http://118.25.13.61/wx_servlet_war/login',
             data: {
               code: res.code
             },

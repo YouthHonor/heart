@@ -167,7 +167,7 @@ Page({
     filter2: function () {
         var that = this;
         wx.request({
-          url: 'http://0xffff0.cn/wx_servlet_war/query',
+          url: 'http://118.25.13.61/wx_servlet_war/query',
           method: "POST",
           header: {
             "content-type": "application/x-www-form-urlencoded"
@@ -189,7 +189,7 @@ Page({
       })
       var that = this;
       wx: wx.request({
-        url: 'http://0xffff0.cn/wx_servlet_war/select',
+        url: 'http://118.25.13.61/wx_servlet_war/select',
         data: {
           xyTypeFlag: that.data.xyTypeFlag,
           xyStreetFlag: that.data.xyStreetFlag,
@@ -218,7 +218,7 @@ Page({
       })
       var that = this;
       wx: wx.request({
-        url: 'http://0xffff0.cn/wx_servlet_war/select',
+        url: 'http://118.25.13.61/wx_servlet_war/select',
         data: {
           xyTypeFlag: that.data.xyTypeFlag,
           xyStreetFlag: that.data.xyStreetFlag,
@@ -247,7 +247,7 @@ Page({
       })
       var that = this;
       wx: wx.request({
-        url: 'http://0xffff0.cn/wx_servlet_war/select',
+        url: 'http://118.25.13.61/wx_servlet_war/select',
         data: {
           xyTypeFlag: that.data.xyTypeFlag,
           xyStreetFlag: that.data.xyStreetFlag,
@@ -276,7 +276,7 @@ Page({
       })
       var that = this;
       wx: wx.request({
-        url: 'http://0xffff0.cn/wx_servlet_war/select',
+        url: 'http://118.25.13.61/wx_servlet_war/select',
         data: {
           xyTypeFlag: that.data.xyTypeFlag,
           xyStreetFlag: that.data.xyStreetFlag,
@@ -305,7 +305,7 @@ Page({
       })
       var that = this;
       wx: wx.request({
-        url: 'http://0xffff0.cn/wx_servlet_war/select',
+        url: 'http://118.25.13.61/wx_servlet_war/select',
         data: {
           xyTypeFlag: that.data.xyTypeFlag,
           xyStreetFlag: that.data.xyStreetFlag,
@@ -334,7 +334,7 @@ Page({
       })
       var that = this;
       wx: wx.request({
-        url: 'http://0xffff0.cn/wx_servlet_war/select',
+        url: 'http://118.25.13.61/wx_servlet_war/select',
         data: {
           xyTypeFlag: that.data.xyTypeFlag,
           xyStreetFlag: that.data.xyStreetFlag,
@@ -363,7 +363,7 @@ Page({
       })
       var that = this;
       wx: wx.request({
-        url: 'http://0xffff0.cn/wx_servlet_war/select',
+        url: 'http://118.25.13.61/wx_servlet_war/select',
         data: {
           xyTypeFlag: that.data.xyTypeFlag,
           xyStreetFlag: that.data.xyStreetFlag,
@@ -392,7 +392,7 @@ Page({
       })
       var that = this;
       wx: wx.request({
-        url: 'http://0xffff0.cn/wx_servlet_war/select',
+        url: 'http://118.25.13.61/wx_servlet_war/select',
         data: {
           xyTypeFlag: that.data.xyTypeFlag,
           xyStreetFlag: that.data.xyStreetFlag,
@@ -421,7 +421,7 @@ Page({
       })
       var that = this;
       wx: wx.request({
-        url: 'http://0xffff0.cn/wx_servlet_war/select',
+        url: 'http://118.25.13.61/wx_servlet_war/select',
         data: {
           xyTypeFlag: that.data.xyTypeFlag,
           xyStreetFlag: that.data.xyStreetFlag,
@@ -450,7 +450,7 @@ Page({
       })
       var that = this;
       wx: wx.request({
-        url: 'http://0xffff0.cn/wx_servlet_war/select',
+        url: 'http://118.25.13.61/wx_servlet_war/select',
         data: {
           xyTypeFlag: that.data.xyTypeFlag,
           xyStreetFlag: that.data.xyStreetFlag,
@@ -479,7 +479,7 @@ Page({
       })
       var that = this;
       wx: wx.request({
-        url: 'http://0xffff0.cn/wx_servlet_war/select',
+        url: 'http://118.25.13.61/wx_servlet_war/select',
         data: {
           xyTypeFlag: that.data.xyTypeFlag,
           xyStreetFlag: that.data.xyStreetFlag,
@@ -508,7 +508,7 @@ Page({
       })
       var that = this;
       wx: wx.request({
-        url: 'http://0xffff0.cn/wx_servlet_war/select',
+        url: 'http://118.25.13.61/wx_servlet_war/select',
         data: {
           xyTypeFlag: that.data.xyTypeFlag,
           xyStreetFlag: that.data.xyStreetFlag,
@@ -537,7 +537,7 @@ Page({
       })
       var that = this;
       wx: wx.request({
-        url: 'http://0xffff0.cn/wx_servlet_war/select',
+        url: 'http://118.25.13.61/wx_servlet_war/select',
         data: {
           xyTypeFlag: that.data.xyTypeFlag,
           xyStreetFlag: that.data.xyStreetFlag,
@@ -566,7 +566,7 @@ Page({
       })
       var that = this;
       wx: wx.request({
-        url: 'http://0xffff0.cn/wx_servlet_war/select',
+        url: 'http://118.25.13.61/wx_servlet_war/select',
         data: {
           xyTypeFlag: that.data.xyTypeFlag,
           xyStreetFlag: that.data.xyStreetFlag,
@@ -595,7 +595,7 @@ Page({
       })
       var that = this;
       wx: wx.request({
-        url: 'http://0xffff0.cn/wx_servlet_war/select',
+        url: 'http://118.25.13.61/wx_servlet_war/select',
         data: {
           xyTypeFlag: that.data.xyTypeFlag,
           xyStreetFlag: that.data.xyStreetFlag,
@@ -629,7 +629,7 @@ Page({
       })
       var that = this;
       wx.request({
-        url: 'http://0xffff0.cn/wx_servlet_war/query',
+        url: 'http://118.25.13.61/wx_servlet_war/query',
         method:"POST",
         header: {
           "content-type": "application/x-www-form-urlencoded"
@@ -650,7 +650,7 @@ Page({
       })
       var that = this;
       wx.request({
-        url: 'http://0xffff0.cn/wx_servlet_war/query',
+        url: 'http://118.25.13.61/wx_servlet_war/query',
         method: "POST",
         header: {
           "content-type": "application/x-www-form-urlencoded"

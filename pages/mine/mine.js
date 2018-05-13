@@ -6,7 +6,7 @@ Page({
   onLoad:function(options){
     var that = this;
     wx.request({
-      url:"http://0xffff0.cn/wx_servlet_war/mine",
+      url:"http://118.25.13.61/wx_servlet_war/mine",
       data:{
         openId:getApp().globalData.open_id
       },
@@ -25,7 +25,7 @@ Page({
   onShow:function(){
     var that = this;
     wx.request({
-      url: "http://localhost:8080/mine",
+      url: "http://118.25.13.61/wx_servlet_war/mine",
       data: {
         openId: getApp().globalData.open_id
       },

@@ -114,7 +114,7 @@ Page({
     }else{
       console.log(that.data.identification);
       wx.request({
-        url: "http://0xffff0.cn/wx_servlet_war/modify",
+        url: "http://118.25.13.61/wx_servlet_war/modify",
         method:"POST",
         header: {
           "content-type": "application/x-www-form-urlencoded"
