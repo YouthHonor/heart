@@ -1,26 +1,25 @@
 {
   "pages":[
-    "pages/index/index",
-    "pages/wishList/wishList",
-    "pages/wish/wish",
-"pages/home/home",
-    "pages/report/report",
    
-  
-    "pages/mine/mine",
-"pages/appoint/appoint",
-    "pages/adLogin/adLogin",
-    "pages/register/register",
-    "pages/detail/detail",
-    "pages/support/support",
-    "pages/verify/verify",
-   
-    
+   "pages/home/home",
+   "pages/about/about",
     "pages/myXy/myXy",
+    "pages/support/support",
+    "pages/detail/detail",
+    "pages/appoint/appoint",
+    "pages/mine/mine",
+    
+    "pages/report/report",
+    "pages/wish/wish",
+    "pages/wishList/wishList",
+    "pages/index/index",
+    "pages/verify/verify",
     "pages/pick/pick",
-    "pages/about/about"
+    "pages/register/register",
+    "pages/adLogin/adLogin"
+   
     
-    
+   
     
   ],
    

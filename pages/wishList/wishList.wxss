@@ -87,3 +87,7 @@ margin-left: 5px;
  border-radius: 10rpx;
  text-align: center;
 }
+.xyrequest{
+  white-space: nowrap;
+  overflow: hidden;
+}

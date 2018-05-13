@@ -1,13 +1,9 @@
 .bg_img{
   width:100%;
   height:100%;
-  background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525246390028&di=19c2e3d686935227c5740ac939c22b13&imgtype=0&src=http%3A%2F%2Fseopic.699pic.com%2Fphoto%2F00023%2F8568.jpg_wh1200.jpg)no-repeat;
+  background: url(http://scimg.jb51.net/allimg/160129/14-160129111K3245.jpg)no-repeat;
   background-size: cover;
-  /*背景模糊*/
-  -webkit-filter: blur(10px); /* Chrome, Opera */  
-  -moz-filter: blur(10px);  
-  -ms-filter: blur(10px);      
-  filter: blur(10px);   
+   
   /*层叠布局*/
   z-index: 0;
   /*相对位置，这样其他view就能用绝对位置覆盖上去*/
@@ -95,5 +91,17 @@
   top:50rpx;
   width:637.5rpx;
   height:100%rpx;
+  margin-top: 60rpx;
 }
-
+.zh_text{
+  margin-top: 15rpx;
+}
+.zh_input{
+  margin-top: 15rpx;
+}
+.pas_text{
+   margin-top: 15rpx;
+}
+.pas_input{
+  margin-top: 15rpx;
+}

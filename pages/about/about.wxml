@@ -1,1 +1,20 @@
-<text>hello </text>
+<view class = "title">心愿墙</view>
+<view  class='all'>
+  <view class='name'>用户名</view>
+  <input class='input' bindinput = "usenameinput" placeholder="填写您的昵称"/>
+  <view class='name'>联系方式</view>
+  <input class='input' bindinput = "phonenameinput" placeholder="填写您的联系方式"/>
+   <view class="name">所属居民区</view>
+   <view>
+              <picker class="yc_list" bindchange='bindPickerYc' value="{{ycId}}" range="{{ycList}}">
+                <view class="picker">{{ycList[ycId]}}</view>
+              </picker>
+              <picker class="street_list" bindchange='bindPickerSt' value="{{stId}}"
+               range="{{stList[ycId].stLists}}">
+                <view class="picker">{{stList[ycId].stLists[stId]}}</view>
+              </picker>
+  </view>  
+        
+</view>
+<view class='submit-button' bindtap='handleSubmit'>登录</view>
+<view class='admin' bindtap="admin">我是管理员</view>

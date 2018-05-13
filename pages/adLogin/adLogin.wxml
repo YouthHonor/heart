@@ -8,28 +8,23 @@
       <view class="register_info">
         <view class="register_window">
           <view class="zh_window window_height window_bot">
-            <view class="zh_text left mright" style='color:white'>账号</view>
+            <view class="zh_text left mright" style='color:black'>账号</view>
             <view class="zh_input left wd">
               <input type="text" name="account" value="{{account}}" focus="true" placeholder='输入账号' maxlength='15'></input>    
             </view>
           </view>
           <view class="pas_window window_height window_bot">
-            <view class="pas_text left mright" style='color:white'>密码</view>
+            <view class="pas_text left mright" style='color:black'>密码</view>
               <view class="pas_input left wd">
                 <input type="password" maxlength='15' name="password" value='{{password}}' placeholder='请输入密码'>
               </input>  
             </view>
           </view>
-          <view class="confirm_window left window_height">
-            <view class="conf_text left mright" style='color:white'>确认密码</view>
-            <view class="conf_input left wd">
-              <input type="password" maxlength='15' name="subPassword" value='{{subPassword}}'>
-            </input>
-          </view>
+         
           <view class="button_window">
             <button class="reg_button" form-type='submit' type="primary">登陆</button>
           </view>
-        </view>
+        
       </view>
 	 </view>
   </form>

@@ -54,7 +54,7 @@
 </view>
 <view class='row'>
 <label class='title'> 我的地址 </label>
-<view class='info' bindtap='handleAddress1'>{{address}}
+<view class='info1' bindtap='handleAddress1'>{{address}}
 </view>
 </view>
 <view class='row'>

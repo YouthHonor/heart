@@ -1,0 +1,46 @@
+page{
+   background: #FFF8DC;
+}
+.title{
+color: #ff8800;
+font-weight:bolder;
+font-size: 80rpx;
+text-align: center;
+letter-spacing: 20rpx;
+margin-top: 100rpx;
+}
+.all{
+
+  font-size: 40rpx;
+  margin-top: 100rpx;
+  margin-left: 40rpx;
+}
+
+.input{
+  border-bottom: 1rpx solid #ccc;
+  margin-top: 20rpx;
+  margin-right: 40rpx;
+  font-size: 30rpx;
+}
+.name{
+  margin-top: 30rpx;
+}
+.area_list{
+  width:450rpx;
+}
+.submit-button{
+  background: #ff9700;
+  margin-top: 200rpx;
+  line-height: 38px;
+  border-radius: 6px;
+  text-align: center;
+  color: #fff;
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+}
+.admin{
+  font-size: 30rpx;
+  text-align: center;
+  color: ccc;
+  text-decoration:underline;
+}
