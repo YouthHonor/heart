@@ -2,7 +2,12 @@
   width:100%;
   height:100%;
   background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525085807099&di=b8bf20aee89d7e7843257d48ad82ef3b&imgtype=0&src=http%3A%2F%2Fscimg.jb51.net%2Fallimg%2F151019%2F14-151019145FC38.jpg)no-repeat;
-  background-size: cover; 
+  background-size: cover;
+  /*背景模糊*/
+  -webkit-filter: blur(10px); /* Chrome, Opera */  
+  -moz-filter: blur(10px);  
+  -ms-filter: blur(10px);      
+  filter: blur(10px);   
   /*层叠布局*/
   z-index: 0;
   /*相对位置，这样其他view就能用绝对位置覆盖上去*/

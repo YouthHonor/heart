@@ -1,8 +1,17 @@
 var app =getApp();
 Page({
   data:{
-    usename:null,
-    phonenumber:null,
+    userName:null,
+    phoneNumber:null,
+    items: [
+      {
+        identification: '群众', value: '群众', checked: true
+      },
+      {
+        identification: '党员', value: '党员'
+      }
+    ],
+
     ycList: [
       "亭湖区", "盐都区", "大丰区", "东台市",
       "建湖县", "射阳县", "阜宁县", "滨海县", "响水县"
@@ -59,7 +68,19 @@ Page({
           "小尖镇", "陈家港镇"]
       },
     ],
+    /*默认为群众,必须要写，不然值将为空*/
+    identification: '群众',
+    ycId: 0,
+    stId: 0
   },
+
+  onLoad: function (options) {
+    this.setData({
+      ycId: 0,
+      stId: 0
+    })
+  },
+
   bindPickerYc: function (e) {
     this.setData({
       ycId: e.detail.value,
@@ -71,28 +92,81 @@ Page({
       stId: e.detail.value
     })
   },
-  usenameinput: function(event){
+  usenameinput: function(e){
     console.log(event);
-    this.setData({username:event.detail.vlaue})
+    this.setData({userName:e.detail.value})
 
   },
-phonenameinput: function (event) {
+phonenameinput: function (e) {
   
-    this.setData({ phonenumber: event.detail.vlaue })
+    this.setData({ phoneNumber: e.detail.value })
 
   },
 handleSubmit:function(event){
-  app.appData.userinfo = { username: this.data.username, phonenumber:this.data.phonenumber}
-  wx.navigateTo({
-    url: '/pages/home/home',
-  })
+  var uname = this.data.userName;
+  var phoneNumber = this.data.phoneNumber;
+  var that = this;
+  var warn = "";
+  //先判断输入信息是否有为空
+  if (uname == "") {
+    warn = "名字不能为空";
+    wx.showToast({
+      title: warn,
+      icon: 'error',
+    })
+    return;
+  } else if (phoneNumber == "") {
+    warn = "手机号不能为空";
+    wx.showToast({
+      title: warn,
+      icon: 'error',
+    })
+    return;
+  } else if (!(/^1(3|4|5|6|7|8)\d{9}$/.test(phoneNumber))) {
+    warn = "手机号格式有误";
+    wx.showToast({
+      title: warn,
+      icon: 'error',
+    })
+    return;
+  } else {
+    console.log(that.data.identification);
+    wx.request({
+      url: "http://118.25.13.61/wx_servlet_war/modify",
+      method: "POST",
+      header: {
+        "content-type": "application/x-www-form-urlencoded"
+      },
+      data: {
+        zh: uname,
+        sf: that.data.identification,
+        hm: phoneNumber,
+        ad: that.data.ycList[that.data.ycId] + " " + that.data.stList[that.data.ycId].stLists[that.data.stId],
+        openId: getApp().globalData.open_id
+      },
+      dataType: "JSON",
+      success:function(res){
+        //修改成功，跳转
+        wx.showModal({
+          title: '登陆状态',
+          content: "登陆成功,页面即将跳转",
+          success: function (res) {
+            if (res.confirm) {
+              wx.switchTab({
+                //跳转到主页
+                url: '/pages/home/home'
+              })
+            }
+          }
+        })
+      }
 
+    })
+  }
 },
   admin:function(event){
     wx.navigateTo({
       url: '/pages/adLogin/adLogin',
     })
   }
-
-
 })
