@@ -54,7 +54,7 @@ Page({
         },
         clickable: true
       }],
-      markers: ""
+      markers: []
 
     },
 
@@ -71,7 +71,7 @@ Page({
   },
   
   onReady() {
-    this.mapCtx = wx.createMapContext('map1')
+    this.mapCtx = wx.createMapContext('map')
 
   },
 
@@ -81,7 +81,7 @@ Page({
     },
     getMessages(){
       wx.request({
-        url: ' http://118.25.13.61/wx_servlet_war/map', 
+        url: 'http://118.25.13.61/wx_servlet_war/map', 
         method: "POST",
         data: {
           
@@ -90,13 +90,17 @@ Page({
           'content-type': 'application/x-www-form-urlencoded' // 默认值
         },
 
+
+
         success: function (res) {
-          console.log(res.data)
+          console.log(res)
         }
       })
 
 
     },
+    
+
     //获取经纬度，待完善
     getLocation: function(){
       wx.getLocation({

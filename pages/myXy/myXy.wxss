@@ -3,10 +3,11 @@ page{
 }
 
 
+
 .xy_win{
   z-index: 999;
   position: absolute;
-
+  
   margin:30rpx;
   top:100rpx;
   width: 90%;

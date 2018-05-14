@@ -16,7 +16,9 @@ Page({
     xyAdd:"",
     xyDeAdd:"",
     xyStory:"",
-    openId:""
+    openId:"",
+    latitude:null,
+    longitude:null
 
   },
   staticData: {
@@ -60,12 +62,15 @@ Page({
   handleChoose(res){
     this.setData({
       address:res.address,
-      xyAdd:res.address 
+      xyAdd:res.address, 
+      longitude:res.longitude,
+      latitude:res.latitude
     });
     Object.assign(this.staticData,{
       latitude: res.latitude,
-      longitude: res.longitude
+      longitude: res.longitude,
     })
+
   },
   
   handleNameChanges(e){
@@ -172,7 +177,10 @@ handleSubmit:function() {
         xyDeAdd:that.data.xyDeAdd,
         xyStory:that.data.xyStory,
         xyDate:that.data.xyDate,
-        openId: getApp().globalData.open_id
+        openId: getApp().globalData.open_id,
+        longitude:that.data.longitude,
+        latitude:that.data.latitude
+        
       },            
       success:function(res){
         that.setData({
