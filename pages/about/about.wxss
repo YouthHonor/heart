@@ -89,3 +89,7 @@ margin-top: 100rpx;
   margin: 0rpx,10rpx;
   border-radius: 10rpx;
 }
+
+.radio{
+  margin-right: 90rpx;
+}

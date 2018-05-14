@@ -1,15 +1,17 @@
 {
   "pages":[
-
+    "pages/about/about",
+    "pages/verify/verify",
+    
     "pages/index/index",
-   "pages/about/about",
+   
    "pages/home/home",
     "pages/myXy/myXy",
     "pages/support/support",
     "pages/detail/detail",
     "pages/appoint/appoint",
     "pages/mine/mine",
-    "pages/verify/verify",
+    
     "pages/report/report",
     "pages/wish/wish",
     "pages/wishList/wishList",

@@ -1,19 +1,7 @@
-.scroll-view{
-  height: 90%;
-}
-
-.left{
-  float:left;
-}
-
-.wd{
-  width:350rpx;
-}
-
 .bg_img{
   width:100%;
   height:100%;
-  background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525180768365&di=2a6fd5a533e30ef955799d49a4237296&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2Faa64034f78f0f7369e08c23d0155b319ebc41313.jpg)no-repeat;
+  background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1526308689496&di=7050bac94f0cd4dc77f7d50718df2ddc&imgtype=0&src=http%3A%2F%2Fwww.51pptmoban.com%2Fd%2Ffile%2F2014%2F03%2F06%2F94c4d57e51d1e5de6e0f992f48819cc2.jpg)no-repeat;
   background-size: cover;
   /*背景模糊*/
    
@@ -32,11 +20,18 @@
   margin-left: 10rpx;
 }
 
-.wd_ra{
-  width:210rpx;
+.item{
+  height:250rpx;
+  margin-top: 50rpx;
+  margin-left: 50rpx;
+  border-bottom: 5px solid #efeff3;
 }
 
-.boder_bot{
-  border-bottom: 1px solid rgb(190,198,185);
-  height: 20%;
+.item_word{
+  float:left;
+  width:472rpx;
+}
+
+.scrolls{
+  height: 90vh;
 }
