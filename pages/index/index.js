@@ -54,7 +54,7 @@ Page({
         },
         clickable: true
       }],
-      markers: ""
+      markers: []
 
     },
 
@@ -71,7 +71,7 @@ Page({
   },
   
   onReady() {
-    this.mapCtx = wx.createMapContext('map1')
+    this.mapCtx = wx.createMapContext('map')
 
   },
 
@@ -90,13 +90,17 @@ Page({
           'content-type': 'application/x-www-form-urlencoded' // 默认值
         },
 
+
+
         success: function (res) {
-          console.log(res.data)
+          console.log(res)
         }
       })
 
 
     },
+    
+
     //获取经纬度，待完善
     getLocation: function(){
       wx.getLocation({
@@ -128,19 +132,11 @@ Page({
       phoneNumber: '021-22062659' //仅为示例，并非真实的电话号码
     })
   },
+
+  
  f1 :function(event){
     wx.navigateTo({
       url: '/pages/wishList/wishList',
-    })
-  },
-  f2: function(event){
-    wx.navigateTo({
-      url: '/pages/wish/wish',
-    })
-  },
-  government:function(event){
-    wx.navigateTo({
-      url: '/pages/logs/logs',
     })
   }
 })

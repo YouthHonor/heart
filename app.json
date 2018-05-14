@@ -1,5 +1,6 @@
 {
   "pages":[
+
     "pages/index/index",
    "pages/about/about",
    "pages/home/home",
@@ -8,12 +9,13 @@
     "pages/detail/detail",
     "pages/appoint/appoint",
     "pages/mine/mine",
-    
+    "pages/verify/verify",
     "pages/report/report",
     "pages/wish/wish",
     "pages/wishList/wishList",
+
     
-    "pages/verify/verify",
+    
     "pages/pick/pick",
     "pages/register/register",
     "pages/adLogin/adLogin"
