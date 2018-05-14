@@ -90,4 +90,5 @@ margin-left: 5px;
 .xyrequest{
   white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
 }

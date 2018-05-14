@@ -128,19 +128,11 @@ Page({
       phoneNumber: '021-22062659' //仅为示例，并非真实的电话号码
     })
   },
+
+  
  f1 :function(event){
     wx.navigateTo({
       url: '/pages/wishList/wishList',
-    })
-  },
-  f2: function(event){
-    wx.navigateTo({
-      url: '/pages/wish/wish',
-    })
-  },
-  government:function(event){
-    wx.navigateTo({
-      url: '/pages/logs/logs',
     })
   }
 })

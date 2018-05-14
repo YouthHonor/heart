@@ -87,6 +87,7 @@ background: #2e5e86
   font-size: 30rpx;
   float: right;
   line-height: 1.5;
+  margin-top: 10rpx;
 }
 
 .divLine{ 

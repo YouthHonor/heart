@@ -17,7 +17,7 @@
 <!-- 设置心愿墙  和查看更多-->
 
 <view class="block">
-<view type="default" bindtap=' f1 ' class = 'more'>查看更多>> </view>
+<view type="default"  class = 'more'>附近的心愿>> </view>
 <view class = 'wall_title'>心愿地图</view>
 </view>
 <!--显示心愿地图组件-->
