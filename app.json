@@ -1,6 +1,6 @@
 {
   "pages":[
-
+"pages/adLogin/adLogin",
     "pages/index/index",
    "pages/about/about",
    "pages/home/home",
@@ -17,8 +17,8 @@
     
     
     "pages/pick/pick",
-    "pages/register/register",
-    "pages/adLogin/adLogin"
+    "pages/register/register"
+    
    
     
    

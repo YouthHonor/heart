@@ -72,7 +72,7 @@ Page({
     })
 
   },
-  
+
   handleNameChanges(e){
     console.log(e.detail.value);
     var name = e.detail.value;
@@ -160,6 +160,7 @@ handleSubmit:function() {
     })
     return;
   } else{
+  
     var that = this;
     wx.request({
       url:"http://118.25.13.61/wx_servlet_war/wish",
@@ -168,6 +169,7 @@ handleSubmit:function() {
         "content-type": "application/x-www-form-urlencoded"
       },
       data:{
+    
         xyName:that.data.xyName,
         xyPhone: that.data.xyPhone,
         xyType: that.data.xyType,

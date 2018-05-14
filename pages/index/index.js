@@ -33,6 +33,7 @@ Page({
       duration: 1000,
       longitude:"",
       latitude:"",
+      markers:[],
       controls: [{
       
         iconPath: '/images/weizhi1.png',
@@ -54,17 +55,10 @@ Page({
         },
         clickable: true
       }],
-      markers: []
+      
 
     },
 
-  handleGetLocationSucc(res) {
-    this.setData({
-      longitude: res.longitude,
-      latitude: res.latitude
-    })
-    console.log(res);
-  },
 
   controltap: function () {
   this.mapCtx.moveToLocation();
@@ -79,28 +73,40 @@ Page({
       this.getLocation();
       this.getMessages();
     },
-    getMessages(){
+    getMessages() {
       wx.request({
-        url: 'http://118.25.13.61/wx_servlet_war/map', 
-        method: "POST",
+        url: 'http://118.25.13.61/wx_servlet_war/map',
         data: {
-          
+
         },
         header: {
-          'content-type': 'application/x-www-form-urlencoded' // 默认值
+          'content-type': 'application/x-www-form-urlencoded'
         },
+        success: this.getMessageSucc.bind(this)
 
-
-
-        success: function (res) {
-          console.log(res)
-        }
       })
-
-
     },
-    
+    getMessageSucc(res) {
+      const data = res.data;
+      const arr = data.map((value, index) => {
+        return {
+          iconPath: "/images/yirenzheng.png",
+          id: value.id,
+          latitude: value.latitude,
+          longitude: value.longitude,
+          width: 36,
+          height: 36
+        }
+      });
+      
+      console.log(arr);
+    },
 
+    handleMakerTap(e) {
+      wx.navigateTo({
+        url: '/pages/support/support?xyId=' + xyId
+      })
+    },
     //获取经纬度，待完善
     getLocation: function(){
       wx.getLocation({
@@ -109,22 +115,17 @@ Page({
         
       })
     },
-    
+
+    handleGetLocationSucc(res) {
+      this.setData({
+        longitude: res.longitude,
+        latitude: res.latitude
+      })
+
+    },
 
   onLoad: function () {
     
-
-
-
-
-
-
-
-
-
-
-
-
 
   },
   tell : function (){
@@ -134,9 +135,9 @@ Page({
   },
 
   
- f1 :function(event){
+ f2 :function(event){
     wx.navigateTo({
-      url: '/pages/wishList/wishList',
+      url: '/pages/wish/wish',
     })
   }
 })
