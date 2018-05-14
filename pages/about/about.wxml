@@ -1,20 +1,33 @@
 <view class = "title">心愿墙</view>
 <view  class='all'>
   <view class='name'>用户名</view>
-  <input class='input' bindinput = "usenameinput" placeholder="填写您的昵称"/>
+  <input class='input' bindinput = "usenameinput" placeholder="填写您的昵称" value=""/>
   <view class='name'>联系方式</view>
   <input class='input' bindinput = "phonenameinput" placeholder="填写您的联系方式"/>
-   <view class="name">所属居民区</view>
-   <view>
-              <picker class="yc_list" bindchange='bindPickerYc' value="{{ycId}}" range="{{ycList}}">
-                <view class="picker">{{ycList[ycId]}}</view>
-              </picker>
-              <picker class="street_list" bindchange='bindPickerSt' value="{{stId}}"
-               range="{{stList[ycId].stLists}}">
-                <view class="picker">{{stList[ycId].stLists[stId]}}</view>
-              </picker>
-  </view>  
-        
-</view>
+
+            <view class="pas_window window_height window_bot">
+            <view class="pas_text left mright">身份</view>
+              <view class="radio_view left">
+                  <radio-group class="radio_group" bindchange="radioChange">
+                    <radio class="radio" wx:for="{{items}}" wx:key="identification" name="identification" value="{{item.identification}}" checked="{{item.checked}}">
+                      <text>{{item.value}}</text>
+                    </radio>
+                  </radio-group>
+            </view>
+          </view>
+
+    <view class="liveArea_win left window_height window_bot">
+      <view class="area_text left mright">所属居民区</view>
+        <view class="area_list left">
+          <picker class="yc_list" bindchange='bindPickerYc' value="{{ycId}}" range="{{ycList}}">
+            <view class="picker">{{ycList[ycId]}}</view>
+          </picker>
+          <picker class="street_list" bindchange='bindPickerSt' value="{{stId}}" range="{{stList[ycId].stLists}}">
+            <view class="picker">{{stList[ycId].stLists[stId]}}</view>
+          </picker>
+        </view>
+      </view>
+  </view>
+
 <view class='submit-button' bindtap='handleSubmit'>登录</view>
 <view class='admin' bindtap="admin">我是管理员</view>

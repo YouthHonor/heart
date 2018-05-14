@@ -52,6 +52,3 @@
   margin: 10px;
 
 }
-.info1{
-  display: inline-block;
-}

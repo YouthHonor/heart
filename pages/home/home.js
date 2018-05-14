@@ -1,5 +1,4 @@
 // pages/home/home.js
-var app = getApp();
 Page({
 
   onLoad: function (options) {

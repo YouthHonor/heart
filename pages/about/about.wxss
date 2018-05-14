@@ -22,7 +22,7 @@ margin-top: 100rpx;
   margin-right: 40rpx;
   font-size: 30rpx;
 }
-.name{
+.name ,{
   margin-top: 30rpx;
 }
 .area_list{
@@ -43,4 +43,54 @@ margin-top: 100rpx;
   text-align: center;
   color: ccc;
   text-decoration:underline;
+}
+
+.yc_list{
+  width:30%;
+  float:left;
+}
+
+.street_list{
+  width:70%;
+  float:left;
+}
+
+.window_bot{
+  border-bottom: 1px solid rgb;
+}
+
+.liveArea_win{
+  margin: 0rpx,10rpx;
+  border-radius: 10rpx;
+}
+
+.window_height{
+  height:80rpx;
+}
+
+.left{
+  float:left;
+}
+
+.area_text{
+  margin-top: 8rpx;
+}
+
+.mright{
+  margin-right:50rpx;
+}
+
+.street_list{
+  width:70%;
+  float:left;
+}
+
+.pas_window{
+  margin: 0rpx,10rpx;
+  border-radius: 10rpx;
+}
+
+.area_text,.pas_text,.radio_view,.area_list{
+  margin-top: 40rpx;
+  border-bottom: 1px solid rgb;
 }
