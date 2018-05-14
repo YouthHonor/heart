@@ -17,8 +17,8 @@ Page({
     xyDeAdd:"",
     xyStory:"",
     openId:"",
-    latitude:null,
-    longitude:null
+    latitude:"",
+    longitude:""
 
   },
   staticData: {
