@@ -81,7 +81,7 @@ Page({
     },
     getMessages(){
       wx.request({
-        url: ' http://118.25.13.61/wx_servlet_war/map', 
+        url: 'http://118.25.13.61/wx_servlet_war/map', 
         method: "POST",
         data: {
           
