@@ -34,6 +34,7 @@ Page({
       longitude:"",
       latitude:"",
       markers:[],
+      clickable: true,
       controls: [{
       
         iconPath: '/images/weizhi1.png',
@@ -55,7 +56,7 @@ Page({
         },
         clickable: true
       }],
-      
+
 
     },
 
@@ -65,7 +66,7 @@ Page({
   },
   
   onReady() {
-    this.mapCtx = wx.createMapContext('map')
+    this.mapCtx = wx.createMapContext('map1')
 
   },
 
@@ -86,28 +87,32 @@ Page({
 
       })
     },
+
     getMessageSucc(res) {
       const data = res.data;
       const arr = data.map((value, index) => {
         return {
-          iconPath: "/images/yirenzheng.png",
-          id: value.id,
+          iconPath: "/images/yirenling.png",
+          id: value.xyId,
           latitude: value.latitude,
           longitude: value.longitude,
           width: 36,
           height: 36
         }
       });
-      
-      console.log(arr);
+      this.setData({
+        markers:arr
+      })
+      console.log(arr)
     },
 
-    handleMakerTap(e) {
+    handleMakerTap:function(e) {
       wx.navigateTo({
-        url: '/pages/support/support?xyId=' + xyId
+        url: '/pages/detail/detail?id=' + e.markerId
       })
     },
-    //获取经纬度，待完善
+
+
     getLocation: function(){
       wx.getLocation({
         type: 'gcj02',
@@ -134,10 +139,17 @@ Page({
     })
   },
 
+
   
- f2 :function(event){
+
+  f2: function(event){
     wx.navigateTo({
       url: '/pages/wish/wish',
+    })
+  },
+  government:function(event){
+    wx.navigateTo({
+      url: '/pages/logs/logs',
     })
   }
 })

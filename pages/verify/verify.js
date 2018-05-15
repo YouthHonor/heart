@@ -1,16 +1,14 @@
 Page({
   data:{
     /*加个id属性*/
-    infoArray: [{ name: "小静", phoneNumber: "17826267128", address: "长春", date: "2018-5-1",      passFlag: "null"}
-                ],
-    ifPass:[{pass:"true",value:"通过审核",checked:true},
-            {pass:"false",value:"拒绝申报"}
+    infoArray:[],
+    ifPass: [{ pass: "通过审核",value:"通过审核",checked:true},
+             { pass: "拒绝申报",value:"拒绝申报"}
             ]
     },
   onLoad:function(){
     var that = this;
     /*获取那边的相应的未审核的心愿或者服务信息,填到数组里*/
-    /*
     wx.request({
       url: '',
       method:'GET',
@@ -31,7 +29,6 @@ Page({
         console.log("get success")
       }
     })
-    */
   },
   radioChange:function(e){
     var id = e.currenTarget.dataset.xyId;
