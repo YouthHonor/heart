@@ -109,7 +109,7 @@ Page({
     handleMakerTap:function(e) {
       console.log(e)
       wx.navigateTo({
-        url: '/pages/detail/detail?id=' + e.markerId
+        url: '/pages/detail/detail?detailId=' + e.markerId
       })
     },
 
