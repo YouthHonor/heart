@@ -1,25 +1,28 @@
 Page({
   data: {
+    xyId:"",
     detail_info: []
   },
+
+  
   //拒绝申请
   refuse:function(){
     var that = this;
     wx.request({
-      url: '',
+      url: 'http://118.25.13.61/wx_servlet_war/verifyDeny',
       method: "POST",
       header: {
         "content-type": "application/x-www-form-urlencoded"
       },
       data: {
-        
+        xyId:that.data.xyId
       },
       success: function (res) {
         that.setData({
           
         })
-        wx.navigateTo({
-          url: '/pages/admindetail/admindetail',
+        wx.redirectTo({
+          url: '/pages/verify/verify',
         })
       }
     })
@@ -30,20 +33,20 @@ Page({
   accept:function(){
     var that = this;
     wx.request({
-      url: '',
+      url: 'http://118.25.13.61/wx_servlet_war/verifyPass',
       method: "POST",
       header: {
         "content-type": "application/x-www-form-urlencoded"
       },
       data: {
-
+        xyId: that.data.xyId
       },
       success: function (res) {
         that.setData({
 
         })
-        wx.navigateTo({
-          url: '/pages/admindetail/admindetail',
+        wx.redirectTo({
+          url: '/pages/verify/verify',
         })
       }
     })
@@ -56,6 +59,9 @@ Page({
   },
   onLoad: function (options) {
     var detailId = options.detailId;
+    this.setData({
+      xyId:detailId
+    })
     var that = this;
     wx.request({
       url: 'http://118.25.13.61/wx_servlet_war/detail',

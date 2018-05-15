@@ -74,12 +74,13 @@ Page({
     })
     var that = this;
     wx.request({
-      url: 'http://118.25.13.61/wx_servlet_war/query',
+      url: 'http://118.25.13.61/wx_servlet_war/queryVerify',
       method: "POST",
       header: {
         "content-type": "application/x-www-form-urlencoded"
       },
       success: function (res) {
+        console.log(res.data);
         that.setData({
           record: res.data
         })
@@ -95,7 +96,7 @@ Page({
     })
     var that = this;
     wx.request({
-      url: 'http://118.25.13.61/wx_servlet_war/query',
+      url: 'http://118.25.13.61/wx_servlet_war/queryVerify',
       method: "POST",
       header: {
         "content-type": "application/x-www-form-urlencoded"
