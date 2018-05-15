@@ -1,0 +1,87 @@
+
+<view class="array" wx:for="{{detail_info}}">
+  <view class='row'>
+  <label class='title'> 许愿人姓名 </label>
+  <view class='info'>
+      {{item.xyName}}
+  </view>
+  </view>
+  <view class='row'>
+  <label class='title'> 联系方式 </label>
+  <view class='info'>
+      {{item.xyPhone}}
+  </view>
+  </view>
+  <view class='row'>
+  <label class='title'> 许愿人类型 </label>
+  <view class='info'>
+      {{item.xyType}}
+  </view>
+  </view>
+  <view class='row'>
+  <label class='title'> 许愿类型 </label>
+  <view class='info'>
+      {{item.wishType}}
+  </view>
+  </view>
+  <view class='row'>
+  <label class='title'> 具体需求 </label>
+  <view class='info'>
+      <text>{{item.xyRequest}}</text>
+  </view>
+  </view>
+  <view class='row'>
+  <label class='title'> 心愿日期 </label>
+  <view class='info'>
+      {{item.xyDate}}
+  </view>
+  </view>
+  <view class='row'>
+  <label class='title'> 我的地址 </label>
+  <view class='info'>
+      {{item.xyAdd}}
+  </view>
+  </view>
+  <view class='row'>
+  <label class='title' > 详细地址 </label>
+  <view class='info'>
+      {{item.xyDeAdd}}
+  </view>
+  </view>
+
+  <view class='row'>
+  <view class="story_win">
+    <label class='title'> 我的故事 </label>
+  </view>
+    <view class='info_story'>
+      <text>{{item.xyStory}}</text>
+    </view> 
+
+  </view>
+
+  <view class='row'>
+    <label class='title'> 认领人 </label>
+    <view class='info'>
+      {{item.pickName}}
+    </view> 
+
+  </view>
+
+    <view class='row'>
+    <label class='title'> 认领人电话 </label>
+    <view class='info'>
+      {{item.pickPhone}}
+    </view> 
+
+  </view>
+
+</view>
+
+
+<view>
+<image class = "report_png" src='/images/jubao1.png'></image>
+<button class = 'report_title' bindtap='refuse'>拒绝申请</button>
+<image class = "support_png" src='/images/zhichi.png'></image>
+<button class = 'support_title' bindtap='accept'>通过申请</button>
+<view >{{connt}}</view>
+</view>

@@ -72,8 +72,8 @@ margin-top: 100rpx;
   float:left;
 }
 
-.area_text{
-  margin-top: 8rpx;
+.area_text,.yc_list,.street_list,.pas_text,.radio_view{
+  margin-top: 10rpx;
 }
 
 .mright{

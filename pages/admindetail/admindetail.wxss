@@ -1,0 +1,66 @@
+
+.row{
+  overflow: hidden;
+  line-height: 100rpx;
+  border-bottom: 1rpx solid #ccc;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  color: #777;
+  background: #fff;
+}
+.report_png{
+  width: 50rpx;
+  height: 50rpx;
+  margin-top:100rpx;
+  float: left;
+  margin-left: 20rpx;
+}
+.report_title{
+  width: 200rpx;
+  height: 50rpx;
+  padding:0;
+  line-height: 50rpx;
+  color: #888;
+  margin-top: 100rpx;
+  float: left;
+  margin-left: 20rpx;
+}
+.support_png{
+  width: 50rpx;
+  height: 50rpx;
+  margin-top:100rpx;
+  float: left;
+  margin-left: 120rpx;
+}
+.support_title{
+  width: 200rpx;
+  height: 50rpx;
+  padding:0;
+  line-height: 50rpx;
+  color: #888;
+  margin-top: 100rpx;
+  float: left;
+  margin-left: 20rpx;
+}
+
+.info{
+  width: 500rpx;
+  height: 100rpx;
+  float:left;
+  margin-left: 20rpx;
+  font-size: 30rpx;
+}
+
+.info_story{
+  margin-left: 20rpx;
+  font-size: 30rpx;
+  text-align: left;
+}
+
+.title{
+  float:left;
+}
+
+.story_win{
+  height: 90rpx;
+}

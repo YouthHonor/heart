@@ -1,4 +1,4 @@
-Page({
+  Page({
     data:{
       tabTxt: ['显示全部', '心愿形式', '地区', '认领状态'],//tab文案
       tab: [true, true, true, true],

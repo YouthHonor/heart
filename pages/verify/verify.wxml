@@ -1,5 +1,6 @@
-
-  <view>
+<button class='button1' bindtap='button1'>待审核</button>
+<button class='button2' bindtap='button1'>审核记录</button>
+<view >
     <scroll-view scroll-y class='scrolls'>
       <view class='item' wx:for="{{record}}" data-detail-id="{{item.xyId}}">
         <image class="image" src="/images/cry.jpg" bindtap="jmpToDetail" data-detail-id="{{item.xyId}}"></image>
@@ -9,22 +10,8 @@
           <view>心愿发布时间：{{item.xyDate}}</view>
           <view>所属街道：{{item.xyStreet}}</view>
         </view>
-
-        <view class="radio_view left">
-            <radio-group class="radio_group" bindchange="radioChange">
-              <radio class="radio" wx:for="{{ifPass}}" wx:for-item="passItem" name="passItem.pass" value="{{passItem.value}}" checked="{{passItem.checked}}" data-xy-id="{{item.xyId}}">
-                <text>{{item.value}}</text>
-              </radio>
-            </radio-group>
-        </view>
-
       </view>
     </scroll-view>
-  
-
-  <view class="button_window">
-    <button class="button" bindtap="submit" type="primary">提交成功</button>
-  </view>
-
+    
 </view>
 

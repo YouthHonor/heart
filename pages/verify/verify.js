@@ -1,63 +1,124 @@
 Page({
-  data:{
-    /*加个id属性*/
-    infoArray:[],
-    ifPass: [{ pass: "通过审核",value:"通过审核",checked:true},
-             { pass: "拒绝申报",value:"拒绝申报"}
-            ]
-    },
-  onLoad:function(){
-    var that = this;
-    /*获取那边的相应的未审核的心愿或者服务信息,填到数组里*/
-    wx.request({
-      url: '',
-      method:'GET',
-      header:{
-        "Content-Type":"json"
-      },
-      success:function(res){
-        var data = res.data;
-        
-        that.setData({
-          infoArray:data
-        })
-      },
-      fail:function(res){
-        console.log('get fail')
-      },
-      complete:function(res){
-        console.log("get success")
-      }
-    })
-  },
-  radioChange:function(e){
-    var id = e.currenTarget.dataset.xyId;
-    var str = "infoArray["+id+"]"+".passFlag"
-    this.setData({
-      /*假设有个字段是审核状态的标志*/
-      /*这里动态修改了infoArray里的passFlag,然后再把新的请求信息传过去*/
-      [str] : e.currentTarget.dataset.passStatus
-    })
-  },
-  submit:function(){
-    /*后端是接收JSON数据的,算了吧，让他更新一下数据库把233*/
-    var that = this;
-    wx.request({
-      url: '',
-      method:"GET",
-      data:{
-        infoArray:that.data.infoArray
-      },
-      header: {
-        "Content-Type": "json"
-      },
-      success:function(res){
-        wx.navigateTo({
-          /*跳回到入口页面*/
-          url: '',
-        })
-      }
+  data: {
+    tabTxt: ['显示全部', '心愿形式', '地区', '认领状态'],//tab文案
 
+    record: [],
+
+    xyTypeFlag: "false",
+    xyStreetFlag: "false",
+    xyFlagFlag: "false",
+
+    Type: "",
+    Street: "",
+    Flag: "",
+  },
+  //待审核和审核记录点击事件
+  button1:function(){
+   
+      var that = this;
+      wx.request({
+        url: '',
+        method: "POST",
+        header: {
+          "content-type": "application/x-www-form-urlencoded"
+        },
+        success: function (res) {
+          that.setData({
+            record: res.data
+          })
+        }
+      })
+  },
+  button2: function () {
+
+    var that = this;
+    wx.request({
+      url: '',
+      method: "POST",
+      header: {
+        "content-type": "application/x-www-form-urlencoded"
+      },
+      success: function (res) {
+        that.setData({
+          record: res.data
+        })
+      }
+    })
+  },
+  //通过审核的点击事件
+  filter:function(){
+
+  },
+  onShareAppMessage: function (res) {
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+      console.log(res.target)
+    }
+    return {
+      title: '心愿墙',
+      path: '/pages/index/index',
+      success: function (res) {
+        // 转发成功
+      },
+      fail: function (res) {
+        // 转发失败
+      }
+    }
+  },
+
+  onLoad: function (options) {
+    this.setData({
+      xyTypeFlag: "false",
+      xyStreetFlag: "false",
+      xyFlagFlag: "false"
+    })
+    var that = this;
+    wx.request({
+      url: 'http://118.25.13.61/wx_servlet_war/query',
+      method: "POST",
+      header: {
+        "content-type": "application/x-www-form-urlencoded"
+      },
+      success: function (res) {
+        that.setData({
+          record: res.data
+        })
+      }
+    })
+
+  },
+  onShow: function () {
+    this.setData({
+      xyTypeFlag: "false",
+      xyStreetFlag: "false",
+      xyFlagFlag: "false"
+    })
+    var that = this;
+    wx.request({
+      url: 'http://118.25.13.61/wx_servlet_war/query',
+      method: "POST",
+      header: {
+        "content-type": "application/x-www-form-urlencoded"
+      },
+      success: function (res) {
+        that.setData({
+          record: res.data
+        })
+      }
+    })
+  },
+
+  jmpToDetail: function (event) {
+    var detailId = event.currentTarget.dataset.detailId;
+    console.log(detailId);
+    wx.navigateTo({
+      url: '/pages/admindetail/admindetail?detailId=' + detailId,
+    })
+  },
+  state: function (event) {
+    var xyId = event.currentTarget.dataset.xyId;
+    wx.navigateTo({
+      url: '/pages/support/support?xyId=' + xyId
     })
   }
 
