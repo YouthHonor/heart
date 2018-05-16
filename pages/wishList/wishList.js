@@ -658,7 +658,9 @@
         success: function (res) {
           that.setData({
             record: res.data
+            
           })
+          console.log(res)
         }
       })
     },

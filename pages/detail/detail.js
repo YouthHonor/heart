@@ -1,5 +1,6 @@
 Page({
   data:{
+    Flag: "",
     detail_info:[]
   },
   

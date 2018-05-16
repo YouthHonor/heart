@@ -1,22 +1,31 @@
 {
   "pages":[
+    
+"pages/wishList/wishList",
+    "pages/detail/detail",
+   
     "pages/about/about",
+    "pages/mine/mine",
+   
+
+    "pages/index/index",
+    
     "pages/appoint/appoint",
     "pages/pick/pick",
     "pages/verify/verify",
     "pages/register/register",
    "pages/adLogin/adLogin",
     "pages/admindetail/admindetail",
-    "pages/index/index", 
+     
    "pages/home/home",
     "pages/myXy/myXy",
     "pages/support/support",
-    "pages/detail/detail",
+    
    
-    "pages/mine/mine",
+   
     "pages/report/report",
-    "pages/wish/wish",
-    "pages/wishList/wishList"
+    "pages/wish/wish"
+    
   
      
   ],
