@@ -665,7 +665,7 @@
 
     jmpToDetail:function(event){
       var detailId = event.currentTarget.dataset.detailId;
-      console.log(detailId);
+      console.log(event)
       wx.navigateTo({
         url: '/pages/detail/detail?detailId='+detailId,
       })

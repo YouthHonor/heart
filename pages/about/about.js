@@ -93,7 +93,6 @@ Page({
     })
   },
   usenameinput: function(e){
-    console.log(event);
     this.setData({userName:e.detail.value})
 
   },
