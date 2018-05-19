@@ -2,11 +2,9 @@
 App({
   appData:{
   
-
-
   },
   globalData:{
-
+   // baseUrl:"https://www.kousisoft.com/wx_servlet_war"
   },
   onLaunch () {
     // 展示本地存储能力

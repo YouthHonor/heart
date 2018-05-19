@@ -8,6 +8,7 @@
   color: #777;
   background: #fff;
 }
+
 .submit-button{
   background: #ff9700;
   line-height: 38px;
