@@ -38,8 +38,8 @@
 <view >
     <scroll-view scroll-y class='scrolls'>
       <view class='item' wx:for="{{record}}" data-detail-id="{{item.xyId}}">
-        <image class="image" src="/images/cry.jpg" bindtap="jmpToDetail" data-detail-id="{{item.xyId}}"></image>
-        <view class="item_word" bindtap="jmpToDetail" data-detail-id="{{item.xyId}}" >
+          <image class="image"  src="{{item.xyImg}}" bindtap="jmpToDetail" data-detail-id="{{item.xyId}}"></image>
+        <view class="item_word" bindtap="jmpToDetail" data-detail-id="{{item.xyId}}">
           <view class='xyrequest'>{{item.xyRequest}}</view>
           <view>心愿类型：{{item.wishType}}</view>
           <view>心愿发布时间：{{item.xyDate}}</view>

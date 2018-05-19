@@ -11,6 +11,7 @@
       Type:"",
       Street:"",
       Flag:"",
+      imgUrls:[],
 
       wishObjectList:["心愿对象▽","个人","团体","公众"],
       wishMethodList: ["心愿形式▽","精神","物质"],
@@ -629,7 +630,7 @@
       })
       var that = this;
       wx.request({
-        url: 'http://118.25.13.61/wx_servlet_war/query',
+        url: 'https://www.kousisoft.com/wx_servlet_war/query',
         method:"POST",
         header: {
           "content-type": "application/x-www-form-urlencoded"
@@ -638,6 +639,29 @@
           that.setData({
             record:res.data
           })
+          for(let i=0;i<that.data.record.length;i++){
+            console.log("length:"+that.data.record.length)
+            console.log("i="+i);
+            var fileName = that.data.record[i].fileName;
+            console.log("fileName:"+fileName)
+            wx.downloadFile({
+              url:"https://www.kousisoft.com/wx_servlet_war/upload/"+fileName+".jpg",
+              success: function (res) {
+                if (i !== that.data.record.length) {
+                  console.log("下载成功:" + res.tempFilePath);
+                  var img = "record[" + i + "].xyImg";
+                  that.setData({
+                    [img]: res.tempFilePath
+                  })
+                }
+                /*缓存 */
+                wx.setStorageSync(that.data.record[i].xyId,that.data.record[i].xyImg);
+              },
+              fail: function (err) {
+                console.log(err)
+              }
+            })
+          }
         }
       })
       
@@ -650,7 +674,7 @@
       })
       var that = this;
       wx.request({
-        url: 'http://118.25.13.61/wx_servlet_war/query',
+        url: 'https://www.kousisoft.com/wx_servlet_war/query',
         method: "POST",
         header: {
           "content-type": "application/x-www-form-urlencoded"
@@ -660,6 +684,17 @@
             record: res.data
             
           })
+          for(let i=0;i<that.data.record.length;i++){
+            var img = "record["+i+"].xyImg";
+            wx.getStorage({
+              key: that.data.record[i].xyId,
+              success: function(res) {
+                that.setData({
+                  [img]:res.data
+                })
+              },
+            })
+          }
           console.log(res)
         }
       })

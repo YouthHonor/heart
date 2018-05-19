@@ -81,6 +81,13 @@ Page({
       stId: 0
     })
   },
+  radioChange(e) {
+    console.log(e.detail.value);
+    var name = e.detail.value;
+    this.setData({
+      identification: name
+    })
+  },
 
   bindPickerYc: function (e) {
     this.setData({
@@ -132,7 +139,7 @@ handleSubmit:function(event){
   } else {
     console.log(that.data.identification);
     wx.request({
-      url: "http://118.25.13.61/wx_servlet_war/modify",
+      url: "https://www.kousisoft.com/wx_servlet_war/modify",
       method: "POST",
       header: {
         "content-type": "application/x-www-form-urlencoded"
