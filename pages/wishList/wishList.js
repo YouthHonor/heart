@@ -639,29 +639,6 @@
           that.setData({
             record:res.data
           })
-          for(let i=0;i<that.data.record.length;i++){
-            console.log("length:"+that.data.record.length)
-            console.log("i="+i);
-            var fileName = that.data.record[i].fileName;
-            console.log("fileName:"+fileName)
-            wx.downloadFile({
-              url:"https://www.kousisoft.com/wx_servlet_war/upload/"+fileName+".jpg",
-              success: function (res) {
-                if (i !== that.data.record.length) {
-                  console.log("下载成功:" + res.tempFilePath);
-                  var img = "record[" + i + "].xyImg";
-                  that.setData({
-                    [img]: res.tempFilePath
-                  })
-                }
-                /*缓存 */
-                wx.setStorageSync(that.data.record[i].xyId,that.data.record[i].xyImg);
-              },
-              fail: function (err) {
-                console.log(err)
-              }
-            })
-          }
         }
       })
       
@@ -684,21 +661,10 @@
             record: res.data
             
           })
-          for(let i=0;i<that.data.record.length;i++){
-            var img = "record["+i+"].xyImg";
-            wx.getStorage({
-              key: that.data.record[i].xyId,
-              success: function(res) {
-                that.setData({
-                  [img]:res.data
-                })
-              },
-            })
           }
-          console.log(res)
-        }
       })
-    },
+
+  },
 
     jmpToDetail:function(event){
       var detailId = event.currentTarget.dataset.detailId;
