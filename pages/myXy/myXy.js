@@ -1,3 +1,4 @@
+  var app = getApp();
   Page({
   data: {
     myXy_info:[],
@@ -7,7 +8,7 @@
     var that = this;
     wx.request({
       /*存放预约服务信息的url*/
-      url: 'http://118.25.13.61/wx_servlet_war/myXy',
+      url: getApp().globalData.baseUrl +'myXy',
       data:{
         openId: getApp().globalData.open_id
       },

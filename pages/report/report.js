@@ -1,3 +1,4 @@
+var app = getApp();
 Page({
   data: {
     array: [ '政治敏感', '违法', '广告','虚假','其他'],

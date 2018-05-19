@@ -38,7 +38,7 @@
 <view >
     <scroll-view scroll-y class='scrolls'>
       <view class='item' wx:for="{{record}}" data-detail-id="{{item.xyId}}">
-          <image class="image"  src="{{item.xyImg}}" bindtap="jmpToDetail" data-detail-id="{{item.xyId}}"></image>
+          <image class="image"  src="https://www.webmad.net/wx_servlet_war/upload/{{item.xyImg}}.jpg" bindtap="jmpToDetail" data-detail-id="{{item.xyId}}"></image>
         <view class="item_word" bindtap="jmpToDetail" data-detail-id="{{item.xyId}}">
           <view class='xyrequest'>{{item.xyRequest}}</view>
           <view>心愿类型：{{item.wishType}}</view>

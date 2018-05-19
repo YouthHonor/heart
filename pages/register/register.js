@@ -1,3 +1,4 @@
+var app = getApp();
 Page({
   data:{
     items:[
@@ -114,7 +115,7 @@ Page({
     }else{
       console.log(that.data.identification);
       wx.request({
-        url: "http://118.25.13.61/wx_servlet_war/modify",
+        url: getApp().globalData.baseUrl +"modify",
         method:"POST",
         header: {
           "content-type": "application/x-www-form-urlencoded"

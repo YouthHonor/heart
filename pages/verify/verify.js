@@ -1,3 +1,4 @@
+var app =getApp();
 Page({
   data: {
     tabTxt: ['显示全部', '心愿形式', '地区', '认领状态'],//tab文案
@@ -74,7 +75,7 @@ Page({
     })
     var that = this;
     wx.request({
-      url: 'http://118.25.13.61/wx_servlet_war/queryVerify',
+      url: getApp().globalData.baseUrl +'queryVerify',
       method: "POST",
       header: {
         "content-type": "application/x-www-form-urlencoded"
@@ -96,7 +97,7 @@ Page({
     })
     var that = this;
     wx.request({
-      url: 'http://118.25.13.61/wx_servlet_war/queryVerify',
+      url: getApp().globalData.baseUrl +'queryVerify',
       method: "POST",
       header: {
         "content-type": "application/x-www-form-urlencoded"

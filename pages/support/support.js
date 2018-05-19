@@ -1,3 +1,4 @@
+var app = getApp();
 Page({
   bindDateChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
@@ -84,7 +85,7 @@ Page({
   handleSubmit:function(){
     var that = this;
     wx.request({
-      url: 'http://118.25.13.61/wx_servlet_war/pick',
+      url: getApp().globalData.baseUrl +'pick',
       method: "POST",
       header: {
         "content-type": "application/x-www-form-urlencoded"

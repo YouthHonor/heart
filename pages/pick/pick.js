@@ -1,3 +1,4 @@
+var app = getApp();
 Page({
   data: {
     pick_info: []
@@ -5,7 +6,7 @@ Page({
   onLoad: function (options) {
     var that = this;
     wx.request({
-      url: "http://118.25.13.61/wx_servlet_war/queryMyPick",
+      url: getApp().globalData.baseUrl +"queryMyPick",
       data: {
         openId: getApp().globalData.open_id
       },

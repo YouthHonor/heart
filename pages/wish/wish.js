@@ -1,3 +1,4 @@
+const app = getApp()
 Page({
   data: {
     address: "点击选择地址",
@@ -41,7 +42,7 @@ Page({
         console.log(that.data.fileName);
         console.log(res.tempFilePaths[0]);
         wx.uploadFile({
-          url: 'https://www.kousisoft.com/wx_servlet_war/upload',
+          url: getApp().globalData.baseUrl +'upload',
           filePath: res.tempFilePaths[0],
           header: {
             "Content-Type": "multipart/form-data"
@@ -187,7 +188,7 @@ handleSubmit:function() {
     var that = this;
   
     wx.request({
-      url:"http://118.25.13.61/wx_servlet_war/wish",
+      url:getApp().globalData.baseUrl +"wish",
       method:"POST",
       header: {
         "content-type": "application/x-www-form-urlencoded"

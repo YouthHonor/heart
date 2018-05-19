@@ -1,3 +1,4 @@
+var app = getApp();
 Page({
   data: {
     account:"",
@@ -26,7 +27,7 @@ Page({
     } else {
       var that = this;
       wx.request({
-        url: 'http://118.25.13.61/wx_servlet_war/adLogin',
+        url: getApp().globalData.baseUrl +'adLogin',
         data: {
           zh: account,
           pas:password

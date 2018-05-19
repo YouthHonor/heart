@@ -1,3 +1,4 @@
+var app =getApp();
 Page({
   data:{
     user_info:[]
@@ -6,7 +7,7 @@ Page({
   onLoad:function(options){
     var that = this;
     wx.request({
-      url:"http://118.25.13.61/wx_servlet_war/mine",
+      url:getApp().globalData.baseUrl +'mine',
       data:{
         openId:getApp().globalData.open_id
       },
@@ -25,7 +26,7 @@ Page({
   onShow:function(){
     var that = this;
     wx.request({
-      url: "http://118.25.13.61/wx_servlet_war/mine",
+      url: getApp().globalData.baseUrl +'mine',
       data: {
         openId: getApp().globalData.open_id
       },

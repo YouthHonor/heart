@@ -3,9 +3,7 @@ App({
   appData:{
   
   },
-  globalData:{
-   // baseUrl:"https://www.kousisoft.com/wx_servlet_war"
-  },
+
   onLaunch () {
     // 展示本地存储能力
     try {
@@ -22,7 +20,7 @@ App({
           //发起网络请求
           var that = this;
           wx.request({
-            url: 'http://118.25.13.61/wx_servlet_war/login',
+            url: 'https://www.webmad.net/wx_servlet_war/login',
             data: {
               code: res.code
             },
@@ -42,6 +40,7 @@ App({
 
 
   globalData: {
-    open_id: null
+    open_id: null,
+    baseUrl: "https://www.webmad.net/wx_servlet_war/"
   }
 })

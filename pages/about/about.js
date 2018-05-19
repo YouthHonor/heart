@@ -139,7 +139,7 @@ handleSubmit:function(event){
   } else {
     console.log(that.data.identification);
     wx.request({
-      url: "https://www.kousisoft.com/wx_servlet_war/modify",
+      url: getApp().globalData.baseUrl +'modify',
       method: "POST",
       header: {
         "content-type": "application/x-www-form-urlencoded"

@@ -1,3 +1,4 @@
+var app =getApp();
 Page({
   data: {
     xyId:"",
@@ -9,7 +10,7 @@ Page({
   refuse:function(){
     var that = this;
     wx.request({
-      url: 'http://118.25.13.61/wx_servlet_war/verifyDeny',
+      url: 'getApp().globalData.baseUrl +verifyDeny',
       method: "POST",
       header: {
         "content-type": "application/x-www-form-urlencoded"
@@ -33,7 +34,7 @@ Page({
   accept:function(){
     var that = this;
     wx.request({
-      url: 'http://118.25.13.61/wx_servlet_war/verifyPass',
+      url: 'getApp().globalData.baseUrl +verifyPass',
       method: "POST",
       header: {
         "content-type": "application/x-www-form-urlencoded"
@@ -64,7 +65,7 @@ Page({
     })
     var that = this;
     wx.request({
-      url: 'http://118.25.13.61/wx_servlet_war/detail',
+      url: getApp().globalData.baseUrl +'detail',
       method: "POST",
       header: {
         "content-type": "application/x-www-form-urlencoded"

@@ -1,3 +1,4 @@
+var app =getApp();
 Page({
   data: {
     detail_info: []
@@ -20,7 +21,7 @@ Page({
     var detailId = options.detailId;
     var that = this;
     wx.request({
-      url: 'http://118.25.13.61/wx_servlet_war/detail',
+      url: getApp().globalData.baseUrl +'detail',
       method: "POST",
       header: {
         "content-type": "application/x-www-form-urlencoded"

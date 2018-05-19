@@ -1,3 +1,4 @@
+var app = getApp();
   Page({
     data:{
       tabTxt: ['显示全部', '心愿形式', '地区', '认领状态'],//tab文案
@@ -168,7 +169,7 @@
     filter2: function () {
         var that = this;
         wx.request({
-          url: 'http://118.25.13.61/wx_servlet_war/query',
+          url: getApp().globalData.baseUrl +'query',
           method: "POST",
           header: {
             "content-type": "application/x-www-form-urlencoded"
@@ -190,7 +191,7 @@
       })
       var that = this;
       wx: wx.request({
-        url: 'http://118.25.13.61/wx_servlet_war/select',
+        url: getApp().globalData.baseUrl +'select',
         data: {
           xyTypeFlag: that.data.xyTypeFlag,
           xyStreetFlag: that.data.xyStreetFlag,
@@ -219,7 +220,7 @@
       })
       var that = this;
       wx: wx.request({
-        url: 'http://118.25.13.61/wx_servlet_war/select',
+        url: getApp().globalData.baseUrl +'select',
         data: {
           xyTypeFlag: that.data.xyTypeFlag,
           xyStreetFlag: that.data.xyStreetFlag,
@@ -248,7 +249,7 @@
       })
       var that = this;
       wx: wx.request({
-        url: 'http://118.25.13.61/wx_servlet_war/select',
+        url: getApp().globalData.baseUrl +'select',
         data: {
           xyTypeFlag: that.data.xyTypeFlag,
           xyStreetFlag: that.data.xyStreetFlag,
@@ -277,7 +278,7 @@
       })
       var that = this;
       wx: wx.request({
-        url: 'http://118.25.13.61/wx_servlet_war/select',
+        url: getApp().globalData.baseUrl +'select',
         data: {
           xyTypeFlag: that.data.xyTypeFlag,
           xyStreetFlag: that.data.xyStreetFlag,
@@ -306,7 +307,7 @@
       })
       var that = this;
       wx: wx.request({
-        url: 'http://118.25.13.61/wx_servlet_war/select',
+        url: getApp().globalData.baseUrl +'select',
         data: {
           xyTypeFlag: that.data.xyTypeFlag,
           xyStreetFlag: that.data.xyStreetFlag,
@@ -335,7 +336,7 @@
       })
       var that = this;
       wx: wx.request({
-        url: 'http://118.25.13.61/wx_servlet_war/select',
+        url: getApp().globalData.baseUrl +'select',
         data: {
           xyTypeFlag: that.data.xyTypeFlag,
           xyStreetFlag: that.data.xyStreetFlag,
@@ -364,7 +365,7 @@
       })
       var that = this;
       wx: wx.request({
-        url: 'http://118.25.13.61/wx_servlet_war/select',
+        url: getApp().globalData.baseUrl +'select',
         data: {
           xyTypeFlag: that.data.xyTypeFlag,
           xyStreetFlag: that.data.xyStreetFlag,
@@ -393,7 +394,7 @@
       })
       var that = this;
       wx: wx.request({
-        url: 'http://118.25.13.61/wx_servlet_war/select',
+        url: getApp().globalData.baseUrl +'select',
         data: {
           xyTypeFlag: that.data.xyTypeFlag,
           xyStreetFlag: that.data.xyStreetFlag,
@@ -422,7 +423,7 @@
       })
       var that = this;
       wx: wx.request({
-        url: 'http://118.25.13.61/wx_servlet_war/select',
+        url: getApp().globalData.baseUrl +'select',
         data: {
           xyTypeFlag: that.data.xyTypeFlag,
           xyStreetFlag: that.data.xyStreetFlag,
@@ -451,7 +452,7 @@
       })
       var that = this;
       wx: wx.request({
-        url: 'http://118.25.13.61/wx_servlet_war/select',
+        url: getApp().globalData.baseUrl +'select',
         data: {
           xyTypeFlag: that.data.xyTypeFlag,
           xyStreetFlag: that.data.xyStreetFlag,
@@ -480,7 +481,7 @@
       })
       var that = this;
       wx: wx.request({
-        url: 'http://118.25.13.61/wx_servlet_war/select',
+        url: getApp().globalData.baseUrl +'select',
         data: {
           xyTypeFlag: that.data.xyTypeFlag,
           xyStreetFlag: that.data.xyStreetFlag,
@@ -509,7 +510,7 @@
       })
       var that = this;
       wx: wx.request({
-        url: 'http://118.25.13.61/wx_servlet_war/select',
+        url: getApp().globalData.baseUrl +'select',
         data: {
           xyTypeFlag: that.data.xyTypeFlag,
           xyStreetFlag: that.data.xyStreetFlag,
@@ -538,7 +539,7 @@
       })
       var that = this;
       wx: wx.request({
-        url: 'http://118.25.13.61/wx_servlet_war/select',
+        url: getApp().globalData.baseUrl +'select',
         data: {
           xyTypeFlag: that.data.xyTypeFlag,
           xyStreetFlag: that.data.xyStreetFlag,
@@ -567,7 +568,7 @@
       })
       var that = this;
       wx: wx.request({
-        url: 'http://118.25.13.61/wx_servlet_war/select',
+        url: getApp().globalData.baseUrl +'select',
         data: {
           xyTypeFlag: that.data.xyTypeFlag,
           xyStreetFlag: that.data.xyStreetFlag,
@@ -596,7 +597,7 @@
       })
       var that = this;
       wx: wx.request({
-        url: 'http://118.25.13.61/wx_servlet_war/select',
+        url: getApp().globalData.baseUrl +'select',
         data: {
           xyTypeFlag: that.data.xyTypeFlag,
           xyStreetFlag: that.data.xyStreetFlag,
@@ -630,7 +631,7 @@
       })
       var that = this;
       wx.request({
-        url: 'https://www.kousisoft.com/wx_servlet_war/query',
+        url: getApp().globalData.baseUrl +'query',
         method:"POST",
         header: {
           "content-type": "application/x-www-form-urlencoded"
@@ -645,7 +646,7 @@
             var fileName = that.data.record[i].fileName;
             console.log("fileName:"+fileName)
             wx.downloadFile({
-              url:"https://www.kousisoft.com/wx_servlet_war/upload/"+fileName+".jpg",
+              url:"getApp().globalData.baseUrl +upload/"+fileName+".jpg",
               success: function (res) {
                 if (i !== that.data.record.length) {
                   console.log("下载成功:" + res.tempFilePath);
@@ -674,7 +675,7 @@
       })
       var that = this;
       wx.request({
-        url: 'https://www.kousisoft.com/wx_servlet_war/query',
+        url: getApp().globalData.baseUrl +'query',
         method: "POST",
         header: {
           "content-type": "application/x-www-form-urlencoded"
