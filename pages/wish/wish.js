@@ -164,6 +164,13 @@ handleSubmit:function() {
       duration: 2000
     })
     return;
+  } else if (!(/^1(3|4|5|6|7|8)\d{9}$/.test(this.data.xyPhone))) {
+    var warn = "手机号格式有误";
+    wx.showToast({
+      title: warn,
+      icon: 'error',
+    })
+    return;
   } else if(this.data.xyRequest === ""){
     wx.showToast({
       title: '请输入具体需求',

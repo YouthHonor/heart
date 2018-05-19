@@ -682,6 +682,7 @@
         success: function (res) {
           that.setData({
             record: res.data
+            
           })
           for(let i=0;i<that.data.record.length;i++){
             var img = "record["+i+"].xyImg";
@@ -694,13 +695,14 @@
               },
             })
           }
+          console.log(res)
         }
       })
     },
 
     jmpToDetail:function(event){
       var detailId = event.currentTarget.dataset.detailId;
-      console.log(detailId);
+      console.log(event)
       wx.navigateTo({
         url: '/pages/detail/detail?detailId='+detailId,
       })

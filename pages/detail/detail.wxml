@@ -80,8 +80,12 @@
 
 <view>
 <image class = "report_png" src='/images/jubao1.png'></image>
-<button class = 'report_title' bindtap='report'>点击举报</button>
+<view class = 'zhuangtai1' bindtap='report'>点击举报</view>
 <image class = "support_png" src='/images/zhichi.png'></image>
-<button class = 'support_title' bindtap='support'>点击参与</button>
-<view >{{connt}}</view>
+<view class = 'support_title'>
+ <view class='zhuangtai' data-xy-id="{{item.xyId}}" wx:if="{{item.xyFlag === '已认领'?true:false}}">已认领</view>
+          <view class='zhuangtai' data-xy-id="{{item.xyId}}" bindtap='state' wx:if="{{item.xyFlag === '待认领'?true:false}}">认领</view>
+          <view class='zhuangtai' data-xy-id="{{item.xyId}}"  wx:if="{{item.xyFlag === '未审核'?true:false}}">待审核</view>
+          <view class='zhuangtai' data-xy-id="{{item.xyId}}"  wx:if="{{item.xyFlag === '已完成'?true:false}}">已完成</view>
+        </view>
 </view>
