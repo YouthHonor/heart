@@ -1,9 +1,7 @@
-
-
 Page({
-  data:{
+  data: {
     address: "点击选择地址",
-    success:  false,
+    success: false,
     tempFilePaths: '',
 
     /*提交字段*/
@@ -27,7 +25,7 @@ Page({
 
 
   },
-  
+
   chooseimage: function () {
     var that = this
     // 上传图片 获取路径  
@@ -71,74 +69,74 @@ Page({
 
 
 
-  
-  handleAddress1(){
+
+  handleAddress1() {
     wx.chooseLocation({
-      success:this.handleChoose.bind(this)
+      success: this.handleChoose.bind(this)
     })
   },
 
-  handleChoose(res){
+  handleChoose(res) {
     this.setData({
-      address:res.address,
-      xyAdd:res.address, 
-      longitude:res.longitude,
-      latitude:res.latitude
+      address: res.address,
+      xyAdd: res.address,
+      longitude: res.longitude,
+      latitude: res.latitude
     });
-    Object.assign(this.staticData,{
+    Object.assign(this.staticData, {
       latitude: res.latitude,
       longitude: res.longitude,
     })
 
   },
 
-  handleNameChanges(e){
+  handleNameChanges(e) {
     console.log(e.detail.value);
     var name = e.detail.value;
     this.setData({
-      xyName:name
+      xyName: name
     })
   },
-  handleContactChanges(e){
+  handleContactChanges(e) {
     console.log(e.detail.value)
     var phone = e.detail.value;
     this.setData({
-      xyPhone:phone
+      xyPhone: phone
     })
-},
+  },
   handleServeTypeChanges(e) {
-  console.log(e.detail.value)
-  var Type = e.detail.value;
-  this.setData({
-    wishType:Type
-  })
-},
+    console.log(e.detail.value)
+    var Type = e.detail.value;
+    this.setData({
+      wishType: Type
+    })
+  },
   handleTypeChanges(e) {
     console.log(e.detail.value)
     var Type = e.detail.value;
     this.setData({
-      xyType:Type
+      xyType: Type
     })
-},
+  },
   handleMessageChanges(e) {
     console.log(e.detail.value)
     var request = e.detail.value;
     this.setData({
-      xyRequest:request
+      xyRequest: request
     })
-},
-  handleAddress(e){
+  },
+  handleAddress(e) {
     console.log(e.detail.value)
     var address = e.detail.value;
     this.setData({
-      xyDeAdd:address
+      xyDeAdd: address
     })
   },
   bindTextAreaBlur: function (e) {
     console.log(e.detail.value)
     var story = e.detail.value;
     this.setData({
-      xyStory:story
+      xyStory: story
     })
   },
 
@@ -225,7 +223,7 @@ handleSubmit:function() {
   }
 
 
-},
+  },
 
 
 
@@ -238,7 +236,7 @@ handleSubmit:function() {
       xyDate: e.detail.value
     })
   },
-  return_home:function(){
+  return_home: function () {
     wx.switchTab({
       url: "/pages/home/home",
     })
@@ -258,23 +256,5 @@ handleSubmit:function() {
         // 转发失败
       }
     }
-  },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
- 
+  }
 })

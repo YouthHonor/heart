@@ -67,6 +67,7 @@ Page({
         stLists: ["响水镇", "黄圩镇", "南河镇", "大有镇", "运河镇", "双港镇",
           "小尖镇", "陈家港镇"]
       },
+
     ],
     /*默认为群众,必须要写，不然值将为空*/
     identification: '群众',
@@ -78,6 +79,13 @@ Page({
     this.setData({
       ycId: 0,
       stId: 0
+    })
+  },
+  radioChange(e) {
+    console.log(e.detail.value);
+    var name = e.detail.value;
+    this.setData({
+      identification: name
     })
   },
 

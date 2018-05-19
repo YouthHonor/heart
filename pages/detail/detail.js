@@ -1,37 +1,36 @@
 Page({
-  data:{
-    Flag: "",
-    detail_info:[]
+  data: {
+    detail_info: []
   },
-  
+
   support: function () {
     wx.navigateTo({
       url: '/pages/support/support',
     })
   },
-  report: function (event){
-   wx.navigateTo({
-     url: '/pages/report/report',
-   })
+  report: function (event) {
+    wx.navigateTo({
+      url: '/pages/report/report',
+    })
   },
   onShareAppMessage: function () {
-    
+
   },
-  onLoad:function(options){
+  onLoad: function (options) {
     var detailId = options.detailId;
     var that = this;
     wx.request({
-      url: 'http://118.25.13.61/wx_servlet_war/detail',  
-      method:"POST",
+      url: 'http://118.25.13.61/wx_servlet_war/detail',
+      method: "POST",
       header: {
         "content-type": "application/x-www-form-urlencoded"
       },
-      data:{
-        xyId:detailId
+      data: {
+        xyId: detailId
       },
-      success:function(res){
+      success: function (res) {
         that.setData({
-          detail_info:res.data
+          detail_info: res.data
         })
       }
     })
