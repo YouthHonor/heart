@@ -18,7 +18,9 @@ Page({
     xyStory:"",
     openId:"",
     latitude:"",
-    longitude:""
+    longitude:"",
+    filePath:"",
+    fileName:""
 
   },
   staticData: {
@@ -27,24 +29,41 @@ Page({
   },
   
   chooseimage: function () {
-    var _this = this;
+    var that = this
+    // 上传图片 获取路径  
     wx.chooseImage({
-      count: 9, // 默认9  
-      sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有  
-      sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有  
       success: function (res) {
-        // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片  
-        _this.setData({
-          tempFilePaths: res.tempFilePaths
+        console.log('临时路径：' + res.tempFilePaths[0])
+        that.setData({
+          filePath: res.tempFilePaths[0]
         })
-        var tempFilePath = res.tempFilePaths[0];
-        new AV.File('file-name', {
-          blob: {
-            uri: tempFilePath,
+        that.setData({
+          fileName: that.data.filePath.substring(that.data.filePath.indexOf("_") + 1, that.data.filePath.indexOf("."))
+        })
+        console.log(that.data.fileName);
+        console.log(res.tempFilePaths[0]);
+        wx.uploadFile({
+          url: 'https://www.kousisoft.com/wx_servlet_war/upload',
+          filePath: res.tempFilePaths[0],
+          header: {
+            "Content-Type": "multipart/form-data"
           },
-        }).save().then(
-          file => console.log(file.url())
-          ).catch(console.error);
+          name: 'image',
+          formData:
+          {
+            /*看一下怎么起图片名*/
+            fileName: that.data.fileName
+
+          },
+          success: function (res) {
+            console.log("flag:" + res.data);
+          }
+        })
+
+
+
+
+ 
       }
     })
   },
@@ -160,8 +179,8 @@ handleSubmit:function() {
     })
     return;
   } else{
-  
     var that = this;
+  
     wx.request({
       url:"http://118.25.13.61/wx_servlet_war/wish",
       method:"POST",
@@ -181,8 +200,8 @@ handleSubmit:function() {
         xyDate:that.data.xyDate,
         openId: getApp().globalData.open_id,
         longitude:that.data.longitude,
-        latitude:that.data.latitude
-        
+        latitude:that.data.latitude,
+        fileName:that.data.fileName
       },            
       success:function(res){
         that.setData({
@@ -193,7 +212,8 @@ handleSubmit:function() {
           icon: 'loading',
           duration: 2000
         })
-      }
+      },
+      
     })
   }
 
