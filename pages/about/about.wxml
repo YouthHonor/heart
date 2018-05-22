@@ -1,9 +1,9 @@
 <view class = "title">心愿墙</view>
 <view  class='all'>
   <view class='name'>用户名</view>
-  <input class='input' bindinput = "usenameinput" placeholder="填写您的昵称" value=""/>
+  <input class='input' bindinput = "usenameinput" placeholder="填写您的昵称" value='{{userName}}'/>
   <view class='name'>联系方式</view>
-  <input class='input' bindinput = "phonenameinput" placeholder="填写您的联系方式"/>
+  <input class='input' bindinput = "phonenameinput" placeholder="填写您的联系方式" value='{{phoneNumber}}'/>
 
             <view class="pas_window window_height window_bot">
             <view class="pas_text left mright">身份</view>

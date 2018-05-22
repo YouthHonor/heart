@@ -10,8 +10,8 @@ Page({
       {
         identification: '党员', value: '党员'
       }
-    ],
-
+       ],
+ 
     ycList: [
       "亭湖区", "盐都区", "大丰区", "东台市",
       "建湖县", "射阳县", "阜宁县", "滨海县", "响水县"
@@ -72,14 +72,37 @@ Page({
     /*默认为群众,必须要写，不然值将为空*/
     identification: '群众',
     ycId: 0,
-    stId: 0
+    stId: 0,
+
+    
   },
 
   onLoad: function (options) {
+    var userName = wx.getStorageSync('userName');
+    var phoneNumber= wx.getStorageSync('phoneNumber');
+    var identification = wx.getStorageSync('identification');
+    var ycId = wx.getStorageSync('ycId');
+    var stId = wx.getStorageSync('stId');
+    if (userName) {
+      this.setData({ userName: userName });
+    }
+    if (phoneNumber) {
+      this.setData({ phoneNumber: phoneNumber });
+    }
+    if (identification) {
+      this.setData({
+         identification: identification ,
+
+      });
+
+      
+    }
+    if(ycId&&stId){
     this.setData({
-      ycId: 0,
-      stId: 0
+      ycId: ycId,
+      stId: stId
     })
+    }
   },
   radioChange(e) {
     console.log(e.detail.value);
@@ -90,6 +113,7 @@ Page({
   },
 
   bindPickerYc: function (e) {
+    console.log(e);
     this.setData({
       ycId: e.detail.value,
       stId: 0
@@ -110,6 +134,7 @@ phonenameinput: function (e) {
 
   },
 handleSubmit:function(event){
+  console.log(event)
   var uname = this.data.userName;
   var phoneNumber = this.data.phoneNumber;
   var that = this;
@@ -137,6 +162,11 @@ handleSubmit:function(event){
     })
     return;
   } else {
+    wx.setStorageSync('userName', uname);
+    wx.setStorageSync('phoneNumber', phoneNumber);
+    wx.setStorageSync('identification', that.data.identification);
+    wx.setStorageSync('ycId', that.data.ycId);
+   wx.setStorageSync('stId', that.data.stId);
     console.log(that.data.identification);
     wx.request({
       url: getApp().globalData.baseUrl +'modify',
@@ -171,6 +201,7 @@ handleSubmit:function(event){
     })
   }
 },
+
   admin:function(event){
     wx.navigateTo({
       url: '/pages/adLogin/adLogin',
