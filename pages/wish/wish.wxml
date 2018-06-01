@@ -68,9 +68,8 @@
  <view class='info'>
  <textarea bindblur="bindTextAreaBlur" class= 'textarea' placeholder="讲述您的故事"  />
 
-
-<button style="margin:30rpx;" bindtap="chooseimage">点击添加图片</button> 
-<image src="{{tempFilePaths }}" mode="aspecFill" style="width: 100%; height: 450rpx"/>   
+<image wx:if="{{!filePath}}" src='/images/push.png'  style="width: 100%; height: 450rpx" bindtap="chooseimage" ></image> 
+<image wx:else src="{{filePath}}" mode="aspecFill" style="width: 100%; height: 450rpx"/>   
 
 
 </view>
